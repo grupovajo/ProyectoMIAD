@@ -1,7 +1,5 @@
 # CASO ELECTRODUNAS - PROYECTO APLICADO GRUPO 1 MIAD
 
-# CLUSTERING DE UNIDADES PRODUCTIVAS AGRÍCOLAS
-
 <img src="https://raw.githubusercontent.com/grupovajo/proyectoANS/master/recursos/MIAD.png" align="right"
      alt="MIAD" width="84" height="35">
 <img src="https://raw.githubusercontent.com/grupovajo/proyectoANS/master/recursos/Uniandes.png" align="left"
