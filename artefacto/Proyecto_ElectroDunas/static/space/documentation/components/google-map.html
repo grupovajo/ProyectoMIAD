@@ -1,0 +1,1177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Title -->
+  <title>Google Map | Space Documentation</title>
+
+  <!-- Required Meta Tags Always Come First -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="../../favicon.ico">
+
+  <!-- Google Fonts -->
+  <link href="//fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+
+  <!-- CSS Implementing Plugins -->
+  <link rel="stylesheet" href="../../assets/vendor/font-awesome/css/all.min.css">
+  <link rel="stylesheet" href="../../assets/vendor/hs-megamenu/src/hs.megamenu.css">
+  <link rel="stylesheet" href="../../assets/vendor/animate.css/animate.min.css">
+  <link rel="stylesheet" href="../assets/vendor/jquery-ui/themes/base/jquery-ui.min.css">
+  <link rel="stylesheet" href="../assets/vendor/prism/prism.css">
+
+  <!-- CSS Space Template -->
+  <link rel="stylesheet" href="../../assets/css/theme.css">
+
+  <!-- CSS Space Doc -->
+  <link rel="stylesheet" href="../assets/css/starter.css">
+</head>
+
+<body>
+  <!-- Skippy -->
+  <a id="skippy" class="sr-only sr-only-focusable u-skippy" href="#content">
+    <div class="container">
+      <span class="u-skiplink-text">Skip to main content</span>
+    </div>
+  </a>
+  <!-- End Skippy -->
+
+  <!-- ========== HEADER ========== -->
+  <header id="header" class="u-header u-header--sticky-top-lg">
+    <div class="u-header__section bg-dark">
+      <div id="logoAndNav" class="container-fluid">
+        <!-- Nav -->
+        <nav class="js-mega-menu navbar navbar-expand-lg u-header__navbar">
+          <!-- Logo -->
+          <a class="navbar-brand u-header__navbar-brand py-3" href="../index.html" aria-label="Space">
+            <img src="../../assets/svg/logos/logo-white.svg" alt="Logo">
+          </a>
+          <!-- End Logo -->
+
+          <!-- Responsive Toggle Button -->
+          <button type="button" class="navbar-toggler btn fd-header-toggle"
+                  aria-label="Toggle navigation"
+                  aria-expanded="false"
+                  aria-controls="navBar"
+                  data-toggle="collapse"
+                  data-target="#navBar">
+            <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 30 30" width="30" height="30" focusable="false">
+              <title>Menu</title>
+              <path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M4 7h22M4 15h22M4 23h22"/>
+            </svg>
+          </button>
+          <!-- End Responsive Toggle Button -->
+
+          <!-- Navigation -->
+          <div id="navBar" class="collapse navbar-collapse py-0">
+            <ul class="navbar-nav navbar-expand-md w-100 u-header__navbar-nav">
+              <!-- Live Preview -->
+              <li class="nav-item u-header__nav-item">
+                <a class="nav-link u-header__nav-link text-white-70" href="../../html/home/index.html">Live Preview</a>
+              </li>
+              <!-- End Live Preview -->
+
+              <!-- Starter -->
+              <li class="nav-item u-header__nav-item">
+                <a class="nav-link u-header__nav-link text-white-70" href="../../starter/index.html">Starter</a>
+              </li>
+              <!-- End Starter -->
+
+              <!-- Contact Us -->
+              <li class="nav-item u-header__nav-item">
+                <a class="nav-link u-header__nav-link text-white-70" href="https://htmlstream.com/contact-us">Contact Us</a>
+              </li>
+              <!-- End Contact Us -->
+
+              <!-- Changelog -->
+              <li class="nav-item hs-has-mega-menu d-none d-lg-inline-block u-header__nav-item position-relative ml-lg-auto"
+                  data-event="hover"
+                  data-animation-in="slideInUp"
+                  data-animation-out="fadeOut"
+                  data-position="left">
+                <a id="changelogMenu" class="nav-link u-header__nav-link text-white-70" href="javascript:;"
+                   aria-haspopup="true"
+                   aria-expanded="false">
+                  v1.6
+                  <span class="fa fa-angle-down u-header__nav-link-icon ml-2"></span>
+                </a>
+
+                <!-- Submenu -->
+                <ul class="hs-mega-menu list-unstyled u-header__sub-menu u-header__sub-menu-menu-gutter--y" style="min-width: 220px;"
+                    aria-labelledby="changelogMenu">
+                  <li class="dropdown-item px-0">
+                    <a class="nav-link text-secondary px-4" href="../getting-started/changelog.html#version1_6_1">v1.6.1</a>
+                    <a class="nav-link text-secondary px-4" href="../getting-started/changelog.html#version1_6">v1.6</a>
+                    <a class="nav-link text-secondary px-4" href="../getting-started/changelog.html#version1_5">v1.5</a>
+                    <a class="nav-link text-secondary px-4" href="../getting-started/changelog.html#version1_4">v1.4</a>
+                    <a class="nav-link text-secondary px-4" href="../getting-started/changelog.html#version1_3_1">v1.3.1</a>
+                    <a class="nav-link text-secondary px-4" href="../getting-started/changelog.html#version1_3">v1.3</a>
+                    <a class="nav-link text-secondary px-4" href="../getting-started/changelog.html#version1_2">v1.2</a>
+                    <a class="nav-link text-secondary px-4" href="../getting-started/changelog.html#version1_1">v1.1</a>
+                    <a class="nav-link text-secondary px-4" href="../getting-started/changelog.html#initial-release">v1.0</a>
+                  </li>
+                </ul>
+                <!-- End Submenu -->
+              </li>
+              <!-- End Changelog -->
+
+              <!-- Social Icons -->
+              <li class="ml-md-auto ml-lg-0">
+                <ul class="list-inline mb-0">
+                  <li class="list-inline-item mx-0">
+                    <a class="u-icon u-icon--sm u-icon--light" href="https://www.facebook.com/htmlstream" target="_blank">
+                      <span class="fab fa-facebook-f u-icon__inner"></span>
+                    </a>
+                  </li>
+                  <li class="list-inline-item mx-0">
+                    <a class="u-icon u-icon--sm u-icon--light" href="https://twitter.com/htmlstream" target="_blank">
+                      <span class="fab fa-twitter u-icon__inner"></span>
+                    </a>
+                  </li>
+                  <li class="list-inline-item mx-0">
+                    <a class="u-icon u-icon--sm u-icon--light" href="https://github.com/htmlstreamofficial" target="_blank">
+                      <span class="fab fa-github u-icon__inner"></span>
+                    </a>
+                  </li>
+                  <li class="list-inline-item mx-0">
+                    <a class="u-icon u-icon--sm u-icon--light" href="https://dribbble.com/htmlstream" target="_blank">
+                      <span class="fab fa-dribbble u-icon__inner"></span>
+                    </a>
+                  </li>
+                  <li class="list-inline-item mx-0">
+                    <a class="u-icon u-icon--sm u-icon--light" href="https://www.instagram.com/htmlstream/" target="_blank">
+                      <span class="fab fa-instagram u-icon__inner"></span>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <!-- End Social Icons -->
+
+              <!-- Button -->
+              <li class="nav-item pl-md-3">
+                <a class="btn btn-sm btn-primary" href="https://themes.getbootstrap.com/product/space-multipurpose-responsive-template/" target="_blank">
+                  Buy Now
+                </a>
+              </li>
+              <!-- End Button -->
+            </ul>
+          </div>
+          <!-- End Navigation -->
+        </nav>
+        <!-- End Nav -->
+      </div>
+    </div>
+  </header>
+  <!-- ========== END HEADER ========== -->
+
+  <div class="container-fluid">
+    <div class="row flex-xl-nowrap">
+      <!-- ========== LEFT ========== -->
+      <div class="col-12 col-md-3 col-xl-2 fd-sidebar">
+        <!-- Sidebar Search -->
+        <form class="fd-search d-flex align-items-center">
+          <input id="fd-sidebar-navigation__search-autocomplete" class="form-control form-control-sm" type="text" placeholder="Search..." data-url="../assets/include/ajax/autocomplete-data-for-documentation-search.json">
+
+          <!-- Responsive Toggle Button -->
+          <button class="btn btn-link fd-search-docs-toggle d-md-none p-0 ml-3" type="button"
+                  data-toggle="collapse"
+                  data-target="#navside-accordion"
+                  aria-controls="navside-accordion"
+                  aria-expanded="false"
+                  aria-label="Toggle docs navigation">
+            <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 30 30" width="30" height="30" focusable="false">
+              <title>Menu</title>
+              <path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M4 7h22M4 15h22M4 23h22"/>
+            </svg>
+          </button>
+          <!-- End Responsive Toggle Button -->
+        </form>
+        <!-- End Sidebar Search -->
+
+        <!-- Sidebar Nav -->
+        <nav id="navside-accordion" class="fd-navside collapse">
+          <div class="fd-navside__block">
+            <a class="fd-navside__title" data-toggle="collapse" data-target="#getting-started" aria-expanded="true" aria-controls="getting-started" href="javascript:;">Getting started</a>
+
+            <ul id="getting-started" class="fd-navside__links collapse" data-parent="#navside-accordion">
+              <li><a href="../index.html">Introduction</a></li>
+              <li><a href="../getting-started/file-structures.html">File structures</a></li>
+              <li><a href="../getting-started/gulp.html">Gulp</a></li>
+              <li><a href="../getting-started/credits.html">Credits</a></li>
+              <li><a href="../getting-started/update.html">Update</a></li>
+              <li><a href="../getting-started/changelog.html">Changelog</a></li>
+
+            </ul>
+          </div>
+
+          <div class="fd-navside__block">
+            <a class="fd-navside__title collapsed" data-toggle="collapse" data-target="#components" aria-expanded="true" aria-controls="components" href="javascript:;">Components</a>
+
+            <ul id="components" class="fd-navside__links collapse show" data-parent="#navside-accordion">
+              <li><a href="../components/typography.html">Typography</a></li>
+              <li><a href="../components/alerts.html">Alerts</a></li>
+              <li><a href="../components/animations.html">Animations</a></li>
+              <li><a href="../components/avatars.html">Avatars</a></li>
+              <li><a href="../components/badge.html">Badge</a></li>
+              <li><a href="../components/bg-video.html">Background Video</a></li>
+              <li><a href="../components/buttons.html">Buttons</a></li>
+              <li><a href="../components/cards.html">Cards</a></li>
+              <li><a href="../components/collapse.html">Collapse</a></li>
+              <li><a href="../components/countdown.html">Countdown</a></li>
+              <li><a href="../components/counters.html">Counters</a></li>
+              <li><a href="../components/cubeportfolio.html">Cubeportfolio</a></li>
+              <li><a href="../components/dividers.html">Dividers</a></li>
+              <li><a href="../components/unfold.html">Unfold (Dropdown and others)</a></li>
+              <li><a href="../components/fancybox.html">Fancybox</a></li>
+              <li><a href="../components/flatpickr.html">Flatpickr</a></li>
+              <li><a href="../components/quantity-counter.html">Quantity Counter</a></li>
+              <li><a href="../components/string-unifier.html">String Unifier</a></li>
+              <li><a href="../components/forms.html">Forms</a></li>
+              <li><a href="../components/input-group.html">Input Groups</a></li>
+              <li><a class="active" href="../components/google-map.html">Google Map</a></li>
+              <li><a href="../components/go-to.html">Go to</a></li>
+              <li><a href="../components/headers.html">Headers</a></li>
+              <li><a href="../components/header-mega-menu.html">Header Mega Menu</a></li>
+              <li><a href="../components/header-searches.html">Header Searches</a></li>
+              <li><a href="../components/header-shopping-carts.html">Header Shopping Carts</a></li>
+              <li>
+                <h6 class="fd-navside__sub-title">Icons:</h6>
+                <ul class="fd-navside__links ml-3 mb-2">
+                  <li><a href="../components/icons.html">Common</a></li>
+                  <li><a href="../components/business-icons.html">Business Icons</a></li>
+                  <li><a href="../components/font-awesome.html">Font Awesome Icons</a></li>
+                  <li><a href="../components/stockholm-icons.html">Stockholm Icons</a></li>
+                </ul>
+              </li>
+              <li><a href="../components/labels.html">Label</a></li>
+              <li><a href="../components/list-group.html">List group</a></li>
+              <li><a href="../components/malihu-scrollbar.html">Malihu Scrollbar</a></li>
+              <li><a href="../components/modal-window.html">Modal Window</a></li>
+              <li><a href="../components/pagination.html">Pagination</a></li>
+              <li><a href="../components/parallax.html">Parallax</a></li>
+              <li><a href="../components/progress.html">Progress</a></li>
+              <li><a href="../components/scroll-nav.html">Scroll Nav</a></li>
+              <li><a href="../components/show-animation.html">Show Animation</a></li>
+              <li><a href="../components/skippy.html">Skippy</a></li>
+              <li><a href="../components/slick-carousel.html">Slick Carousel</a></li>
+              <li><a href="../components/social-apis.html">Social APIs</a></li>
+              <li><a href="../components/spinners.html">Spinners</a></li>
+              <li><a href="../components/step-form.html">Step Form</a></li>
+              <li><a href="../components/sticky-block.html">Sticky Block</a></li>
+              <li><a href="../components/sticky-footer.html">Sticky Footer</a></li>
+              <li><a href="../components/tables.html">Tables</a></li>
+              <li><a href="../components/tabs.html">Tabs</a></li>
+              <li><a href="../components/toasts.html">Toasts</a></li>
+              <li><a href="../components/typedjs.html">Typedjs</a></li>
+              <li><a href="../components/validation.html">Validation</a></li>
+              <li><a href="../components/video-player.html">Video Player</a></li>
+              <li><a href="../components/wizard.html">Wizard</a></li>
+            </ul>
+          </div>
+
+          <div class="fd-navside__block">
+            <a class="fd-navside__title" data-toggle="collapse" data-target="#utilities" aria-expanded="true" aria-controls="utilities" href="javascript:;">Utilities</a>
+
+            <ul id="utilities" class="fd-navside__links collapse" data-parent="#navside-accordion">
+              <li><a href="../utilities/borders.html">Borders</a></li>
+              <li><a href="../utilities/colors.html">Colors</a></li>
+              <li><a href="../utilities/content-alignments.html">Content Alignments (with Position)</a></li>
+              <li><a href="../utilities/position.html">Position</a></li>
+              <li><a href="../utilities/sizing.html">Sizing</a></li>
+              <li><a href="../utilities/shadows.html">Shadows</a></li>
+              <li><a href="../utilities/lift.html">Lift</a></li>
+              <li><a href="../utilities/spacing.html">Spacing</a></li>
+              <li><a href="../utilities/others.html">Others</a></li>
+            </ul>
+          </div>
+
+          <div class="fd-navside__block">
+            <a class="fd-navside__title" data-toggle="collapse" data-target="#customization" aria-expanded="true" aria-controls="customization" href="javascript:;">Customization</a>
+
+            <ul id="customization" class="fd-navside__links collapse" data-parent="#navside-accordion">
+              <li><a href="../customization/css.html">CSS</a></li>
+              <li><a href="../customization/sass.html">SASS</a></li>
+              <li><a href="../customization/bootstrap-sass.html">Bootstrap SASS</a></li>
+              <li><a href="../customization/js.html">JavaScript</a></li>
+              <li><a href="../customization/typography.html">Typography</a></li>
+              <li><a href="../customization/colors.html">Colors</a></li>
+            </ul>
+          </div>
+        </nav>
+        <!-- End Sidebar Nav -->
+      </div>
+      <!-- ========== END LEFT ========== -->
+
+      <!-- ========== RIGHT ========== -->
+      <div class="d-none d-xl-block col-xl-2 fd-toc">
+        <ul id="scrollNav" class="fd-toc-section-nav">
+          <li class="fd-toc-entry active"><a href="#how-to-use">How to use?</a></li>
+          <li class="fd-toc-entry"><a href="#api">API</a></li>
+          <li class="fd-toc-entry">
+            <a href="#example">Example</a>
+            <ul>
+              <li class="fd-toc-entry"><a href="#roadmap">Road map</a></li>
+              <li class="fd-toc-entry"><a href="#satellite">Satellite</a></li>
+              <li class="fd-toc-entry"><a href="#terrain">Terrain</a></li>
+              <li class="fd-toc-entry"><a href="#street-view">Street view</a></li>
+              <li class="fd-toc-entry"><a href="#custom-light">Custom light</a></li>
+              <li class="fd-toc-entry"><a href="#custom-dark">Custom dark</a></li>
+              <li class="fd-toc-entry"><a href="#geolocation">Geolocation</a></li>
+              <li class="fd-toc-entry"><a href="#polygon">Polygon</a></li>
+              <li class="fd-toc-entry"><a href="#polylines">Polylines</a></li>
+              <li class="fd-toc-entry"><a href="#routes">Routes</a></li>
+              <li class="fd-toc-entry"><a href="#geocoding">Geocoding</a></li>
+              <li class="fd-toc-entry"><a href="#multiple-markers">Multiple markers</a></li>
+            </ul>
+          </li>
+          <li class="fd-toc-entry">
+            <a href="#js-behavior">JavaScript behavior</a>
+            <ul>
+              <li class="fd-toc-entry"><a href="#methods">Methods</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <!-- ========== END RIGHT ========== -->
+
+      <!-- ========== MAIN ========== -->
+      <main class="col-12 col-md-9 col-xl-8 pl-md-5 fd-content space-3">
+        <div class="mb-9">
+          <h1 class="font-weight-medium">Google Map</h1>
+          <p class="lead font-weight-normal">Space Google Maps allows you to use the potential of Google Maps in a simple way.</p>
+        </div>
+
+        <div class="alert alert-warning mb-7" role="alert">
+          <div class="media">
+            <span class="fa fa-exclamation-triangle fa-2x mt-2 mr-3"></span>
+            <div class="media-body">
+              The Google Map degradation issue is related with the latest changes that were introduced on June 11th, 2018. For more information, see <a class="alert-link" target="_blank" href="https://developers.google.com/maps/billing/important-updates">https://developers.google.com/maps/billing/important-updates</a>. Hence, you are required to use your own API.
+            </div>
+          </div>
+        </div>
+
+        <div id="how-to-use" class="mb-9">
+          <h2 class="h4">How to use? <a class="anchorjs-link" href="#how-to-use" aria-label="Anchor" data-anchorjs-icon="#"></a></h2>
+
+          <p>Copy-paste the following <code class="highlighter-rouge">&lt;script&gt;</code> near the end of your pages under <em><u>JS Implementing Plugins</u></em> to enable it.</p>
+
+          <pre class="mb-4">
+            <code class="language-html" data-lang="html">
+              &lt;script src="../../assets/vendor/gmaps/gmaps.min.js"&gt;&lt;/script&gt;
+            </code>
+          </pre>
+
+          <p>Copy-paste the following <code class="highlighter-rouge">&lt;script&gt;</code> near the end of your pages under <em><u>JS Space</u></em> to enable it.</p>
+
+          <pre class="mb-4">
+            <code class="language-html" data-lang="html">
+              &lt;script src="../../assets/js/components/hs.g-map.js"&gt;&lt;/script&gt;
+            </code>
+          </pre>
+
+          <p>Copy-paste the init function under <em><u>JS Plugins Init.</u></em>, before the closing <code class="highlighter-rouge">&lt;/body&gt;</code> tag, to enable it.</p>
+
+          <pre class="mb-4">
+            <code class="language-html" data-lang="html">
+              &lt;script&gt;
+                // initialization of google map
+                function initMap() {
+                  $.HSCore.components.HSGMap.init('.js-g-map');
+                }
+              &lt;/script&gt;
+            </code>
+          </pre>
+        </div>
+
+        <div class="fd-callout fd-callout-danger">
+          <h3 id="important" class="h5">Important!</h3>
+
+          <p>In some cases, Google Map does not work, for this reason, the following Google Map API key script should be included at the bottom of the page, after all scripts, before closing <code class="highlighter-rouge">&lt;/body&gt;</code> tag.</p>
+        </div>
+
+        <div id="api" class="mb-9">
+          <h2 class="h4">API <a class="anchorjs-link" href="#api" aria-label="Anchor" data-anchorjs-icon="#"></a></h2>
+          <p>Include your API key in the following script, in the place of <code>YOURAPIKEY</code>.</p>
+
+          <pre class="mb-4">
+            <code class="language-html" data-lang="html">
+              &lt;script src="//maps.googleapis.com/maps/api/js?key=YOURAPIKEY&callback=initMap" async defer&gt;&lt;/script&gt;
+            </code>
+          </pre>
+        </div>
+
+        <div id="example" class="mb-9">
+          <h2 class="h4">Example <a class="anchorjs-link" href="#example" aria-label="Anchor" data-anchorjs-icon="#"></a></h2>
+        </div>
+
+        <div id="roadmap" class="mb-9">
+          <h2 class="h4">Road map <a class="anchorjs-link" href="#roadmap" aria-label="Anchor" data-anchorjs-icon="#"></a></h2>
+
+          <div class="fd-example mb-4">
+            <div id="GMapRoadmap" class="js-g-map embed-responsive embed-responsive-21by9"
+                 data-lat="40.748866"
+                 data-lng="-73.988366"
+                 data-pin="true"></div>
+          </div>
+
+          <pre class="mb-4">
+            <code class="language-html" data-lang="html">
+              &lt;div id="GMapRoadmap" class="js-g-map embed-responsive embed-responsive-21by9"
+                   data-lat="40.748866"
+                   data-lng="-73.988366"
+                   data-pin="true"&gt;&lt;/div&gt;
+            </code>
+          </pre>
+        </div>
+
+        <div id="satellite" class="mb-9">
+          <h2 class="h4">Satellite <a class="anchorjs-link" href="#satellite" aria-label="Anchor" data-anchorjs-icon="#"></a></h2>
+
+          <div class="fd-example mb-4">
+            <div id="GMapSatellite" class="js-g-map embed-responsive embed-responsive-21by9"
+                 data-type="satellite"
+                 data-lat="40.748866"
+                 data-lng="-73.988366"
+                 data-title="Space"
+                 data-pin="true"></div>
+          </div>
+
+          <pre class="mb-4">
+            <code class="language-html" data-lang="html">
+              &lt;div id="GMapSatellite" class="js-g-map embed-responsive embed-responsive-21by9"
+                   data-type="satellite"
+                   data-lat="40.748866"
+                   data-lng="-73.988366"
+                   data-title="Space"
+                   data-pin="true"&gt;&lt;/div&gt;
+            </code>
+          </pre>
+        </div>
+
+        <div id="terrain" class="mb-9">
+          <h2 class="h4">Terrain <a class="anchorjs-link" href="#terrain" aria-label="Anchor" data-anchorjs-icon="#"></a></h2>
+
+          <div class="fd-example mb-4">
+            <div id="GMapTerrain" class="js-g-map embed-responsive embed-responsive-21by9"
+                 data-type="terrain"
+                 data-lat="40.748866"
+                 data-lng="-73.988366"
+                 data-title="Space"
+                 data-pin="true"></div>
+          </div>
+
+          <pre class="mb-4">
+            <code class="language-html" data-lang="html">
+              &lt;div id="GMapTerrain" class="js-g-map embed-responsive embed-responsive-21by9"
+                   data-type="terrain"
+                   data-lat="40.748866"
+                   data-lng="-73.988366"
+                   data-title="Space"
+                   data-pin="true"&gt;&lt;/div&gt;
+            </code>
+          </pre>
+        </div>
+
+        <div id="street-view" class="mb-9">
+          <h2 class="h4">Street view <a class="anchorjs-link" href="#street-view" aria-label="Anchor" data-anchorjs-icon="#"></a></h2>
+
+          <div class="fd-example mb-4">
+            <div id="GMapStreetView" class="js-g-map embed-responsive embed-responsive-21by9"
+                 data-type="street-view"
+                 data-lat="40.748866"
+                 data-lng="-73.988366"></div>
+          </div>
+
+          <pre class="mb-4">
+            <code class="language-html" data-lang="html">
+              &lt;div id="GMapStreetView" class="js-g-map embed-responsive embed-responsive-21by9"
+                   data-type="street-view"
+                   data-lat="40.748866"
+                   data-lng="-73.988366"&gt;&lt;/div&gt;
+            </code>
+          </pre>
+        </div>
+
+        <div id="custom-light" class="mb-9">
+          <h2 class="h4">Custom light <a class="anchorjs-link" href="#custom-light" aria-label="Anchor" data-anchorjs-icon="#"></a></h2>
+
+          <div class="fd-example mb-4">
+            <div id="GMapCustomized-light" class="js-g-map embed-responsive embed-responsive-21by9"
+                 data-type="custom"
+                 data-lat="40.674"
+                 data-lng="-73.946"
+                 data-zoom="12"
+                 data-title="Space"
+                 data-pin="true"
+                 data-pin-icon="../../assets/img/map-markers/map-marker6.png"
+                 data-styles='[
+                   ["", "", [{"saturation":-100},{"lightness":51},{"visibility":"simplified"}]],
+                   ["", "labels", [{"visibility":"on"}]],
+                   ["water", "", [{"color":"#bac6cb"}]]
+                 ]'></div>
+          </div>
+
+          <pre class="mb-4">
+            <code class="language-html" data-lang="html">
+              &lt;div id="GMapCustomized-light" class="js-g-map embed-responsive embed-responsive-21by9"
+                   data-type="custom"
+                   data-lat="40.674"
+                   data-lng="-73.946"
+                   data-zoom="12"
+                   data-title="Space"
+                   data-pin="true"
+                   data-pin-icon="../../assets/img/map-markers/map-marker6.png"
+                   data-styles='[
+                     ["", "", [{"saturation":-100},{"lightness":51},{"visibility":"simplified"}]],
+                     ["", "labels", [{"visibility":"on"}]],
+                     ["water", "", [{"color":"#bac6cb"}]]
+                   ]'&gt;&lt;/div&gt;
+            </code>
+          </pre>
+        </div>
+
+        <div id="custom-dark" class="mb-9">
+          <h2 class="h4">Custom dark <a class="anchorjs-link" href="#custom-dark" aria-label="Anchor" data-anchorjs-icon="#"></a></h2>
+
+          <div class="fd-example mb-4">
+            <div id="GMapCustomized-dark" class="js-g-map embed-responsive embed-responsive-21by9"
+                 data-type="custom"
+                 data-lat="40.674"
+                 data-lng="-73.946"
+                 data-zoom="12"
+                 data-title="Space"
+                 data-pin="true"
+                 data-pin-icon="../../assets/img/map-markers/map-marker6.png"
+                 data-styles='[
+                   ["", "", [{"saturation":-100},{"lightness":50},{"visibility":"simplified"}]],
+                   ["", "geometry", [{"color":"#1e303d"}]],
+                   ["road", "", [{"color":"#ffffff"},{"lightness":-100}]],
+                   ["road", "labels.text.fill", [{"color":"#ffffff"},{"lightness":-50}]],
+                   ["water", "", [{"color":"#0e171d"}]]
+                 ]'></div>
+          </div>
+
+          <pre class="mb-4">
+            <code class="language-html" data-lang="html">
+              &lt;div id="GMapCustomized-dark" class="js-g-map embed-responsive embed-responsive-21by9"
+                   data-type="custom"
+                   data-lat="40.674"
+                   data-lng="-73.946"
+                   data-zoom="12"
+                   data-title="Space"
+                   data-pin="true"
+                   data-pin-icon="../../assets/img/map-markers/map-marker6.png"
+                   data-styles='[
+                     ["", "", [{"saturation":-100},{"lightness":50},{"visibility":"simplified"}]],
+                     ["", "geometry", [{"color":"#1e303d"}]],
+                     ["road", "", [{"color":"#ffffff"},{"lightness":-100}]],
+                     ["road", "labels.text.fill", [{"color":"#ffffff"},{"lightness":-50}]],
+                     ["water", "", [{"color":"#0e171d"}]]
+                   ]'&gt;&lt;/div&gt;
+            </code>
+          </pre>
+        </div>
+
+        <div id="geolocation" class="mb-9">
+          <h2 class="h4">Geolocation <a class="anchorjs-link" href="#geolocation" aria-label="Anchor" data-anchorjs-icon="#"></a></h2>
+
+          <div class="fd-example mb-4">
+            <div id="GMapGeolocation" class="js-g-map embed-responsive embed-responsive-21by9"
+                 data-lat="40.748866"
+                 data-lng="-73.988366"
+                 data-zoom="16"
+                 data-geolocation="true"
+                 data-title="Space"
+                 data-pin="true"
+                 data-pin-icon="../../assets/img/map-markers/map-marker6.png"></div>
+          </div>
+
+          <pre class="mb-4">
+            <code class="language-html" data-lang="html">
+              &lt;div id="GMapGeolocation" class="js-g-map embed-responsive embed-responsive-21by9"
+                   data-lat="40.748866"
+                   data-lng="-73.988366"
+                   data-zoom="16"
+                   data-geolocation="true"
+                   data-title="Space"
+                   data-pin="true"
+                   data-pin-icon="../../assets/img/map-markers/map-marker6.png"&gt;&lt;/div&gt;
+            </code>
+          </pre>
+        </div>
+
+        <div id="polygon" class="mb-9">
+          <h2 class="h4">Polygon <a class="anchorjs-link" href="#polygon" aria-label="Anchor" data-anchorjs-icon="#"></a></h2>
+
+          <div class="fd-example mb-4">
+            <div id="GMapPolygon" class="js-g-map embed-responsive embed-responsive-21by9"
+                 data-lat="-12.043333"
+                 data-lng="-77.028333"
+                 data-zoom="14"
+                 data-pin="true"
+                 data-polygon="true"
+                 data-polygon-cords="[
+                   [-12.040397656836609,-77.03373871559225],
+                   [-12.040248585302038,-77.03993927003302],
+                   [-12.050047116528843,-77.02448169303511],
+                   [-12.044804866577001,-77.02154422636042]
+                 ]"
+                 data-polygon-styles='{"strokeColor":"#BBD8E9","strokeOpacity":1,"strokeWeight":3,"fillColor":"#BBD8E9","fillOpacity":0.6}'></div>
+          </div>
+
+          <pre class="mb-4">
+            <code class="language-html" data-lang="html">
+              &lt;div id="GMapPolygon" class="js-g-map embed-responsive embed-responsive-21by9"
+                   data-lat="-12.043333"
+                   data-lng="-77.028333"
+                   data-zoom="14"
+                   data-pin="true"
+                   data-polygon="true"
+                   data-polygon-cords="[
+                     [-12.040397656836609,-77.03373871559225],
+                     [-12.040248585302038,-77.03993927003302],
+                     [-12.050047116528843,-77.02448169303511],
+                     [-12.044804866577001,-77.02154422636042]
+                   ]"
+                   data-polygon-styles='{"strokeColor":"#BBD8E9","strokeOpacity":1,"strokeWeight":3,"fillColor":"#BBD8E9","fillOpacity":0.6}'&gt;&lt;/div&gt;
+            </code>
+          </pre>
+        </div>
+
+        <div id="polylines" class="mb-9">
+          <h2 class="h4">Polylines <a class="anchorjs-link" href="#polylines" aria-label="Anchor" data-anchorjs-icon="#"></a></h2>
+
+          <div class="fd-example mb-4">
+            <div id="GMapPolylines" class="js-g-map embed-responsive embed-responsive-21by9"
+                 data-lat="-12.043333"
+                 data-lng="-77.028333"
+                 data-zoom="14"
+                 data-pin="true"
+                 data-polylines="true"
+                 data-polylines-cords="[
+                   [-12.044012922866312, -77.02470665341184],
+                   [-12.05449279282314, -77.03024273281858],
+                   [-12.055122327623378, -77.03039293652341],
+                   [-12.075917129727586, -77.02764635449216],
+                   [-12.07635776902266, -77.02792530422971],
+                   [-12.076819390363665, -77.02893381481931],
+                   [-12.088527520066453, -77.0241058385925],
+                   [-12.090814532191756, -77.02271108990476]
+                 ]"
+                 data-polylines-styles='{"strokeColor":"#131540","strokeOpacity":0.6,"strokeWeight":6}'></div>
+          </div>
+
+          <pre class="mb-4">
+            <code class="language-html" data-lang="html">
+              &lt;div id="GMapPolylines" class="js-g-map embed-responsive embed-responsive-21by9"
+                   data-lat="-12.043333"
+                   data-lng="-77.028333"
+                   data-zoom="14"
+                   data-pin="true"
+                   data-polylines="true"
+                   data-polylines-cords="[
+                     [-12.044012922866312, -77.02470665341184],
+                     [-12.05449279282314, -77.03024273281858],
+                     [-12.055122327623378, -77.03039293652341],
+                     [-12.075917129727586, -77.02764635449216],
+                     [-12.07635776902266, -77.02792530422971],
+                     [-12.076819390363665, -77.02893381481931],
+                     [-12.088527520066453, -77.0241058385925],
+                     [-12.090814532191756, -77.02271108990476]
+                   ]"
+                   data-polylines-styles='{"strokeColor":"#131540","strokeOpacity":0.6,"strokeWeight":6}'&gt;&lt;/div&gt;
+            </code>
+          </pre>
+        </div>
+
+        <div id="routes" class="mb-9">
+          <h2 class="h4">Routes <a class="anchorjs-link" href="#routes" aria-label="Anchor" data-anchorjs-icon="#"></a></h2>
+
+          <div class="fd-example mb-4">
+            <div id="GMapRoutes" class="js-g-map embed-responsive embed-responsive-21by9"
+                 data-lat="-12.043333"
+                 data-lng="-77.028333"
+                 data-zoom="14"
+                 data-pin="true"
+                 data-routes="true"
+                 data-routes-cords="[
+                   [-12.044012922866312, -77.02470665341184],
+                   [-12.090814532191756, -77.02271108990476]
+                 ]"
+                 data-routes-styles='{"travelMode":"driving","strokeColor":"#131540","strokeOpacity":0.6,"strokeWeight":6}'></div>
+          </div>
+
+          <pre class="mb-4">
+            <code class="language-html" data-lang="html">
+              &lt;div id="GMapRoutes" class="js-g-map embed-responsive embed-responsive-21by9"
+                   data-lat="-12.043333"
+                   data-lng="-77.028333"
+                   data-zoom="14"
+                   data-pin="true"
+                   data-routes="true"
+                   data-routes-cords="[
+                     [-12.044012922866312, -77.02470665341184],
+                     [-12.090814532191756, -77.02271108990476]
+                   ]"
+                   data-routes-styles='{"travelMode":"driving","strokeColor":"#131540","strokeOpacity":0.6,"strokeWeight":6}'&gt;&lt;/div&gt;
+            </code>
+          </pre>
+        </div>
+
+        <div id="geocoding" class="mb-9">
+          <h2 class="h4">Geocoding <a class="anchorjs-link" href="#geocoding" aria-label="Anchor" data-anchorjs-icon="#"></a></h2>
+
+          <div class="fd-example mb-4">
+            <div id="GMapGeocoding" class="js-g-map embed-responsive embed-responsive-21by9"
+                 data-lat="-12.043333"
+                 data-lng="-77.028333"
+                 data-zoom="14"
+                 data-geocoding="true"
+                 data-cords-target="#GMapGeocodingAddress"
+                 data-pin="true"
+                 data-pin-icon="../../assets/img/map-markers/map-marker6.png"></div>
+          </div>
+
+          <pre class="mb-4">
+            <code class="language-html" data-lang="html">
+              &lt;div id="GMapGeocoding" class="js-g-map embed-responsive embed-responsive-21by9"
+                   data-lat="-12.043333"
+                   data-lng="-77.028333"
+                   data-zoom="14"
+                   data-geocoding="true"
+                   data-cords-target="#GMapGeocodingAddress"
+                   data-pin="true"
+                   data-pin-icon="../../assets/img/map-markers/map-marker6.png"&gt;&lt;/div&gt;
+            </code>
+          </pre>
+        </div>
+
+        <div id="multiple-markers" class="mb-9">
+          <h2 class="h4">Multiple markers <a class="anchorjs-link" href="#multiple-markers" aria-label="Anchor" data-anchorjs-icon="#"></a></h2>
+
+          <div class="fd-example mb-4">
+            <div id="GMapMultipleMarkers" class="js-g-map embed-responsive embed-responsive-21by9"
+                 data-type="terrain"
+                 data-lat="-33.92"
+                 data-lng="151.25"
+                 data-zoom="10"
+                 data-multiple-markers="true"
+                 data-markers-locations='[
+                   ["Bondi Beach", -33.890542, 151.274856, 4],
+                   ["Coogee Beach", -33.923036, 151.259052, 5],
+                   ["Cronulla Beach", -34.028249, 151.157507, 3],
+                   ["Manly Beach", -33.80010128657071, 151.28747820854187, 2],
+                   ["Maroubra Beach", -33.950198, 151.259302, 1]
+                 ]'></div>
+          </div>
+
+          <pre class="mb-4">
+            <code class="language-html" data-lang="html">
+              &lt;div id="GMapMultipleMarkers" class="js-g-map embed-responsive embed-responsive-21by9"
+                   data-type="terrain"
+                   data-lat="-33.92"
+                   data-lng="151.25"
+                   data-zoom="10"
+                   data-multiple-markers="true"
+                   data-markers-locations='[
+                     ["Bondi Beach", -33.890542, 151.274856, 4],
+                     ["Coogee Beach", -33.923036, 151.259052, 5],
+                     ["Cronulla Beach", -34.028249, 151.157507, 3],
+                     ["Manly Beach", -33.80010128657071, 151.28747820854187, 2],
+                     ["Maroubra Beach", -33.950198, 151.259302, 1]
+                   ]'&gt;&lt;/div&gt;
+            </code>
+          </pre>
+        </div>
+
+        <div id="js-behavior" class="mb-4">
+          <h2 class="h4">JavaScript behavior <a class="anchorjs-link" href="#js-behavior" aria-label="Anchor" data-anchorjs-icon="#"></a></h2>
+        </div>
+
+        <div id="methods" class="mb-9">
+          <h2 class="h4">Methods <a class="anchorjs-link" href="#methods" aria-label="Anchor" data-anchorjs-icon="#"></a></h2>
+          <p>Options can be passed via data attributes or JavaScript. For data attributes, append the option name to <code class="highlighter-rouge">data-</code>, as in <code class="highlighter-rouge">data-type=""</code>.</p>
+
+          <div class="fd-example mb-4">
+            <table class="table table-bordered table-striped">
+              <thead>
+                <tr>
+                  <th style="width: 30%;">Attribute</th>
+                  <th>Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <p><code class="highlighter-rouge">data-type</code></p>
+                  </td>
+                  <td>
+                    Map types. Valid values are:
+
+                    <ol>
+                      <li class="mb-6">
+                        <code class="highlighter-rouge">satellite</code> - satellite imagery Google Earth map. Available parameters for customization:
+
+                        <ul class="mb-4">
+                          <li><code class="highlighter-rouge">data-lat</code></li>
+                          <li><code class="highlighter-rouge">data-lng</code></li>
+                          <li><code class="highlighter-rouge">data-zoom</code></li>
+                          <li><code class="highlighter-rouge">data-title</code></li>
+                          <li><code class="highlighter-rouge">data-pin</code></li>
+                          <li><code class="highlighter-rouge">data-pin-icon</code></li>
+                          <li><code class="highlighter-rouge">data-geolocation</code></li>
+                          <li><code class="highlighter-rouge">data-geocoding</code></li>
+                          <li><code class="highlighter-rouge">data-cords-target</code></li>
+                          <li><code class="highlighter-rouge">data-multiple-markers</code></li>
+                          <li><code class="highlighter-rouge">data-markers-locations</code></li>
+                        </ul>
+
+                        <h4 class="h6">Screenshot example:</h4>
+                        <img class="img-fluid" src="../assets/img/img5.png" alt="Image Description">
+                      </li>
+
+                      <li class="mb-6">
+                        <code class="highlighter-rouge">terrain</code> - physical map on the basis of data on the landscape. Available parameters for customization:
+
+                        <ul class="mb-4">
+                          <li><code class="highlighter-rouge">data-lat</code></li>
+                          <li><code class="highlighter-rouge">data-lng</code></li>
+                          <li><code class="highlighter-rouge">data-zoom</code></li>
+                          <li><code class="highlighter-rouge">data-title</code></li>
+                          <li><code class="highlighter-rouge">data-pin</code></li>
+                          <li><code class="highlighter-rouge">data-pin-icon</code></li>
+                          <li><code class="highlighter-rouge">data-geolocation</code></li>
+                          <li><code class="highlighter-rouge">data-geocoding</code></li>
+                          <li><code class="highlighter-rouge">data-cords-target</code></li>
+                          <li><code class="highlighter-rouge">data-multiple-markers</code></li>
+                          <li><code class="highlighter-rouge">data-markers-locations</code></li>
+                        </ul>
+
+                        <h4 class="h6">Screenshot example:</h4>
+                        <img class="img-fluid" src="../assets/img/img6.png" alt="Image Description">
+                      </li>
+
+                      <li class="mb-6">
+                        <code class="highlighter-rouge">street-view</code> - Provides circular panoramas from these locations within the coverage area. The coverage area of the Street View API is the same as that of the Google Maps application. A list of supported cities for Street View is available on <a href="https://www.google.com/streetview/understand/?hl=ru#where">Google Maps</a> Available parameters for customization:
+
+                        <ul class="mb-4">
+                          <li><code class="highlighter-rouge">data-lat</code></li>
+                          <li><code class="highlighter-rouge">data-lng</code></li>
+                          <li><code class="highlighter-rouge">data-title</code></li>
+                          <li><code class="highlighter-rouge">data-geolocation</code></li>
+                          <li><code class="highlighter-rouge">data-geocoding</code></li>
+                          <li><code class="highlighter-rouge">data-cords-target</code></li>
+                        </ul>
+
+                        <h4 class="h6">Screenshot example:</h4>
+                        <img class="img-fluid" src="../assets/img/img7.png" alt="Image Description">
+                      </li>
+
+                      <li class="mb-6">
+                        <code class="highlighter-rouge">static</code> - a static image of the map. The picture is generated according to the parameters. Available parameters for customization:
+
+                        <ul class="mb-4">
+                          <li><code class="highlighter-rouge">data-lat</code></li>
+                          <li><code class="highlighter-rouge">data-lng</code></li>
+                          <li><code class="highlighter-rouge">data-zoom</code></li>
+                          <li><code class="highlighter-rouge">data-title</code></li>
+                          <li><code class="highlighter-rouge">data-pin</code></li>
+                          <li><code class="highlighter-rouge">data-pin-icon</code></li>
+                        </ul>
+
+                        <h4 class="h6">Screenshot example:</h4>
+                        <img class="img-fluid" src="../assets/img/img8.png" alt="Image Description">
+                      </li>
+
+                      <li class="mb-6">
+                        <code class="highlighter-rouge">custom</code> - custom map. Available parameters for customization:
+
+                        <ul class="mb-4">
+                          <li><code class="highlighter-rouge">data-lat</code></li>
+                          <li><code class="highlighter-rouge">data-lng</code></li>
+                          <li><code class="highlighter-rouge">data-zoom</code></li>
+                          <li><code class="highlighter-rouge">data-title</code></li>
+                          <li><code class="highlighter-rouge">data-styles</code></li>
+                          <li><code class="highlighter-rouge">data-polygon</code></li>
+                          <li><code class="highlighter-rouge">data-polygon-cords</code></li>
+                          <li><code class="highlighter-rouge">data-polygon-styles</code></li>
+                          <li><code class="highlighter-rouge">data-polylines</code></li>
+                          <li><code class="highlighter-rouge">data-polylines-cords</code></li>
+                          <li><code class="highlighter-rouge">data-polylines-styles</code></li>
+                          <li><code class="highlighter-rouge">data-routes</code></li>
+                          <li><code class="highlighter-rouge">data-routes-cords</code></li>
+                          <li><code class="highlighter-rouge">data-routes-styles</code></li>
+                          <li><code class="highlighter-rouge">data-geolocation</code></li>
+                          <li><code class="highlighter-rouge">data-geocoding</code></li>
+                          <li><code class="highlighter-rouge">data-cords-target</code></li>
+                          <li><code class="highlighter-rouge">data-pin</code></li>
+                          <li><code class="highlighter-rouge">data-pin-icon</code></li>
+                          <li><code class="highlighter-rouge">data-multiple-markers</code></li>
+                          <li><code class="highlighter-rouge">data-markers-locations</code></li>
+                        </ul>
+
+                        <h4 class="h6">Screenshot example:</h4>
+                        <img class="img-fluid" src="../assets/img/img9.png" alt="Image Description">
+                      </li>
+                    </ol>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <p><code class="highlighter-rouge">data-lat</code></p>
+                  </td>
+                  <td>Latitude coordinate.</td>
+                </tr>
+                <tr>
+                  <td>
+                    <p><code class="highlighter-rouge">data-lng</code></p>
+                  </td>
+                  <td>Longitude coordinate.</td>
+                </tr>
+                <tr>
+                  <td>
+                    <p><code class="highlighter-rouge">data-zoom</code></p>
+                  </td>
+                  <td>Zoom level.</td>
+                </tr>
+                <tr>
+                  <td>
+                    <p><code class="highlighter-rouge">data-title</code></p>
+                  </td>
+                  <td>Hover heading on pin.</td>
+                </tr>
+                <tr>
+                  <td>
+                    <p><code class="highlighter-rouge">data-styles</code></p>
+                  </td>
+                  <td>Takes parameters if <code class="highlighter-rouge">data-type=""</code> is set to <code class="highlighter-rouge">custom</code>. Working with parameters is described <a href="https://developers.google.com/maps/documentation/javascript/style-reference?hl=en">here</a>.</td>
+                </tr>
+                <tr>
+                  <td>
+                    <p><code class="highlighter-rouge">data-polygon</code></p>
+                  </td>
+                  <td>If set to true <code class="highlighter-rouge">true</code>, it includes the ability to highlight the area on the map with color.</td>
+                </tr>
+                <tr>
+                  <td>
+                    <p><code class="highlighter-rouge">data-polygon-cords</code></p>
+                  </td>
+                  <td>If <code class="highlighter-rouge">data-polygon=""</code> is set to <code class="highlighter-rouge">true</code>, takes the values of the coordinates of the area for highlighting by color.</td>
+                </tr>
+                <tr>
+                  <td>
+                    <p><code class="highlighter-rouge">data-polygon-styles</code></p>
+                  </td>
+                  <td>
+                    If <code class="highlighter-rouge">data-polygon=""</code> is set to <code class="highlighter-rouge">true</code>, sets styles for selection.
+
+                    Parameters:
+
+                    <ul class="mb-4">
+                      <li><code class="highlighter-rouge">strokeColor</code> - stroke color</li>
+                      <li><code class="highlighter-rouge">strokeOpacity</code> - stroke opacity</li>
+                      <li><code class="highlighter-rouge">strokeWeight</code> - stroke thickness</li>
+                      <li><code class="highlighter-rouge">fillColor</code> - fill color</li>
+                      <li><code class="highlighter-rouge">fillOpacity</code> - fill opacity</li>
+                    </ul>
+
+                    <h4 class="h6">Screenshot example:</h4>
+                    <img class="img-fluid" src="../assets/img/img10.png" alt="Image Description">
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <p><code class="highlighter-rouge">data-routes</code></p>
+                  </td>
+                  <td>If <code class="highlighter-rouge">true</code>, then includes the ability to add a route according to the specified coordinates.</td>
+                </tr>
+                <tr>
+                  <td>
+                    <p><code class="highlighter-rouge">data-routes-cords</code></p>
+                  </td>
+                  <td>If <code class="highlighter-rouge">data-routes=""</code> is set to <code class="highlighter-rouge">true</code>, takes the values of the coordinates of the route.</td>
+                </tr>
+                <tr>
+                  <td>
+                    <p><code class="highlighter-rouge">data-routes-styles</code></p>
+                  </td>
+                  <td>
+                    If <code class="highlighter-rouge">data-routes=""</code> is set to <code class="highlighter-rouge">true</code>, specifies the styles for the route line.
+
+                    Parameters:
+
+                    <ul class="mb-4">
+                      <li>
+                        <code class="highlighter-rouge">travelMode</code> - the desired mode of movement. Accepted values:
+
+                        <ul>
+                          <li><code class="highlighter-rouge">DRIVING</code> - indicates a standard road route using the road network.</li>
+                          <li><code class="highlighter-rouge">BICYCLING</code> - request a route for cyclists on bike lanes and preferred streets.</li>
+                          <li><code class="highlighter-rouge">TRANSIT</code> - a request for a route on public transport.</li>
+                          <li><code class="highlighter-rouge">WALKING</code> - request for a walking route along footpaths and sidewalks.</li>
+                        </ul>
+                      </li>
+                      <li><code class="highlighter-rouge">strokeColor</code> - stroke color</li>
+                      <li><code class="highlighter-rouge">strokeOpacity</code> - stroke opacity</li>
+                      <li><code class="highlighter-rouge">strokeWeight</code> - stroke thickness</li>
+                    </ul>
+
+                    <h4 class="h6">Screenshot example:</h4>
+                    <img class="img-fluid" src="../assets/img/img11.png" alt="Image Description">
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <p><code class="highlighter-rouge">data-geolocation</code></p>
+                  </td>
+                  <td>If <code class="highlighter-rouge">true</code>, automatic detection of geo-position is turned on.</td>
+                </tr>
+                <tr>
+                  <td>
+                    <p><code class="highlighter-rouge">data-geocoding</code></p>
+                  </td>
+                  <td>If <code class="highlighter-rouge">true</code>, the search functionality on the map is included through the form.</td>
+                </tr>
+                <tr>
+                  <td>
+                    <p><code class="highlighter-rouge">data-cords-target</code></p>
+                  </td>
+                  <td>If <code class="highlighter-rouge">data-geocoding=""</code> is set to <code class="highlighter-rouge">true</code>, the ID is passed to the value of the input field in which the data will be sent.</td>
+                </tr>
+                <tr>
+                  <td>
+                    <p><code class="highlighter-rouge">data-pin</code></p>
+                  </td>
+                  <td>If <code class="highlighter-rouge">true</code>, you can add the custom pin.</td>
+                </tr>
+                <tr>
+                  <td>
+                    <p><code class="highlighter-rouge">data-pin-icon</code></p>
+                  </td>
+                  <td>
+                    If <code class="highlighter-rouge">data-pin=""</code> is set to <code class="highlighter-rouge">true</code>, a value is passed to the path to the image.
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <p><code class="highlighter-rouge">data-multiple-markers</code></p>
+                  </td>
+                  <td>If <code class="highlighter-rouge">true</code>, the possibility of adding several markers on the map will be included.</td>
+                </tr>
+                <tr>
+                  <td>
+                    <p><code class="highlighter-rouge">data-markers-locations</code></p>
+                  </td>
+                  <td>
+                    Coordinates of places displayed on the map.
+
+                    <h4 class="h6">Screenshot example:</h4>
+                    <img class="img-fluid" src="../assets/img/img12.png" alt="Image Description">
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <p><code class="highlighter-rouge">infoWindowTemplate</code></p>
+                  </td>
+                  <td>
+                    In order to change the <code class="highlighter-rouge">infoWindowTemplate</code>, you need to change it using the following function:
+
+                    <pre class="mb-4">
+                      <code class="language-js" data-lang="js">
+                        $.HSCore.components.HSGMap.init('#GMap', {
+                         infoWindowTemplate: function (imgsrc, imgalt, date, locationname, title) {
+                           return '&lt;img src="' + imgsrc + '" alt="' + imgalt + '"&gt;' +
+                             '&lt;div class="p-2"&gt;' +
+                             '&lt;strong class="d-block mb-1"&gt;' + date + '&lt;/strong&gt;' +
+                             '&lt;p class="mb-1"&gt;&lt;i class="fa fa-map-marker mr-2"&gt;&lt;/i&gt;' + locationname + '&lt;/p&gt;' +
+                             '&lt;h3 class="h5 mb-0"&gt;' + title + '&lt;/h3&gt;' +
+                             '&lt;/div&gt;';
+                         }
+                        });
+                      </code>
+                    </pre>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </main>
+      <!-- ========== END MAIN ========== -->
+    </div>
+  </div>
+
+  <!-- Go to Top -->
+  <a class="js-go-to u-go-to" href="javascript:;"
+    data-position='{"bottom": 15, "right": 15 }'
+    data-type="fixed"
+    data-offset-top="400"
+    data-compensation="#header"
+    data-show-effect="slideInUp"
+    data-hide-effect="slideOutDown">
+    <span class="fa fa-arrow-up u-go-to__inner"></span>
+  </a>
+  <!-- End Go to Top -->
+
+  <!-- JS Global Compulsory -->
+  <script src="../../assets/vendor/jquery/dist/jquery.min.js"></script>
+  <script src="../../assets/vendor/jquery-migrate/dist/jquery-migrate.min.js"></script>
+  <script src="../../assets/vendor/popper.js/dist/umd/popper.min.js"></script>
+  <script src="../../assets/vendor/bootstrap/bootstrap.min.js"></script>
+
+  <!-- JS Implementing Plugins -->
+  <script src="../../assets/vendor/hs-megamenu/src/hs.megamenu.js"></script>
+  <script src="../../assets/vendor/gmaps/gmaps.min.js"></script>
+  <script src="../assets/vendor/jquery-ui/jquery-ui.core.min.js"></script>
+  <script src="../assets/vendor/jquery-ui/ui/widgets/menu.js"></script>
+  <script src="../assets/vendor/jquery-ui/ui/widgets/mouse.js"></script>
+  <script src="../assets/vendor/jquery-ui/ui/widgets/autocomplete.js"></script>
+  <script src="../assets/vendor/prism/prism.js"></script>
+
+  <!-- JS Space -->
+  <script src="../../assets/js/hs.core.js"></script>
+  <script src="../../assets/js/components/hs.header.js"></script>
+  <script src="../../assets/js/components/hs.unfold.js"></script>
+  <script src="../../assets/js/components/hs.go-to.js"></script>
+  <script src="../../assets/js/components/hs.g-map.js"></script>
+  <script src="../../assets/js/components/hs.scroll-nav.js"></script>
+  <script src="../assets/js/components/hs.autocomplete-local-search.js"></script>
+
+  <!-- JS Plugins Init. -->
+  <script>
+    $(document).on('ready', function () {
+      // initialization of header
+      $.HSCore.components.HSHeader.init($('#header'));
+
+      // initialization of go to
+      $.HSCore.components.HSGoTo.init('.js-go-to');
+    });
+
+    $(window).on('load', function () {
+      // initialization of HSMegaMenu component
+      $('.js-mega-menu').HSMegaMenu({
+        event: 'hover',
+        pageContainer: $('.container'),
+        breakpoint: 768,
+        hideTimeOut: 0
+      });
+
+      // initialization of autocomplete
+      $.HSCore.components.HSLocalSearchAutocomplete.init('#fd-sidebar-navigation__search-autocomplete');
+
+      // initialization of HSScrollNav component
+      $.HSCore.components.HSScrollNav.init($('#scrollNav'), {
+        duration: 700
+      });
+    });
+
+    // initialization of google map
+    function initMap() {
+      $.HSCore.components.HSGMap.init('.js-g-map');
+    }
+  </script>
+
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyABAaQLTeSRRn4egPXc1tRNi40scrXvcQM&callback=initMap" async defer></script>
+</body>
+</html>

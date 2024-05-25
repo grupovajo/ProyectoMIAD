@@ -1,0 +1,899 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Title -->
+  <title>Cubeportfolio | Space Documentation</title>
+
+  <!-- Required Meta Tags Always Come First -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="../../favicon.ico">
+
+  <!-- Google Fonts -->
+  <link href="//fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+
+  <!-- CSS Implementing Plugins -->
+  <link rel="stylesheet" href="../../assets/vendor/font-awesome/css/all.min.css">
+  <link rel="stylesheet" href="../../assets/vendor/hs-megamenu/src/hs.megamenu.css">
+  <link rel="stylesheet" href="../../assets/vendor/animate.css/animate.min.css">
+  <link rel="stylesheet" href="../../assets/vendor/cubeportfolio/css/cubeportfolio.min.css">
+  <link rel="stylesheet" href="../assets/vendor/jquery-ui/themes/base/jquery-ui.min.css">
+  <link rel="stylesheet" href="../assets/vendor/prism/prism.css">
+
+  <!-- CSS Space Template -->
+  <link rel="stylesheet" href="../../assets/css/theme.css">
+
+  <!-- CSS Space Doc -->
+  <link rel="stylesheet" href="../assets/css/starter.css">
+</head>
+
+<body>
+  <!-- Skippy -->
+  <a id="skippy" class="sr-only sr-only-focusable u-skippy" href="#content">
+    <div class="container">
+      <span class="u-skiplink-text">Skip to main content</span>
+    </div>
+  </a>
+  <!-- End Skippy -->
+
+  <!-- ========== HEADER ========== -->
+  <header id="header" class="u-header u-header--sticky-top-lg">
+    <div class="u-header__section bg-dark">
+      <div id="logoAndNav" class="container-fluid">
+        <!-- Nav -->
+        <nav class="js-mega-menu navbar navbar-expand-lg u-header__navbar">
+          <!-- Logo -->
+          <a class="navbar-brand u-header__navbar-brand py-3" href="../index.html" aria-label="Space">
+            <img src="../../assets/svg/logos/logo-white.svg" alt="Logo">
+          </a>
+          <!-- End Logo -->
+
+          <!-- Responsive Toggle Button -->
+          <button type="button" class="navbar-toggler btn fd-header-toggle"
+                  aria-label="Toggle navigation"
+                  aria-expanded="false"
+                  aria-controls="navBar"
+                  data-toggle="collapse"
+                  data-target="#navBar">
+            <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 30 30" width="30" height="30" focusable="false">
+              <title>Menu</title>
+              <path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M4 7h22M4 15h22M4 23h22"/>
+            </svg>
+          </button>
+          <!-- End Responsive Toggle Button -->
+
+          <!-- Navigation -->
+          <div id="navBar" class="collapse navbar-collapse py-0">
+            <ul class="navbar-nav navbar-expand-md w-100 u-header__navbar-nav">
+              <!-- Live Preview -->
+              <li class="nav-item u-header__nav-item">
+                <a class="nav-link u-header__nav-link text-white-70" href="../../html/home/index.html">Live Preview</a>
+              </li>
+              <!-- End Live Preview -->
+
+              <!-- Starter -->
+              <li class="nav-item u-header__nav-item">
+                <a class="nav-link u-header__nav-link text-white-70" href="../../starter/index.html">Starter</a>
+              </li>
+              <!-- End Starter -->
+
+              <!-- Contact Us -->
+              <li class="nav-item u-header__nav-item">
+                <a class="nav-link u-header__nav-link text-white-70" href="https://htmlstream.com/contact-us">Contact Us</a>
+              </li>
+              <!-- End Contact Us -->
+
+              <!-- Changelog -->
+              <li class="nav-item hs-has-mega-menu d-none d-lg-inline-block u-header__nav-item position-relative ml-lg-auto"
+                  data-event="hover"
+                  data-animation-in="slideInUp"
+                  data-animation-out="fadeOut"
+                  data-position="left">
+                <a id="changelogMenu" class="nav-link u-header__nav-link text-white-70" href="javascript:;"
+                   aria-haspopup="true"
+                   aria-expanded="false">
+                  v1.6
+                  <span class="fa fa-angle-down u-header__nav-link-icon ml-2"></span>
+                </a>
+
+                <!-- Submenu -->
+                <ul class="hs-mega-menu list-unstyled u-header__sub-menu u-header__sub-menu-menu-gutter--y" style="min-width: 220px;"
+                    aria-labelledby="changelogMenu">
+                  <li class="dropdown-item px-0">
+                    <a class="nav-link text-secondary px-4" href="../getting-started/changelog.html#version1_6_1">v1.6.1</a>
+                    <a class="nav-link text-secondary px-4" href="../getting-started/changelog.html#version1_6">v1.6</a>
+                    <a class="nav-link text-secondary px-4" href="../getting-started/changelog.html#version1_5">v1.5</a>
+                    <a class="nav-link text-secondary px-4" href="../getting-started/changelog.html#version1_4">v1.4</a>
+                    <a class="nav-link text-secondary px-4" href="../getting-started/changelog.html#version1_3_1">v1.3.1</a>
+                    <a class="nav-link text-secondary px-4" href="../getting-started/changelog.html#version1_3">v1.3</a>
+                    <a class="nav-link text-secondary px-4" href="../getting-started/changelog.html#version1_2">v1.2</a>
+                    <a class="nav-link text-secondary px-4" href="../getting-started/changelog.html#version1_1">v1.1</a>
+                    <a class="nav-link text-secondary px-4" href="../getting-started/changelog.html#initial-release">v1.0</a>
+                  </li>
+                </ul>
+                <!-- End Submenu -->
+              </li>
+              <!-- End Changelog -->
+
+              <!-- Social Icons -->
+              <li class="ml-md-auto ml-lg-0">
+                <ul class="list-inline mb-0">
+                  <li class="list-inline-item mx-0">
+                    <a class="u-icon u-icon--sm u-icon--light" href="https://www.facebook.com/htmlstream" target="_blank">
+                      <span class="fab fa-facebook-f u-icon__inner"></span>
+                    </a>
+                  </li>
+                  <li class="list-inline-item mx-0">
+                    <a class="u-icon u-icon--sm u-icon--light" href="https://twitter.com/htmlstream" target="_blank">
+                      <span class="fab fa-twitter u-icon__inner"></span>
+                    </a>
+                  </li>
+                  <li class="list-inline-item mx-0">
+                    <a class="u-icon u-icon--sm u-icon--light" href="https://github.com/htmlstreamofficial" target="_blank">
+                      <span class="fab fa-github u-icon__inner"></span>
+                    </a>
+                  </li>
+                  <li class="list-inline-item mx-0">
+                    <a class="u-icon u-icon--sm u-icon--light" href="https://dribbble.com/htmlstream" target="_blank">
+                      <span class="fab fa-dribbble u-icon__inner"></span>
+                    </a>
+                  </li>
+                  <li class="list-inline-item mx-0">
+                    <a class="u-icon u-icon--sm u-icon--light" href="https://www.instagram.com/htmlstream/" target="_blank">
+                      <span class="fab fa-instagram u-icon__inner"></span>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <!-- End Social Icons -->
+
+              <!-- Button -->
+              <li class="nav-item pl-md-3">
+                <a class="btn btn-sm btn-primary" href="https://themes.getbootstrap.com/product/space-multipurpose-responsive-template/" target="_blank">
+                  Buy Now
+                </a>
+              </li>
+              <!-- End Button -->
+            </ul>
+          </div>
+          <!-- End Navigation -->
+        </nav>
+        <!-- End Nav -->
+      </div>
+    </div>
+  </header>
+  <!-- ========== END HEADER ========== -->
+
+  <div class="container-fluid">
+    <div class="row flex-xl-nowrap">
+      <!-- ========== LEFT ========== -->
+      <div class="col-12 col-md-3 col-xl-2 fd-sidebar">
+        <!-- Sidebar Search -->
+        <form class="fd-search d-flex align-items-center">
+          <input id="fd-sidebar-navigation__search-autocomplete" class="form-control form-control-sm" type="text" placeholder="Search..." data-url="../assets/include/ajax/autocomplete-data-for-documentation-search.json">
+
+          <!-- Responsive Toggle Button -->
+          <button class="btn btn-link fd-search-docs-toggle d-md-none p-0 ml-3" type="button"
+                  data-toggle="collapse"
+                  data-target="#navside-accordion"
+                  aria-controls="navside-accordion"
+                  aria-expanded="false"
+                  aria-label="Toggle docs navigation">
+            <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 30 30" width="30" height="30" focusable="false">
+              <title>Menu</title>
+              <path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M4 7h22M4 15h22M4 23h22"/>
+            </svg>
+          </button>
+          <!-- End Responsive Toggle Button -->
+        </form>
+        <!-- End Sidebar Search -->
+
+        <!-- Sidebar Nav -->
+        <nav id="navside-accordion" class="fd-navside collapse">
+          <div class="fd-navside__block">
+            <a class="fd-navside__title" data-toggle="collapse" data-target="#getting-started" aria-expanded="true" aria-controls="getting-started" href="javascript:;">Getting started</a>
+
+            <ul id="getting-started" class="fd-navside__links collapse" data-parent="#navside-accordion">
+              <li><a href="../index.html">Introduction</a></li>
+              <li><a href="../getting-started/file-structures.html">File structures</a></li>
+              <li><a href="../getting-started/gulp.html">Gulp</a></li>
+              <li><a href="../getting-started/credits.html">Credits</a></li>
+              <li><a href="../getting-started/update.html">Update</a></li>
+              <li><a href="../getting-started/changelog.html">Changelog</a></li>
+
+            </ul>
+          </div>
+
+          <div class="fd-navside__block">
+            <a class="fd-navside__title collapsed" data-toggle="collapse" data-target="#components" aria-expanded="true" aria-controls="components" href="javascript:;">Components</a>
+
+            <ul id="components" class="fd-navside__links collapse show" data-parent="#navside-accordion">
+              <li><a href="../components/typography.html">Typography</a></li>
+              <li><a href="../components/alerts.html">Alerts</a></li>
+              <li><a href="../components/animations.html">Animations</a></li>
+              <li><a href="../components/avatars.html">Avatars</a></li>
+              <li><a href="../components/badge.html">Badge</a></li>
+              <li><a href="../components/bg-video.html">Background Video</a></li>
+              <li><a href="../components/buttons.html">Buttons</a></li>
+              <li><a href="../components/cards.html">Cards</a></li>
+              <li><a href="../components/collapse.html">Collapse</a></li>
+              <li><a href="../components/countdown.html">Countdown</a></li>
+              <li><a href="../components/counters.html">Counters</a></li>
+              <li><a class="active" href="../components/cubeportfolio.html">Cubeportfolio</a></li>
+              <li><a href="../components/dividers.html">Dividers</a></li>
+              <li><a href="../components/unfold.html">Unfold (Dropdown and others)</a></li>
+              <li><a href="../components/fancybox.html">Fancybox</a></li>
+              <li><a href="../components/flatpickr.html">Flatpickr</a></li>
+              <li><a href="../components/quantity-counter.html">Quantity Counter</a></li>
+              <li><a href="../components/string-unifier.html">String Unifier</a></li>
+              <li><a href="../components/forms.html">Forms</a></li>
+              <li><a href="../components/input-group.html">Input Groups</a></li>
+              <li><a href="../components/google-map.html">Google Map</a></li>
+              <li><a href="../components/go-to.html">Go to</a></li>
+              <li><a href="../components/headers.html">Headers</a></li>
+              <li><a href="../components/header-mega-menu.html">Header Mega Menu</a></li>
+              <li><a href="../components/header-searches.html">Header Searches</a></li>
+              <li><a href="../components/header-shopping-carts.html">Header Shopping Carts</a></li>
+              <li>
+                <h6 class="fd-navside__sub-title">Icons:</h6>
+                <ul class="fd-navside__links ml-3 mb-2">
+                  <li><a href="../components/icons.html">Common</a></li>
+                  <li><a href="../components/business-icons.html">Business Icons</a></li>
+                  <li><a href="../components/font-awesome.html">Font Awesome Icons</a></li>
+                  <li><a href="../components/stockholm-icons.html">Stockholm Icons</a></li>
+                </ul>
+              </li>
+              <li><a href="../components/labels.html">Label</a></li>
+              <li><a href="../components/list-group.html">List group</a></li>
+              <li><a href="../components/malihu-scrollbar.html">Malihu Scrollbar</a></li>
+              <li><a href="../components/modal-window.html">Modal Window</a></li>
+              <li><a href="../components/pagination.html">Pagination</a></li>
+              <li><a href="../components/parallax.html">Parallax</a></li>
+              <li><a href="../components/progress.html">Progress</a></li>
+              <li><a href="../components/scroll-nav.html">Scroll Nav</a></li>
+              <li><a href="../components/show-animation.html">Show Animation</a></li>
+              <li><a href="../components/skippy.html">Skippy</a></li>
+              <li><a href="../components/slick-carousel.html">Slick Carousel</a></li>
+              <li><a href="../components/social-apis.html">Social APIs</a></li>
+              <li><a href="../components/spinners.html">Spinners</a></li>
+              <li><a href="../components/step-form.html">Step Form</a></li>
+              <li><a href="../components/sticky-block.html">Sticky Block</a></li>
+              <li><a href="../components/sticky-footer.html">Sticky Footer</a></li>
+              <li><a href="../components/tables.html">Tables</a></li>
+              <li><a href="../components/tabs.html">Tabs</a></li>
+              <li><a href="../components/toasts.html">Toasts</a></li>
+              <li><a href="../components/typedjs.html">Typedjs</a></li>
+              <li><a href="../components/validation.html">Validation</a></li>
+              <li><a href="../components/video-player.html">Video Player</a></li>
+              <li><a href="../components/wizard.html">Wizard</a></li>
+            </ul>
+          </div>
+
+          <div class="fd-navside__block">
+            <a class="fd-navside__title" data-toggle="collapse" data-target="#utilities" aria-expanded="true" aria-controls="utilities" href="javascript:;">Utilities</a>
+
+            <ul id="utilities" class="fd-navside__links collapse" data-parent="#navside-accordion">
+              <li><a href="../utilities/borders.html">Borders</a></li>
+              <li><a href="../utilities/colors.html">Colors</a></li>
+              <li><a href="../utilities/content-alignments.html">Content Alignments (with Position)</a></li>
+              <li><a href="../utilities/position.html">Position</a></li>
+              <li><a href="../utilities/sizing.html">Sizing</a></li>
+              <li><a href="../utilities/shadows.html">Shadows</a></li>
+              <li><a href="../utilities/lift.html">Lift</a></li>
+              <li><a href="../utilities/spacing.html">Spacing</a></li>
+              <li><a href="../utilities/others.html">Others</a></li>
+            </ul>
+          </div>
+
+          <div class="fd-navside__block">
+            <a class="fd-navside__title" data-toggle="collapse" data-target="#customization" aria-expanded="true" aria-controls="customization" href="javascript:;">Customization</a>
+
+            <ul id="customization" class="fd-navside__links collapse" data-parent="#navside-accordion">
+              <li><a href="../customization/css.html">CSS</a></li>
+              <li><a href="../customization/sass.html">SASS</a></li>
+              <li><a href="../customization/bootstrap-sass.html">Bootstrap SASS</a></li>
+              <li><a href="../customization/js.html">JavaScript</a></li>
+              <li><a href="../customization/typography.html">Typography</a></li>
+              <li><a href="../customization/colors.html">Colors</a></li>
+            </ul>
+          </div>
+        </nav>
+        <!-- End Sidebar Nav -->
+      </div>
+      <!-- ========== END LEFT ========== -->
+
+      <!-- ========== RIGHT ========== -->
+      <div class="d-none d-xl-block col-xl-2 fd-toc">
+        <ul id="scrollNav" class="fd-toc-section-nav">
+          <li class="fd-toc-entry active"><a href="#how-to-use">How to use?</a></li>
+          <li class="fd-toc-entry"><a href="#basic-example">Basic example</a></li>
+          <li class="fd-toc-entry">
+            <a href="#js-behavior">JavaScript behavior</a>
+            <ul>
+              <li class="fd-toc-entry"><a href="#methods">Methods</a></li>
+            </ul>
+          </li>
+          <li class="fd-toc-entry"><a href="#official-documentation">Official documentation</a></li>
+        </ul>
+      </div>
+      <!-- ========== END RIGHT ========== -->
+
+      <!-- ========== MAIN ========== -->
+      <main class="col-12 col-md-9 col-xl-8 pl-md-5 fd-content space-3">
+        <div class="mb-9">
+          <h1 class="font-weight-medium">Cubeportfolio</h1>
+          <p class="lead font-weight-normal">Showcase your latest works with a a jQuery grid plugin that provides powerful portfolio system, beautiful animated filtering or any other ordered grid content.</p>
+        </div>
+
+        <div id="how-to-use" class="mb-9">
+          <h2 class="h4">How to use? <a class="anchorjs-link" href="#how-to-use" aria-label="Anchor" data-anchorjs-icon="#"></a></h2>
+          <p>Copy-paste the stylesheet <code class="highlighter-rouge">&lt;link&gt;</code> into your <code class="highlighter-rouge">&lt;head&gt;</code> to load the CSS.</p>
+
+          <pre class="mb-4">
+            <code class="language-html" data-lang="html">
+              &lt;link rel="stylesheet" href="../../assets/vendor/cubeportfolio/css/cubeportfolio.min.css"&gt;
+            </code>
+          </pre>
+
+          <p>Copy-paste the following <code class="highlighter-rouge">&lt;script&gt;</code> near the end of your pages under <em><u>JS Implementing Plugins</u></em> to enable it.</p>
+
+          <pre class="mb-4">
+            <code class="language-html" data-lang="html">
+              &lt;script src="../../assets/vendor/cubeportfolio/js/jquery.cubeportfolio.min.js"&gt;&lt;/script&gt;
+            </code>
+          </pre>
+
+          <p>Copy-paste the following <code class="highlighter-rouge">&lt;script&gt;</code> near the end of your pages under <em><u>JS Space</u></em> to enable it.</p>
+
+          <pre class="mb-4">
+            <code class="language-html" data-lang="html">
+              &lt;script src="../../assets/js/helpers/hs.cubeportfolio.js"&gt;&lt;/script&gt;
+            </code>
+          </pre>
+
+          <p>Copy-paste the init function under <em><u>JS Plugins Init.</u></em>, before the closing <code class="highlighter-rouge">&lt;/body&gt;</code> tag, to enable it.</p>
+
+          <pre class="mb-4">
+            <code class="language-html" data-lang="html">
+              &lt;script&gt;
+                $(document).on('ready', function () {
+                  // initialization of cubeportfolio
+                  $.HSCore.components.HSCubeportfolio.init('.cbp');
+                });
+              &lt;/script&gt;
+            </code>
+          </pre>
+        </div>
+
+        <div id="basic-example" class="mb-9">
+          <h2 class="h4">Basic example <a class="anchorjs-link" href="#basic-example" aria-label="Anchor" data-anchorjs-icon="#"></a></h2>
+
+          <div class="fd-example mb-4">
+            <!-- Cubeportfolio -->
+            <div class="u-cubeportfolio">
+              <!-- Filter -->
+              <ul id="filterControls" class="list-inline cbp-l-filters-alignCenter mb-5">
+                <li class="list-inline-item cbp-filter-item cbp-filter-item-active u-cubeportfolio__item" data-filter="*">All</li>
+                <li class="list-inline-item cbp-filter-item u-cubeportfolio__item" data-filter=".branding">Branding</li>
+                <li class="list-inline-item cbp-filter-item u-cubeportfolio__item" data-filter=".abstract">Abstract</li>
+                <li class="list-inline-item cbp-filter-item u-cubeportfolio__item" data-filter=".graphic">Graphic</li>
+                <li class="list-inline-item cbp-filter-item u-cubeportfolio__item" data-filter=".illustration">Illustration</li>
+              </ul>
+              <!-- End Filter -->
+
+              <!-- Content -->
+              <div class="cbp"
+                    data-controls="#filterControls"
+                    data-animation="quicksand"
+                    data-caption-animation="zoom"
+                    data-x-gap="30"
+                    data-y-gap="30"
+                    data-media-queries='[
+                      {"width": 1500, "cols": 3},
+                      {"width": 1100, "cols": 3},
+                      {"width": 800, "cols": 3},
+                      {"width": 580, "cols": 2},
+                      {"width": 300, "cols": 1}
+                    ]'>
+                <!-- Item -->
+                <div class="cbp-item graphic">
+                  <div class="cbp-caption">
+                    <div class="cbp-caption-defaultWrap">
+                      <img src="../assets/img/img41.jpg" alt="Image Description">
+                    </div>
+                    <div class="cbp-caption-activeWrap">
+                      <div class="cbp-l-caption-alignCenter d-flex align-items-end">
+                        <ul class="list-inline ml-auto p-3 mb-0">
+                          <li class="list-inline-item">
+                            <a class="u-icon u-icon--primary rounded-circle" href="../../html/portfolio/single-page-simple.html">
+                              <span class="fa fa-link u-icon__inner"></span>
+                            </a>
+                          </li>
+                          <li class="list-inline-item">
+                            <a class="cbp-lightbox u-icon u-icon--primary rounded-circle" href="../assets/img/img41-lg.jpg">
+                              <span class="fa fa-images u-icon__inner"></span>
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="p-4">
+                    <h2 class="h5 mb-0">Remind me more</h2>
+                    <p class="small mb-0">by Tiberiu Neamu</p>
+                  </div>
+                </div>
+                <!-- End Item -->
+
+                <!-- Item -->
+                <div class="cbp-item branding">
+                  <div class="cbp-caption">
+                    <div class="cbp-caption-defaultWrap">
+                      <img src="../assets/img/img42.jpg" alt="Image Description">
+                    </div>
+                    <div class="cbp-caption-activeWrap">
+                      <div class="cbp-l-caption-alignCenter d-flex align-items-end">
+                        <ul class="list-inline ml-auto p-3 mb-0">
+                          <li class="list-inline-item">
+                            <a class="u-icon u-icon--primary rounded-circle" href="../../html/portfolio/single-page-simple.html">
+                              <span class="fa fa-link u-icon__inner"></span>
+                            </a>
+                          </li>
+                          <li class="list-inline-item">
+                            <a class="cbp-lightbox u-icon u-icon--primary rounded-circle" href="../assets/img/img42-lg.jpg">
+                              <span class="fa fa-images u-icon__inner"></span>
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="p-4">
+                    <h3 class="h5 mb-0">Workout buddy</h3>
+                    <p class="small mb-0">by Tiberiu Neamu</p>
+                  </div>
+                </div>
+                <!-- End Item -->
+
+                <!-- Item -->
+                <div class="cbp-item abstract">
+                  <div class="cbp-caption">
+                    <div class="cbp-caption-defaultWrap">
+                      <img src="../assets/img/img43.jpg" alt="Image Description">
+                    </div>
+                    <div class="cbp-caption-activeWrap">
+                      <div class="cbp-l-caption-alignCenter d-flex align-items-end">
+                        <ul class="list-inline ml-auto p-3 mb-0">
+                          <li class="list-inline-item">
+                            <a class="u-icon u-icon--primary rounded-circle" href="../../html/portfolio/single-page-simple.html">
+                              <span class="fa fa-link u-icon__inner"></span>
+                            </a>
+                          </li>
+                          <li class="list-inline-item">
+                            <a class="cbp-lightbox u-icon u-icon--primary rounded-circle" href="../assets/img/img43-lg.jpg">
+                              <span class="fa fa-images u-icon__inner"></span>
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="p-4">
+                    <h4 class="h5 mb-0">Easy note</h4>
+                    <p class="small mb-0">by Cosmin Capitanu</p>
+                  </div>
+                </div>
+                <!-- End Item -->
+              </div>
+              <!-- End Content -->
+            </div>
+            <!-- End Cubeportfolio -->
+          </div>
+
+          <div style="overflow: auto; height: 300px;">
+            <pre class="mb-4">
+              <code class="language-html" data-lang="html">
+                &lt;!-- Cubeportfolio --&gt;
+                &lt;div class="u-cubeportfolio"&gt;
+                  &lt;!-- Filter --&gt;
+                  &lt;ul id="filterControls" class="list-inline cbp-l-filters-alignCenter mb-5"&gt;
+                    &lt;li class="list-inline-item cbp-filter-item cbp-filter-item-active u-cubeportfolio__item" data-filter="*"&gt;All&lt;/li&gt;
+                    &lt;li class="list-inline-item cbp-filter-item u-cubeportfolio__item" data-filter=".branding"&gt;Branding&lt;/li&gt;
+                    &lt;li class="list-inline-item cbp-filter-item u-cubeportfolio__item" data-filter=".abstract"&gt;Abstract&lt;/li&gt;
+                    &lt;li class="list-inline-item cbp-filter-item u-cubeportfolio__item" data-filter=".graphic"&gt;Graphic&lt;/li&gt;
+                    &lt;li class="list-inline-item cbp-filter-item u-cubeportfolio__item" data-filter=".illustration"&gt;Illustration&lt;/li&gt;
+                  &lt;/ul&gt;
+                  &lt;!-- End Filter --&gt;
+
+                  &lt;!-- Content --&gt;
+                  &lt;div class="cbp"
+                        data-controls="#filterControls"
+                        data-animation="quicksand"
+                        data-caption-animation="zoom"
+                        data-x-gap="30"
+                        data-y-gap="30"
+                        data-media-queries='[
+                          {"width": 1500, "cols": 3},
+                          {"width": 1100, "cols": 3},
+                          {"width": 800, "cols": 3},
+                          {"width": 580, "cols": 2},
+                          {"width": 300, "cols": 1}
+                        ]'&gt;
+                    &lt;!-- Item --&gt;
+                    &lt;div class="cbp-item graphic"&gt;
+                      &lt;div class="cbp-caption"&gt;
+                        &lt;div class="cbp-caption-defaultWrap"&gt;
+                          &lt;img src="../assets/img/img41.jpg" alt="Image Description"&gt;
+                        &lt;/div&gt;
+                        &lt;div class="cbp-caption-activeWrap"&gt;
+                          &lt;div class="cbp-l-caption-alignCenter d-flex align-items-end"&gt;
+                            &lt;ul class="list-inline ml-auto p-3 mb-0"&gt;
+                              &lt;li class="list-inline-item"&gt;
+                                &lt;a class="u-icon u-icon--primary rounded-circle" href="../../html/portfolio/single-page-simple.html"&gt;
+                                  &lt;span class="fa fa-link u-icon__inner"&gt;&lt;/span&gt;
+                                &lt;/a&gt;
+                              &lt;/li&gt;
+                              &lt;li class="list-inline-item"&gt;
+                                &lt;a class="cbp-lightbox u-icon u-icon--primary rounded-circle" href="../assets/img/img41-lg.jpg"&gt;
+                                  &lt;span class="fa fa-images u-icon__inner"&gt;&lt;/span&gt;
+                                &lt;/a&gt;
+                              &lt;/li&gt;
+                            &lt;/ul&gt;
+                          &lt;/div&gt;
+                        &lt;/div&gt;
+                      &lt;/div&gt;
+                      &lt;div class="p-4"&gt;
+                        &lt;h2 class="h5 mb-0"&gt;Remind me more&lt;/h2&gt;
+                        &lt;p class="small mb-0"&gt;by Tiberiu Neamu&lt;/p&gt;
+                      &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;!-- End Item --&gt;
+
+                    &lt;!-- Item --&gt;
+                    &lt;div class="cbp-item branding"&gt;
+                      &lt;div class="cbp-caption"&gt;
+                        &lt;div class="cbp-caption-defaultWrap"&gt;
+                          &lt;img src="../assets/img/img41.jpg" alt="Image Description"&gt;
+                        &lt;/div&gt;
+                        &lt;div class="cbp-caption-activeWrap"&gt;
+                          &lt;div class="cbp-l-caption-alignCenter d-flex align-items-end"&gt;
+                            &lt;ul class="list-inline ml-auto p-3 mb-0"&gt;
+                              &lt;li class="list-inline-item"&gt;
+                                &lt;a class="u-icon u-icon--primary rounded-circle" href="../../html/portfolio/single-page-simple.html"&gt;
+                                  &lt;span class="fa fa-link u-icon__inner"&gt;&lt;/span&gt;
+                                &lt;/a&gt;
+                              &lt;/li&gt;
+                              &lt;li class="list-inline-item"&gt;
+                                &lt;a class="cbp-lightbox u-icon u-icon--primary rounded-circle" href="../assets/img/img42-lg.jpg"&gt;
+                                  &lt;span class="fa fa-images u-icon__inner"&gt;&lt;/span&gt;
+                                &lt;/a&gt;
+                              &lt;/li&gt;
+                            &lt;/ul&gt;
+                          &lt;/div&gt;
+                        &lt;/div&gt;
+                      &lt;/div&gt;
+                      &lt;div class="p-4"&gt;
+                        &lt;h3 class="h5 mb-0"&gt;Workout buddy&lt;/h3&gt;
+                        &lt;p class="small mb-0"&gt;by Tiberiu Neamu&lt;/p&gt;
+                      &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;!-- End Item --&gt;
+
+                    &lt;!-- Item --&gt;
+                    &lt;div class="cbp-item abstract"&gt;
+                      &lt;div class="cbp-caption"&gt;
+                        &lt;div class="cbp-caption-defaultWrap"&gt;
+                          &lt;img src="../assets/img/img41.jpg" alt="Image Description"&gt;
+                        &lt;/div&gt;
+                        &lt;div class="cbp-caption-activeWrap"&gt;
+                          &lt;div class="cbp-l-caption-alignCenter d-flex align-items-end"&gt;
+                            &lt;ul class="list-inline ml-auto p-3 mb-0"&gt;
+                              &lt;li class="list-inline-item"&gt;
+                                &lt;a class="u-icon u-icon--primary rounded-circle" href="../../html/portfolio/single-page-simple.html"&gt;
+                                  &lt;span class="fa fa-link u-icon__inner"&gt;&lt;/span&gt;
+                                &lt;/a&gt;
+                              &lt;/li&gt;
+                              &lt;li class="list-inline-item"&gt;
+                                &lt;a class="cbp-lightbox u-icon u-icon--primary rounded-circle" href="../assets/img/img43-lg.jpg"&gt;
+                                  &lt;span class="fa fa-images u-icon__inner"&gt;&lt;/span&gt;
+                                &lt;/a&gt;
+                              &lt;/li&gt;
+                            &lt;/ul&gt;
+                          &lt;/div&gt;
+                        &lt;/div&gt;
+                      &lt;/div&gt;
+                      &lt;div class="p-4"&gt;
+                        &lt;h4 class="h5 mb-0"&gt;Easy note&lt;/h4&gt;
+                        &lt;p class="small mb-0"&gt;by Cosmin Capitanu&lt;/p&gt;
+                      &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;!-- End Item --&gt;
+                  &lt;/div&gt;
+                  &lt;!-- End Content --&gt;
+                &lt;/div&gt;
+                &lt;!-- End Cubeportfolio --&gt;
+              </code>
+            </pre>
+          </div>
+        </div>
+
+        <div id="js-behavior" class="mb-4">
+          <h2 class="h4">JavaScript behavior <a class="anchorjs-link" href="#js-behavior" aria-label="Anchor" data-anchorjs-icon="#"></a></h2>
+        </div>
+
+        <div id="methods" class="mb-9">
+          <h2 class="h4">Methods <a class="anchorjs-link" href="#methods" aria-label="Anchor" data-anchorjs-icon="#"></a></h2>
+          <p>Options can be passed via data attributes or JavaScript. For data attributes, append the option name to <code class="highlighter-rouge">data-</code>, as in <code class="highlighter-rouge">data-controls=""</code>.</p>
+
+          <div class="fd-example mb-4">
+            <table class="table table-bordered table-striped">
+              <thead>
+                <tr>
+                  <th style="width: 25%;">Attribute</th>
+                  <th>Value</th>
+                  <th>Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <p><code class="highlighter-rouge">data-controls</code></p>
+                  </td>
+                  <td>string that represent the elements in the document (DOM selector)</td>
+                  <td>Defines the container for the filter. The value is the item ID.</td>
+                </tr>
+                <tr>
+                  <td>
+                    <p><code class="highlighter-rouge">data-layout</code></p>
+                  </td>
+                  <td>
+                    <ul class="list-unstyled">
+                      <li><code class="highlighter-rouge">grid</code></li>
+                      <li><code class="highlighter-rouge">slider</code></li>
+                      <li><code class="highlighter-rouge">masonry</code></li>
+                      <li><code class="highlighter-rouge">mosaic</code></li>
+                    </ul>
+                  </td>
+                  <td>Defines the layout mode. The following values are available:</td>
+                </tr>
+                <tr>
+                  <td>
+                    <p><code class="highlighter-rouge">data-x-gap</code></p>
+                  </td>
+                  <td>only integers (e.g. 1, 5, 10)</td>
+                  <td>Defines the spacing between the elements on the left and right.</td>
+                </tr>
+                <tr>
+                  <td>
+                    <p><code class="highlighter-rouge">data-y-gap</code></p>
+                  </td>
+                  <td>only integers (e.g. 1, 5, 10)</td>
+                  <td>Defines the spacing between the elements on the top and bottom.</td>
+                </tr>
+                <tr>
+                  <td>
+                    <p><code class="highlighter-rouge">data-animation</code></p>
+                  </td>
+                  <td>
+                    <ul class="list-unstyled">
+                      <li><code class="highlighter-rouge">fadeOut</code></li>
+                      <li><code class="highlighter-rouge">quicksand</code></li>
+                      <li><code class="highlighter-rouge">bounceLeft</code></li>
+                      <li><code class="highlighter-rouge">bounceTop</code></li>
+                      <li><code class="highlighter-rouge">bounceBottom</code></li>
+                      <li><code class="highlighter-rouge">moveLeft</code></li>
+                      <li><code class="highlighter-rouge">slideLeft</code></li>
+                      <li><code class="highlighter-rouge">fadeOutTop</code></li>
+                      <li><code class="highlighter-rouge">sequentially</code></li>
+                      <li><code class="highlighter-rouge">skew</code></li>
+                      <li><code class="highlighter-rouge">slideDelay</code></li>
+                      <li><code class="highlighter-rouge">rotateSides</code></li>
+                      <li><code class="highlighter-rouge">flipOutDelay</code></li>
+                      <li><code class="highlighter-rouge">flipOut</code></li>
+                      <li><code class="highlighter-rouge">unfold</code></li>
+                      <li><code class="highlighter-rouge">foldLeft</code></li>
+                      <li><code class="highlighter-rouge">scaleDown</code></li>
+                      <li><code class="highlighter-rouge">scaleSides</code></li>
+                      <li><code class="highlighter-rouge">frontRow</code></li>
+                      <li><code class="highlighter-rouge">flipBottom</code></li>
+                      <li><code class="highlighter-rouge">rotateRoom</code></li>
+                    </ul>
+                  </td>
+                  <td>Defines the effects of appearance, as well as the sorting of elements. The following values are available:</td>
+                </tr>
+                <tr>
+                  <td>
+                    <p><code class="highlighter-rouge">data-caption-animation</code></p>
+                  </td>
+                  <td>
+                    <ul class="list-unstyled">
+                      <li><code class="highlighter-rouge">pushTop</code></li>
+                      <li><code class="highlighter-rouge">pushDown</code></li>
+                      <li><code class="highlighter-rouge">revealBottom</code></li>
+                      <li><code class="highlighter-rouge">revealTop</code></li>
+                      <li><code class="highlighter-rouge">revealLeft</code></li>
+                      <li><code class="highlighter-rouge">moveRight</code></li>
+                      <li><code class="highlighter-rouge">overlayBottom</code></li>
+                      <li><code class="highlighter-rouge">overlayBottomPush</code></li>
+                      <li><code class="highlighter-rouge">overlayBottomReveal</code></li>
+                      <li><code class="highlighter-rouge">overlayBottomAlong</code></li>
+                      <li><code class="highlighter-rouge">overlayRightAlong</code></li>
+                      <li><code class="highlighter-rouge">minimal</code></li>
+                      <li><code class="highlighter-rouge">fadeIn</code></li>
+                      <li><code class="highlighter-rouge">zoom</code></li>
+                      <li><code class="highlighter-rouge">opacity</code></li>
+                    </ul>
+                  </td>
+                  <td>The appearance effect for the description. The following values are available:</td>
+                </tr>
+                <tr>
+                  <td>
+                    <p><code class="highlighter-rouge">data-media-queries</code></p>
+                  </td>
+                  <td>
+                    <ul class="list-unstyled">
+                      <li>{"width": 1500, "cols": 4},</li>
+                      <li>{"width": 1100, "cols": 4},</li>
+                      <li>{"width": 800, "cols": 3},</li>
+                      <li>{"width": 480, "cols": 2},</li>
+                      <li>{"width": 300, "cols": 1}</li>
+                    </ul>
+                  </td>
+                  <td>Responsive breakpoint values. Allows you to change some rules on the resolution specified in the first item of the object.</td>
+                </tr>
+                <tr>
+                  <td>
+                    <p><code class="highlighter-rouge">data-load-more-selector</code></p>
+                  </td>
+                  <td>string that represent the elements in the document (DOM selector)</td>
+                  <td>Define the wrapper for loadMore</td>
+                </tr>
+                <tr>
+                  <td>
+                    <p><code class="highlighter-rouge">data-load-more-action</code></p>
+                  </td>
+                  <td>'click' or 'auto'</td>
+                  <td>How the loadMore functionality should behave. Load on click on the button or automatically when you scroll the page</td>
+                </tr>
+                <tr>
+                  <td>
+                    <p><code class="highlighter-rouge">data-load-more-amount</code></p>
+                  </td>
+                  <td>only integers (e.g. 2, 3, 10)</td>
+                  <td>How many items to load when a loadMore action is triggered</td>
+                </tr>
+                <tr>
+                  <td>
+                    <p><code class="highlighter-rouge">data-is-auto</code></p>
+                  </td>
+                  <td>true or false</td>
+                  <td>Autoplay the slider. Option available only for <code class="highlighter-rouge">data-layout="slider"</code></td>
+                </tr>
+                <tr>
+                  <td>
+                    <p><code class="highlighter-rouge">data-auto-timeout</code></p>
+                  </td>
+                  <td>only integers (ex: 1000, 2000, 5000)</td>
+                  <td>Autoplay interval timeout. Time is set in milliseconds. 1000 milliseconds equals 1 second. Option available only for <code class="highlighter-rouge">data-layout="slider"</code></td>
+                </tr>
+                <tr>
+                  <td>
+                    <p><code class="highlighter-rouge">data-is-auto-pause-on-hover</code></p>
+                  </td>
+                  <td>true or false</td>
+                  <td>Stops autoplay when user hover the slider. Option available only for <code class="highlighter-rouge">data-layout="slider"</code></td>
+                </tr>
+                <tr>
+                  <td>
+                    <p><code class="highlighter-rouge">data-is-show-navigation</code></p>
+                  </td>
+                  <td>true or false</td>
+                  <td>Show 'next' and 'prev' buttons for slider. Option available only for <code class="highlighter-rouge">data-layout="slider"</code></td>
+                </tr>
+                <tr>
+                  <td>
+                    <p><code class="highlighter-rouge">data-is-show-pagination</code></p>
+                  </td>
+                  <td>true or false</td>
+                  <td>Show pagination for slider. Option available only for <code class="highlighter-rouge">data-layout="slider"</code></td>
+                </tr>
+                <tr>
+                  <td>
+                    <p><code class="highlighter-rouge">data-is-rewind-nav</code></p>
+                  </td>
+                  <td>true or false</td>
+                  <td>Enable slide to first item (last item). Option available only for <code class="highlighter-rouge">data-layout="slider"</code></td>
+                </tr>
+                <tr>
+                  <td>
+                    <p><code class="highlighter-rouge">data-is-scroll-by-page</code></p>
+                  </td>
+                  <td>true or false</td>
+                  <td>Scroll by page and not by item. This option affect next/prev buttons and drag support. Option available only for <code class="highlighter-rouge">data-layout="slider"</code></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="fd-callout fd-callout-warning">
+          <h3 id="official-documentation" class="h5">Official Documentation</h3>
+
+          <p>For more detailed information, see the official documentation: <a href="../../assets/vendor/cubeportfolio/documentation/index.html">Cubeportfolio documentation</a>.</p>
+        </div>
+      </main>
+      <!-- ========== END MAIN ========== -->
+    </div>
+  </div>
+
+  <!-- Go to Top -->
+  <a class="js-go-to u-go-to" href="javascript:;"
+    data-position='{"bottom": 15, "right": 15 }'
+    data-type="fixed"
+    data-offset-top="400"
+    data-compensation="#header"
+    data-show-effect="slideInUp"
+    data-hide-effect="slideOutDown">
+    <span class="fa fa-arrow-up u-go-to__inner"></span>
+  </a>
+  <!-- End Go to Top -->
+
+  <!-- JS Global Compulsory -->
+  <script src="../../assets/vendor/jquery/dist/jquery.min.js"></script>
+  <script src="../../assets/vendor/jquery-migrate/dist/jquery-migrate.min.js"></script>
+  <script src="../../assets/vendor/popper.js/dist/umd/popper.min.js"></script>
+  <script src="../../assets/vendor/bootstrap/bootstrap.min.js"></script>
+
+  <!-- JS Implementing Plugins -->
+  <script src="../../assets/vendor/hs-megamenu/src/hs.megamenu.js"></script>
+  <script src="../../assets/vendor/cubeportfolio/js/jquery.cubeportfolio.min.js"></script>
+  <script src="../assets/vendor/jquery-ui/jquery-ui.core.min.js"></script>
+  <script src="../assets/vendor/jquery-ui/ui/widgets/menu.js"></script>
+  <script src="../assets/vendor/jquery-ui/ui/widgets/mouse.js"></script>
+  <script src="../assets/vendor/jquery-ui/ui/widgets/autocomplete.js"></script>
+  <script src="../assets/vendor/prism/prism.js"></script>
+
+  <!-- JS Space -->
+  <script src="../../assets/js/hs.core.js"></script>
+  <script src="../../assets/js/components/hs.header.js"></script>
+  <script src="../../assets/js/components/hs.unfold.js"></script>
+  <script src="../../assets/js/components/hs.go-to.js"></script>
+  <script src="../../assets/js/components/hs.scroll-nav.js"></script>
+  <script src="../../assets/js/components/hs.cubeportfolio.js"></script>
+  <script src="../assets/js/components/hs.autocomplete-local-search.js"></script>
+
+  <!-- JS Plugins Init. -->
+  <script>
+    $(document).on('ready', function () {
+      // initialization of header
+      $.HSCore.components.HSHeader.init($('#header'));
+
+      // initialization of go to
+      $.HSCore.components.HSGoTo.init('.js-go-to');
+
+      // initialization of cubeportfolio
+      $.HSCore.components.HSCubeportfolio.init('.cbp');
+    });
+
+    $(window).on('load', function () {
+      // initialization of HSMegaMenu component
+      $('.js-mega-menu').HSMegaMenu({
+        event: 'hover',
+        pageContainer: $('.container'),
+        breakpoint: 768,
+        hideTimeOut: 0
+      });
+
+      // initialization of autocomplete
+      $.HSCore.components.HSLocalSearchAutocomplete.init('#fd-sidebar-navigation__search-autocomplete');
+
+      // initialization of HSScrollNav component
+      $.HSCore.components.HSScrollNav.init($('#scrollNav'), {
+        duration: 700
+      });
+    });
+  </script>
+</body>
+</html>

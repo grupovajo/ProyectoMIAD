@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Title -->
+  <title>Footers - Space Starter | Space - Responsive Website Template</title>
+
+  <!-- Required Meta Tags Always Come First -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="../favicon.ico">
+
+  <!-- Google Fonts -->
+  <link href="//fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+
+  <!-- CSS Implementing Plugins -->
+  <link rel="stylesheet" href="../assets/vendor/font-awesome/css/all.min.css">
+  <link rel="stylesheet" href="../assets/vendor/hs-megamenu/src/hs.megamenu.css">
+  <link rel="stylesheet" href="../assets/vendor/animate.css/animate.min.css">
+  <link rel="stylesheet" href="../documentation/assets/vendor/jquery-ui/themes/base/jquery-ui.min.css">
+  <link rel="stylesheet" href="../documentation/assets/vendor/prism/prism.css">
+
+  <!-- CSS Space Template -->
+  <link rel="stylesheet" href="../assets/css/theme.css">
+
+  <!-- CSS Space Doc -->
+  <link rel="stylesheet" href="../documentation/assets/css/starter.css">
+</head>
+
+<body>
+  <!-- Skippy -->
+  <a id="skippy" class="sr-only sr-only-focusable u-skippy" href="#content">
+    <div class="container">
+      <span class="u-skiplink-text">Skip to main content</span>
+    </div>
+  </a>
+  <!-- End Skippy -->
+
+  <!-- ========== HEADER ========== -->
+  <header id="header" class="u-header u-header--sticky-top-lg">
+    <div class="u-header__section">
+      <div id="logoAndNav" class="container-fluid">
+        <!-- Nav -->
+        <nav class="js-mega-menu navbar navbar-expand-lg u-header__navbar">
+          <!-- Logo -->
+          <a class="navbar-brand u-header__navbar-brand py-3" href="index.html" aria-label="Space">
+            <img src="../assets/svg/logos/logo.svg" alt="Logo">
+          </a>
+          <!-- End Logo -->
+
+          <!-- Responsive Toggle Button -->
+          <button type="button" class="navbar-toggler btn fd-header-toggle"
+                  aria-label="Toggle navigation"
+                  aria-expanded="false"
+                  aria-controls="navBar"
+                  data-toggle="collapse"
+                  data-target="#navBar">
+            <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 30 30" width="30" height="30" focusable="false">
+              <title>Menu</title>
+              <path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M4 7h22M4 15h22M4 23h22"/>
+            </svg>
+          </button>
+          <!-- End Responsive Toggle Button -->
+
+          <!-- Navigation -->
+          <div id="navBar" class="collapse navbar-collapse py-0">
+            <ul class="navbar-nav navbar-expand-md w-100 u-header__navbar-nav">
+              <!-- Live Preview -->
+              <li class="nav-item u-header__nav-item">
+                <a class="nav-link u-header__nav-link" href="../html/home/index.html">Live Preview</a>
+              </li>
+              <!-- End Live Preview -->
+
+              <!-- Starter -->
+              <li class="nav-item u-header__nav-item">
+                <a class="nav-link u-header__nav-link" href="../documentation/index.html">Documentation</a>
+              </li>
+              <!-- End Starter -->
+
+              <!-- Contact Us -->
+              <li class="nav-item u-header__nav-item">
+                <a class="nav-link u-header__nav-link" href="https://htmlstream.com/contact-us">Contact Us</a>
+              </li>
+              <!-- End Contact Us -->
+
+              <!-- Changelog -->
+              <li class="nav-item hs-has-mega-menu d-none d-lg-inline-block u-header__nav-item position-relative ml-lg-auto"
+                  data-event="hover"
+                  data-animation-in="slideInUp"
+                  data-animation-out="fadeOut"
+                  data-position="left">
+                <a id="changelogMenu" class="nav-link u-header__nav-link" href="javascript:;"
+                   aria-haspopup="true"
+                   aria-expanded="false">
+                  v1.6
+                  <span class="fa fa-angle-down u-header__nav-link-icon ml-2"></span>
+                </a>
+
+                <!-- Submenu -->
+                <ul class="hs-mega-menu list-unstyled u-header__sub-menu u-header__sub-menu-menu-gutter--y" style="min-width: 220px;"
+                    aria-labelledby="changelogMenu">
+                  <li class="dropdown-item px-0">
+                    <a class="nav-link text-secondary px-4" href="../documentation/getting-started/changelog.html#version1_6_1">v1.6.1</a>
+                    <a class="nav-link text-secondary px-4" href="../documentation/getting-started/changelog.html#version1_6">v1.6</a>
+                    <a class="nav-link text-secondary px-4" href="../documentation/getting-started/changelog.html#version1_5">v1.5</a>
+                    <a class="nav-link text-secondary px-4" href="../documentation/getting-started/changelog.html#version1_4">v1.4</a>
+                    <a class="nav-link text-secondary px-4" href="../documentation/getting-started/changelog.html#version1_3_1">v1.3.1</a>
+                    <a class="nav-link text-secondary px-4" href="../documentation/getting-started/changelog.html#version1_3">v1.3</a>
+                    <a class="nav-link text-secondary px-4" href="../documentation/getting-started/changelog.html#version1_2">v1.2</a>
+                    <a class="nav-link text-secondary px-4" href="../documentation/getting-started/changelog.html#version1_1">v1.1</a>
+                    <a class="nav-link text-secondary px-4" href="../documentation/getting-started/changelog.html#initial-release">v1.0</a>
+                  </li>
+                </ul>
+                <!-- End Submenu -->
+              </li>
+              <!-- End Changelog -->
+
+              <!-- Social Icons -->
+              <li class="ml-md-auto ml-lg-0">
+                <ul class="list-inline mb-0">
+                  <li class="list-inline-item mx-0">
+                    <a class="u-icon u-icon--sm u-icon--secondary" href="https://www.facebook.com/htmlstream" target="_blank">
+                      <span class="fab fa-facebook-f u-icon__inner"></span>
+                    </a>
+                  </li>
+                  <li class="list-inline-item mx-0">
+                    <a class="u-icon u-icon--sm u-icon--secondary" href="https://twitter.com/htmlstream" target="_blank">
+                      <span class="fab fa-twitter u-icon__inner"></span>
+                    </a>
+                  </li>
+                  <li class="list-inline-item mx-0">
+                    <a class="u-icon u-icon--sm u-icon--secondary" href="https://github.com/htmlstreamofficial" target="_blank">
+                      <span class="fab fa-github u-icon__inner"></span>
+                    </a>
+                  </li>
+                  <li class="list-inline-item mx-0">
+                    <a class="u-icon u-icon--sm u-icon--secondary" href="https://dribbble.com/htmlstream" target="_blank">
+                      <span class="fab fa-dribbble u-icon__inner"></span>
+                    </a>
+                  </li>
+                  <li class="list-inline-item mx-0">
+                    <a class="u-icon u-icon--sm u-icon--secondary" href="https://www.instagram.com/htmlstream/" target="_blank">
+                      <span class="fab fa-instagram u-icon__inner"></span>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <!-- End Social Icons -->
+
+              <!-- Button -->
+              <li class="nav-item pl-md-3">
+                <a class="btn btn-sm btn-primary" href="https://themes.getbootstrap.com/product/space-multipurpose-responsive-template/" target="_blank">
+                  Buy Now
+                </a>
+              </li>
+              <!-- End Button -->
+            </ul>
+          </div>
+          <!-- End Navigation -->
+        </nav>
+        <!-- End Nav -->
+      </div>
+    </div>
+  </header>
+  <!-- ========== END HEADER ========== -->
+
+  <div class="container-fluid">
+    <div class="row flex-xl-nowrap">
+      <!-- ========== LEFT ========== -->
+      <div class="col-12 col-md-3 col-xl-2 fd-sidebar">
+        <!-- Sidebar Search -->
+        <form class="fd-search d-flex align-items-center">
+          <input id="fd-sidebar-navigation__search-autocomplete" class="form-control form-control-sm" type="text" placeholder="Search..." data-url="../documentation/assets/include/ajax/autocomplete-data-for-starter-search.json">
+
+          <!-- Responsive Toggle Button -->
+          <button class="btn btn-link fd-search-docs-toggle d-md-none p-0 ml-3" type="button"
+                  data-toggle="collapse"
+                  data-target="#navside-accordion"
+                  aria-controls="navside-accordion"
+                  aria-expanded="false"
+                  aria-label="Toggle docs navigation">
+            <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 30 30" width="30" height="30" focusable="false">
+              <title>Menu</title>
+              <path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M4 7h22M4 15h22M4 23h22"/>
+            </svg>
+          </button>
+          <!-- End Responsive Toggle Button -->
+        </form>
+        <!-- End Sidebar Search -->
+
+        <!-- Sidebar Nav -->
+        <nav id="navside-accordion" class="fd-navside collapse">
+          <ul id="components" class="fd-navside__links collapse show" data-parent="#navside-accordion">
+            <li><a href="index.html">Introduction</a></li>
+            <li><a href="cards.html">Cards</a></li>
+            <li><a href="clients.html">Clients</a></li>
+            <li><a href="cta.html">Call-to-action (CTA)</a></li>
+            <li><a href="features.html">Features</a></li>
+            <li><a class="active" href="footers.html">Footers</a></li>
+            <li><a href="form-layouts.html">Form layouts</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="header-layouts.html">Header layouts</a></li>
+            <li><a href="hero.html">Hero</a></li>
+            <li><a href="hero-subscribe.html">Hero Subscribe</a></li>
+            <li><a href="icon-blocks.html">Icon blocks</a></li>
+            <li><a href="media-objects.html">Media objects</a></li>
+            <li><a href="modal-window.html">Modal Window</a></li>
+            <li><a href="news-blogs.html">News Blogs</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="products-hero.html">Products hero</a></li>
+            <li><a href="stats.html">Stats</a></li>
+            <li><a href="team.html">Team</a></li>
+            <li><a href="testimonials.html">Testimonials</a></li>
+            <li><a href="timeline.html">Timeline</a></li>
+            <li><a href="typedjs.html">TypedJS</a></li>
+            <li><a href="unfold-dropdown.html">Unfold (Dropdown)</a></li>
+            <li><a href="unfold-sidebar.html">Unfold (Sidebar)</a></li>
+            <li><a href="video-player.html">Video Player</a></li>
+            <li><a href="wizard.html">Wizard</a></li>
+          </ul>
+        </nav>
+        <!-- End Sidebar Nav -->
+      </div>
+      <!-- ========== END LEFT ========== -->
+
+      <!-- ========== MAIN ========== -->
+      <main class="col-12 col-md-9 col-xl-10 pl-md-5 fd-content space-3">
+        <div class="mb-9">
+          <h1 class="font-weight-medium">Footers</h1>
+          <p class="lead font-weight-normal">Different style of footer layouts.</p>
+        </div>
+
+        <div id="footer-1" class="mb-9">
+          <h2 class="h4">Footer #1 <a class="anchorjs-link" href="#footer-1" aria-label="Anchor" data-anchorjs-icon="#"></a></h2>
+
+          <div class="fd-example mb-4">
+            <!-- ========== FOOTER ========== -->
+            <footer class="bg-dark">
+              <div class="container space-2">
+                <div class="row justify-content-md-between">
+                  <div class="col-6 col-md-3 col-lg-2 order-lg-3 mb-7 mb-lg-0">
+                    <h3 class="h6 text-white mb-3">About</h3>
+
+                    <!-- List Group -->
+                    <div class="list-group list-group-flush list-group-transparent">
+                      <a class="list-group-item list-group-item-action" href="../html/pages/about-agency.html">About Agency</a>
+                      <a class="list-group-item list-group-item-action" href="../html/pages/about-start-up.html">About Start-Up</a>
+                      <a class="list-group-item list-group-item-action" href="../html/pages/services-agency.html">Services Agency</a>
+                      <a class="list-group-item list-group-item-action" href="../html/pages/services-start-up.html">Services Start-Up</a>
+                    </div>
+                    <!-- End List Group -->
+                  </div>
+
+                  <div class="col-6 col-md-3 col-lg-2 order-lg-4 mb-7 mb-lg-0">
+                    <h3 class="h6 text-white mb-3">Company</h3>
+
+                    <!-- List Group -->
+                    <div class="list-group list-group-flush list-group-transparent">
+                      <a class="list-group-item list-group-item-action" href="../html/pages/contacts-agency.html">Contact Us</a>
+                      <a class="list-group-item list-group-item-action" href="../html/pages/help.html">Help</a>
+                      <a class="list-group-item list-group-item-action" href="../html/pages/careers.html">Careers</a>
+                      <a class="list-group-item list-group-item-action" href="../html/pages/terms.html">Terms &amp; Conditions</a>
+                      <a class="list-group-item list-group-item-action" href="../html/pages/privacy.html">Privacy &amp; Policy</a>
+                    </div>
+                    <!-- End List Group -->
+                  </div>
+
+                  <div class="col-6 col-md-3 col-lg-2 order-lg-5 mb-7 mb-lg-0">
+                    <h3 class="h6 text-white mb-3">Shop</h3>
+
+                    <!-- List Group -->
+                    <div class="list-group list-group-flush list-group-transparent">
+                      <a class="list-group-item list-group-item-action" href="../html/shop/classic.html">Classic</a>
+                      <a class="list-group-item list-group-item-action" href="../html/shop/single-product.html">Single Product</a>
+                      <a class="list-group-item list-group-item-action" href="../html/shop/checkout.html">Checkout</a>
+                    </div>
+                    <!-- End List Group -->
+                  </div>
+
+                  <div class="col-6 col-md-3 col-lg-2 order-lg-6 mb-7 mb-lg-0">
+                    <h3 class="h6 text-white mb-3">Social</h3>
+
+                    <!-- List -->
+                    <div class="list-group list-group-flush list-group-transparent">
+                      <a class="list-group-item list-group-item-action" href="#">
+                        <span class="fab fa-facebook-f min-width-3 text-center mr-2"></span>
+                        Facebook
+                      </a>
+                      <a class="list-group-item list-group-item-action" href="#">
+                        <span class="fab fa-twitter min-width-3 text-center mr-2"></span>
+                        Twitter
+                      </a>
+                      <a class="list-group-item list-group-item-action" href="#">
+                        <span class="fab fa-dribbble min-width-3 text-center mr-2"></span>
+                        Dribbble
+                      </a>
+                      <a class="list-group-item list-group-item-action" href="#">
+                        <span class="fab fa-github min-width-3 text-center mr-2"></span>
+                        GitHub
+                      </a>
+                    </div>
+                    <!-- End List -->
+                  </div>
+
+                  <div class="col-lg-4 order-lg-1 d-flex align-items-start flex-column">
+                    <!-- Logo -->
+                    <a class="d-inline-block mb-5" href="index.html" aria-label="Space">
+                      <img src="../assets/svg/logos/logo-short-white.svg" alt="Logo" style="width: 40px; max-width: 100%;">
+                    </a>
+                    <!-- End Logo -->
+
+                    <!-- Language -->
+                    <div class="btn-group d-block position-relative mb-4 mb-lg-auto">
+                      <a id="footerLanguageInvoker" class="btn-text-secondary d-flex align-items-center u-unfold--language-btn rounded py-2 px-3" href="javascript:;" role="button"
+                         aria-controls="footerLanguage"
+                         aria-haspopup="true"
+                         aria-expanded="false"
+                         data-unfold-event="click"
+                         data-unfold-target="#footerLanguage"
+                         data-unfold-type="css-animation"
+                         data-unfold-duration="300"
+                         data-unfold-delay="300"
+                         data-unfold-hide-on-scroll="false"
+                         data-unfold-animation-in="slideInUp"
+                         data-unfold-animation-out="fadeOut">
+                        <span class="font-size-14">English</span>
+                        <span class="fa fa-angle-down u-unfold__icon-pointer u-unfold--language-icon-pointer ml-4"></span>
+                      </a>
+
+                      <!-- Content -->
+                      <div id="footerLanguage" class="u-unfold u-unfold--language bottom-0 left-0" aria-labelledby="footerLanguageInvoker">
+                        <div class="py-6 px-5">
+                          <h4 class="h6 mb-4">Select your language</h4>
+
+                          <div class="row">
+                            <div class="col-6">
+                              <!-- List of Languages -->
+                              <div class="list-group list-group-borderless list-group-flush">
+                                <a class="active d-flex align-items-center list-group-item list-group-item-action" href="#">
+                                  <img class="max-width-3 mr-2" src="../assets/vendor/flag-icon-css/flags/4x3/us.svg" alt="United States Flag">
+                                  English
+                                </a>
+                                <a class="d-flex align-items-center list-group-item list-group-item-action" href="#">
+                                  <img class="max-width-3 mr-2" src="../assets/vendor/flag-icon-css/flags/4x3/fr.svg" alt="France Flag">
+                                  Français
+                                </a>
+                                <a class="d-flex align-items-center list-group-item list-group-item-action" href="#">
+                                  <img class="max-width-3 mr-2" src="../assets/vendor/flag-icon-css/flags/4x3/de.svg" alt="Germany Flag">
+                                  Deutsch
+                                </a>
+                                <a class="d-flex align-items-center list-group-item list-group-item-action" href="#">
+                                  <img class="max-width-3 mr-2" src="../assets/vendor/flag-icon-css/flags/4x3/pt.svg" alt="Portugal Flag">
+                                  Português
+                                </a>
+                              </div>
+                              <!-- End List of Languages -->
+                            </div>
+
+                            <div class="col-6">
+                              <!-- List of Languages -->
+                              <div class="list-group list-group-borderless list-group-flush">
+                                <a class="d-flex align-items-center list-group-item list-group-item-action" href="#">
+                                  <img class="max-width-3 mr-2" src="../assets/vendor/flag-icon-css/flags/4x3/es.svg" alt="Spain Flag">
+                                  Español
+                                </a>
+                                <a class="d-flex align-items-center list-group-item list-group-item-action" href="#">
+                                  <img class="max-width-3 mr-2" src="../assets/vendor/flag-icon-css/flags/4x3/it.svg" alt="Italy Flag">
+                                  Italiano
+                                </a>
+                                <a class="d-flex align-items-center list-group-item list-group-item-action" href="#">
+                                  <img class="max-width-3 mr-2" src="../assets/vendor/flag-icon-css/flags/4x3/ru.svg" alt="Russian Flag">
+                                  Русский
+                                </a>
+                                <a class="d-flex align-items-center list-group-item list-group-item-action" href="#">
+                                  <img class="max-width-3 mr-2" src="../assets/vendor/flag-icon-css/flags/4x3/tr.svg" alt="Turkey Flag">
+                                  Türkçe
+                                </a>
+                              </div>
+                              <!-- End List of Languages -->
+                            </div>
+                          </div>
+                        </div>
+
+                        <!-- Signup -->
+                        <a class="u-unfold--language__link p-5" href="../pages/signup-simple.html">
+                          <small class="d-block text-muted mb-1">More languages coming soon.</small>
+                          <small class="d-block">Signup to get notified <span class="fa fa-arrow-right u-unfold__icon-pointer"></span></small>
+                        </a>
+                        <!-- End Signup -->
+                      </div>
+                      <!-- End Content -->
+                    </div>
+                    <!-- End Language -->
+
+                    <p class="small text-muted">All rights reserved. &copy; Space. 2019 Htmlstream.</p>
+                  </div>
+                </div>
+              </div>
+            </footer>
+            <!-- ========== END FOOTER ========== -->
+          </div>
+
+          <div class="mb-4" style="overflow: auto; height: 300px;">
+            <pre>
+              <code class="language-markup" data-lang="html">
+                &lt;!-- ========== FOOTER ========== --&gt;
+                &lt;footer class="bg-dark"&gt;
+                  &lt;div class="container space-2"&gt;
+                    &lt;div class="row justify-content-md-between"&gt;
+                      &lt;div class="col-6 col-md-3 col-lg-2 order-lg-3 mb-7 mb-lg-0"&gt;
+                        &lt;h3 class="h6 text-white mb-3"&gt;About&lt;/h3&gt;
+
+                        &lt;!-- List Group --&gt;
+                        &lt;div class="list-group list-group-flush list-group-transparent"&gt;
+                          &lt;a class="list-group-item list-group-item-action" href="../html/pages/about-agency.html"&gt;About Agency&lt;/a&gt;
+                          &lt;a class="list-group-item list-group-item-action" href="../html/pages/about-start-up.html"&gt;About Start-Up&lt;/a&gt;
+                          &lt;a class="list-group-item list-group-item-action" href="../html/pages/services-agency.html"&gt;Services Agency&lt;/a&gt;
+                          &lt;a class="list-group-item list-group-item-action" href="../html/pages/services-start-up.html"&gt;Services Start-Up&lt;/a&gt;
+                        &lt;/div&gt;
+                        &lt;!-- End List Group --&gt;
+                      &lt;/div&gt;
+
+                      &lt;div class="col-6 col-md-3 col-lg-2 order-lg-4 mb-7 mb-lg-0"&gt;
+                        &lt;h3 class="h6 text-white mb-3"&gt;Company&lt;/h3&gt;
+
+                        &lt;!-- List Group --&gt;
+                        &lt;div class="list-group list-group-flush list-group-transparent"&gt;
+                          &lt;a class="list-group-item list-group-item-action" href="../html/pages/contacts-agency.html"&gt;Contact Us&lt;/a&gt;
+                          &lt;a class="list-group-item list-group-item-action" href="../html/pages/help.html"&gt;Help&lt;/a&gt;
+                          &lt;a class="list-group-item list-group-item-action" href="../html/pages/careers.html"&gt;Careers&lt;/a&gt;
+                          &lt;a class="list-group-item list-group-item-action" href="../html/pages/terms.html"&gt;Terms &amp; Conditions&lt;/a&gt;
+                          &lt;a class="list-group-item list-group-item-action" href="../html/pages/privacy.html"&gt;Privacy &amp; Policy&lt;/a&gt;
+                        &lt;/div&gt;
+                        &lt;!-- End List Group --&gt;
+                      &lt;/div&gt;
+
+                      &lt;div class="col-6 col-md-3 col-lg-2 order-lg-5 mb-7 mb-lg-0"&gt;
+                        &lt;h3 class="h6 text-white mb-3"&gt;Shop&lt;/h3&gt;
+
+                        &lt;!-- List Group --&gt;
+                        &lt;div class="list-group list-group-flush list-group-transparent"&gt;
+                          &lt;a class="list-group-item list-group-item-action" href="../html/shop/classic.html"&gt;Classic&lt;/a&gt;
+                          &lt;a class="list-group-item list-group-item-action" href="../html/shop/single-product.html"&gt;Single Product&lt;/a&gt;
+                          &lt;a class="list-group-item list-group-item-action" href="../html/shop/checkout.html"&gt;Checkout&lt;/a&gt;
+                        &lt;/div&gt;
+                        &lt;!-- End List Group --&gt;
+                      &lt;/div&gt;
+
+                      &lt;div class="col-6 col-md-3 col-lg-2 order-lg-6 mb-7 mb-lg-0"&gt;
+                        &lt;h3 class="h6 text-white mb-3"&gt;Social&lt;/h3&gt;
+
+                        &lt;!-- List --&gt;
+                        &lt;div class="list-group list-group-flush list-group-transparent"&gt;
+                          &lt;a class="list-group-item list-group-item-action" href="#"&gt;
+                            &lt;span class="fab fa-facebook-f min-width-3 text-center mr-2"&gt;&lt;/span&gt;
+                            Facebook
+                          &lt;/a&gt;
+                          &lt;a class="list-group-item list-group-item-action" href="#"&gt;
+                            &lt;span class="fab fa-twitter min-width-3 text-center mr-2"&gt;&lt;/span&gt;
+                            Twitter
+                          &lt;/a&gt;
+                          &lt;a class="list-group-item list-group-item-action" href="#"&gt;
+                            &lt;span class="fab fa-dribbble min-width-3 text-center mr-2"&gt;&lt;/span&gt;
+                            Dribbble
+                          &lt;/a&gt;
+                          &lt;a class="list-group-item list-group-item-action" href="#"&gt;
+                            &lt;span class="fab fa-github min-width-3 text-center mr-2"&gt;&lt;/span&gt;
+                            GitHub
+                          &lt;/a&gt;
+                        &lt;/div&gt;
+                        &lt;!-- End List --&gt;
+                      &lt;/div&gt;
+
+                      &lt;div class="col-lg-4 order-lg-1 d-flex align-items-start flex-column"&gt;
+                        &lt;!-- Logo --&gt;
+                        &lt;a class="d-inline-block mb-5" href="index.html" aria-label="Space"&gt;
+                          &lt;img src="../assets/svg/logos/logo-short-white.svg" alt="Logo" style="width: 40px; max-width: 100%;"&gt;
+                        &lt;/a&gt;
+                        &lt;!-- End Logo --&gt;
+
+                        &lt;!-- Language --&gt;
+                        &lt;div class="btn-group d-block position-relative mb-4 mb-lg-auto"&gt;
+                          &lt;a id="footerLanguageInvoker" class="btn-text-secondary d-flex align-items-center u-unfold--language-btn rounded py-2 px-3" href="javascript:;" role="button"
+                             aria-controls="footerLanguage"
+                             aria-haspopup="true"
+                             aria-expanded="false"
+                             data-unfold-event="click"
+                             data-unfold-target="#footerLanguage"
+                             data-unfold-type="css-animation"
+                             data-unfold-duration="300"
+                             data-unfold-delay="300"
+                             data-unfold-hide-on-scroll="false"
+                             data-unfold-animation-in="slideInUp"
+                             data-unfold-animation-out="fadeOut"&gt;
+                            &lt;span class="font-size-14"&gt;English&lt;/span&gt;
+                            &lt;span class="fa fa-angle-down u-unfold__icon-pointer u-unfold--language-icon-pointer ml-4"&gt;&lt;/span&gt;
+                          &lt;/a&gt;
+
+                          &lt;!-- Content --&gt;
+                          &lt;div id="footerLanguage" class="u-unfold u-unfold--language bottom-0 left-0" aria-labelledby="footerLanguageInvoker"&gt;
+                            &lt;div class="py-6 px-5"&gt;
+                              &lt;h4 class="h6 mb-4"&gt;Select your language&lt;/h4&gt;
+
+                              &lt;div class="row"&gt;
+                                &lt;div class="col-6"&gt;
+                                  &lt;!-- List of Languages --&gt;
+                                  &lt;div class="list-group list-group-borderless list-group-flush"&gt;
+                                    &lt;a class="active d-flex align-items-center list-group-item list-group-item-action" href="#"&gt;
+                                      &lt;img class="max-width-3 mr-2" src="../assets/vendor/flag-icon-css/flags/4x3/us.svg" alt="United States Flag"&gt;
+                                      English
+                                    &lt;/a&gt;
+                                    &lt;a class="d-flex align-items-center list-group-item list-group-item-action" href="#"&gt;
+                                      &lt;img class="max-width-3 mr-2" src="../assets/vendor/flag-icon-css/flags/4x3/fr.svg" alt="France Flag"&gt;
+                                      Français
+                                    &lt;/a&gt;
+                                    &lt;a class="d-flex align-items-center list-group-item list-group-item-action" href="#"&gt;
+                                      &lt;img class="max-width-3 mr-2" src="../assets/vendor/flag-icon-css/flags/4x3/de.svg" alt="Germany Flag"&gt;
+                                      Deutsch
+                                    &lt;/a&gt;
+                                    &lt;a class="d-flex align-items-center list-group-item list-group-item-action" href="#"&gt;
+                                      &lt;img class="max-width-3 mr-2" src="../assets/vendor/flag-icon-css/flags/4x3/pt.svg" alt="Portugal Flag"&gt;
+                                      Português
+                                    &lt;/a&gt;
+                                  &lt;/div&gt;
+                                  &lt;!-- End List of Languages --&gt;
+                                &lt;/div&gt;
+
+                                &lt;div class="col-6"&gt;
+                                  &lt;!-- List of Languages --&gt;
+                                  &lt;div class="list-group list-group-borderless list-group-flush"&gt;
+                                    &lt;a class="d-flex align-items-center list-group-item list-group-item-action" href="#"&gt;
+                                      &lt;img class="max-width-3 mr-2" src="../assets/vendor/flag-icon-css/flags/4x3/es.svg" alt="Spain Flag"&gt;
+                                      Español
+                                    &lt;/a&gt;
+                                    &lt;a class="d-flex align-items-center list-group-item list-group-item-action" href="#"&gt;
+                                      &lt;img class="max-width-3 mr-2" src="../assets/vendor/flag-icon-css/flags/4x3/it.svg" alt="Italy Flag"&gt;
+                                      Italiano
+                                    &lt;/a&gt;
+                                    &lt;a class="d-flex align-items-center list-group-item list-group-item-action" href="#"&gt;
+                                      &lt;img class="max-width-3 mr-2" src="../assets/vendor/flag-icon-css/flags/4x3/ru.svg" alt="Russian Flag"&gt;
+                                      Русский
+                                    &lt;/a&gt;
+                                    &lt;a class="d-flex align-items-center list-group-item list-group-item-action" href="#"&gt;
+                                      &lt;img class="max-width-3 mr-2" src="../assets/vendor/flag-icon-css/flags/4x3/tr.svg" alt="Turkey Flag"&gt;
+                                      Türkçe
+                                    &lt;/a&gt;
+                                  &lt;/div&gt;
+                                  &lt;!-- End List of Languages --&gt;
+                                &lt;/div&gt;
+                              &lt;/div&gt;
+                            &lt;/div&gt;
+
+                            &lt;!-- Signup --&gt;
+                            &lt;a class="u-unfold--language__link p-5" href="../pages/signup-simple.html"&gt;
+                              &lt;small class="d-block text-muted mb-1"&gt;More languages coming soon.&lt;/small&gt;
+                              &lt;small class="d-block"&gt;Signup to get notified &lt;span class="fa fa-arrow-right u-unfold__icon-pointer"&gt;&lt;/span&gt;&lt;/small&gt;
+                            &lt;/a&gt;
+                            &lt;!-- End Signup --&gt;
+                          &lt;/div&gt;
+                          &lt;!-- End Content --&gt;
+                        &lt;/div&gt;
+                        &lt;!-- End Language --&gt;
+
+                        &lt;p class="small text-muted"&gt;All rights reserved. &copy; Space. 2019 Htmlstream.&lt;/p&gt;
+                      &lt;/div&gt;
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                &lt;/footer&gt;
+                &lt;!-- ========== END FOOTER ========== --&gt;
+              </code>
+            </pre>
+          </div>
+
+          <h3 class="h6">JS library and initialization:</h3>
+          <pre class="mb-4">
+            <code class="language-html" data-lang="html">
+              &lt;!-- JS Space --&gt;
+              &lt;script src="../../assets/js/components/hs.unfold.js"&gt;&lt;/script&gt;
+
+              &lt;!-- JS Plugins Init. --&gt;
+              &lt;script&gt;
+                $(document).on('ready', function () {
+                  // initialization of unfold component
+                  $.HSCore.components.HSUnfold.init($('[data-unfold-target]');
+                });
+              &lt;/script&gt;
+            </code>
+          </pre>
+        </div>
+      </main>
+      <!-- ========== END MAIN ========== -->
+    </div>
+  </div>
+
+  <!-- Go to Top -->
+  <a class="js-go-to u-go-to" href="javascript:;"
+    data-position='{"bottom": 15, "right": 15 }'
+    data-type="fixed"
+    data-offset-top="400"
+    data-compensation="#header"
+    data-show-effect="slideInUp"
+    data-hide-effect="slideOutDown">
+    <span class="fa fa-arrow-up u-go-to__inner"></span>
+  </a>
+  <!-- End Go to Top -->
+
+  <!-- JS Global Compulsory -->
+  <script src="../assets/vendor/jquery/dist/jquery.min.js"></script>
+  <script src="../assets/vendor/jquery-migrate/dist/jquery-migrate.min.js"></script>
+  <script src="../assets/vendor/popper.js/dist/umd/popper.min.js"></script>
+  <script src="../assets/vendor/bootstrap/bootstrap.min.js"></script>
+
+  <!-- JS Implementing Plugins -->
+  <script src="../assets/vendor/hs-megamenu/src/hs.megamenu.js"></script>
+  <script src="../documentation/assets/vendor/jquery-ui/jquery-ui.core.min.js"></script>
+  <script src="../documentation/assets/vendor/jquery-ui/ui/widgets/menu.js"></script>
+  <script src="../documentation/assets/vendor/jquery-ui/ui/widgets/mouse.js"></script>
+  <script src="../documentation/assets/vendor/jquery-ui/ui/widgets/autocomplete.js"></script>
+  <script src="../documentation/assets/vendor/prism/prism.js"></script>
+
+  <!-- JS Space -->
+  <script src="../assets/js/hs.core.js"></script>
+  <script src="../assets/js/components/hs.header.js"></script>
+  <script src="../assets/js/components/hs.unfold.js"></script>
+  <script src="../assets/js/components/hs.go-to.js"></script>
+  <script src="../assets/js/components/hs.scroll-nav.js"></script>
+  <script src="../documentation/assets/js/components/hs.autocomplete-local-search.js"></script>
+
+  <!-- JS Plugins Init. -->
+  <script>
+    $(document).on('ready', function () {
+      // initialization of header
+      $.HSCore.components.HSHeader.init($('#header'));
+
+      // initialization of unfold component
+      $.HSCore.components.HSUnfold.init($('[data-unfold-target]'));
+
+      // initialization of go to
+      $.HSCore.components.HSGoTo.init('.js-go-to');
+    });
+
+    $(window).on('load', function () {
+      // initialization of HSMegaMenu component
+      $('.js-mega-menu').HSMegaMenu({
+        event: 'hover',
+        pageContainer: $('.container'),
+        breakpoint: 768,
+        hideTimeOut: 0
+      });
+
+      // initialization of autocomplete
+      $.HSCore.components.HSLocalSearchAutocomplete.init('#fd-sidebar-navigation__search-autocomplete');
+
+      // initialization of HSScrollNav component
+      $.HSCore.components.HSScrollNav.init($('#scrollNav'), {
+        duration: 700
+      });
+    });
+  </script>
+</body>
+</html>

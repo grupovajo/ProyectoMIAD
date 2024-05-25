@@ -1,0 +1,111 @@
+[
+  {
+    "label": "Introduction",
+    "category": "Component",
+    "url": "index.html"
+  },{
+    "label": "Cards",
+    "category": "Component",
+    "url": "cards.html"
+  },{
+    "label": "Clients",
+    "category": "Component",
+    "url": "clients.html"
+  },{
+    "label": "Call-to-action (CTA)",
+    "category": "Component",
+    "url": "cta.html"
+  },{
+    "label": "Features",
+    "category": "Component",
+    "url": "features.html"
+  },{
+    "label": "Footers",
+    "category": "Component",
+    "url": "footers.html"
+  },{
+    "label": "Form layouts",
+    "category": "Component",
+    "url": "form-layouts.html"
+  },{
+    "label": "Gallery",
+    "category": "Component",
+    "url": "gallery.html"
+  },{
+    "label": "Header layouts",
+    "category": "Component",
+    "url": "header-layouts.html"
+  },{
+    "label": "Hero",
+    "category": "Component",
+    "url": "hero.html"
+  },{
+    "label": "Hero subscribe",
+    "category": "Component",
+    "url": "hero-subscribe.html"
+  },{
+    "label": "Icon blocks",
+    "category": "Component",
+    "url": "icon-blocks.html"
+  },{
+    "label": "Media objects",
+    "category": "Component",
+    "url": "media-objects.html"
+  },{
+    "label": "Modal window",
+    "category": "Component",
+    "url": "modal-window.html"
+  },{
+    "label": "News blogs",
+    "category": "Component",
+    "url": "news-blogs.html"
+  },{
+    "label": "Pricing",
+    "category": "Component",
+    "url": "pricing.html"
+  },{
+    "label": "Products",
+    "category": "Component",
+    "url": "products.html"
+  },{
+    "label": "Products hero",
+    "category": "Component",
+    "url": "products-hero.html"
+  },{
+    "label": "Statistics",
+    "category": "Component",
+    "url": "stats.html"
+  },{
+    "label": "Team",
+    "category": "Component",
+    "url": "team.html"
+  },{
+    "label": "Testimonials",
+    "category": "Component",
+    "url": "testimonials.html"
+  },{
+    "label": "Timeline",
+    "category": "Component",
+    "url": "timeline.html"
+  },{
+    "label": "Typed.js",
+    "category": "Component",
+    "url": "typedjs.html"
+  },{
+    "label": "Unfold dropdown",
+    "category": "Component",
+    "url": "unfold-dropdown.html"
+  },{
+    "label": "Unfold sidebar",
+    "category": "Component",
+    "url": "unfold-sidebar.html"
+  },{
+    "label": "Video player",
+    "category": "Component",
+    "url": "video-player.html"
+  },{
+    "label": "Wizard",
+    "category": "Component",
+    "url": "wizard.html"
+  }
+]

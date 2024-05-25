@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Title -->
+  <title>Changelog | Space Documentation</title>
+
+  <!-- Required Meta Tags Always Come First -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="../../favicon.ico">
+
+  <!-- Google Fonts -->
+  <link href="//fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+
+  <!-- CSS Implementing Plugins -->
+  <link rel="stylesheet" href="../../assets/vendor/font-awesome/css/all.min.css">
+  <link rel="stylesheet" href="../../assets/vendor/hs-megamenu/src/hs.megamenu.css">
+  <link rel="stylesheet" href="../../assets/vendor/animate.css/animate.min.css">
+  <link rel="stylesheet" href="../assets/vendor/jquery-ui/themes/base/jquery-ui.min.css">
+  <link rel="stylesheet" href="../assets/vendor/prism/prism.css">
+
+  <!-- CSS Space Template -->
+  <link rel="stylesheet" href="../../assets/css/theme.css">
+
+  <!-- CSS Space Doc -->
+  <link rel="stylesheet" href="../assets/css/starter.css">
+</head>
+
+<body>
+  <!-- Skippy -->
+  <a id="skippy" class="sr-only sr-only-focusable u-skippy" href="#content">
+    <div class="container">
+      <span class="u-skiplink-text">Skip to main content</span>
+    </div>
+  </a>
+  <!-- End Skippy -->
+
+  <!-- ========== HEADER ========== -->
+  <header id="header" class="u-header u-header--sticky-top-lg">
+    <div class="u-header__section bg-dark">
+      <div id="logoAndNav" class="container-fluid">
+        <!-- Nav -->
+        <nav class="js-mega-menu navbar navbar-expand-lg u-header__navbar">
+          <!-- Logo -->
+          <a class="navbar-brand u-header__navbar-brand py-3" href="../index.html" aria-label="Space">
+            <img src="../../assets/svg/logos/logo-white.svg" alt="Logo">
+          </a>
+          <!-- End Logo -->
+
+          <!-- Responsive Toggle Button -->
+          <button type="button" class="navbar-toggler btn fd-header-toggle"
+                  aria-label="Toggle navigation"
+                  aria-expanded="false"
+                  aria-controls="navBar"
+                  data-toggle="collapse"
+                  data-target="#navBar">
+            <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 30 30" width="30" height="30" focusable="false">
+              <title>Menu</title>
+              <path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M4 7h22M4 15h22M4 23h22"/>
+            </svg>
+          </button>
+          <!-- End Responsive Toggle Button -->
+
+          <!-- Navigation -->
+          <div id="navBar" class="collapse navbar-collapse py-0">
+            <ul class="navbar-nav navbar-expand-md w-100 u-header__navbar-nav">
+              <!-- Live Preview -->
+              <li class="nav-item u-header__nav-item">
+                <a class="nav-link u-header__nav-link text-white-70" href="../../html/home/index.html">Live Preview</a>
+              </li>
+              <!-- End Live Preview -->
+
+              <!-- Starter -->
+              <li class="nav-item u-header__nav-item">
+                <a class="nav-link u-header__nav-link text-white-70" href="../../starter/index.html">Starter</a>
+              </li>
+              <!-- End Starter -->
+
+              <!-- Contact Us -->
+              <li class="nav-item u-header__nav-item">
+                <a class="nav-link u-header__nav-link text-white-70" href="https://htmlstream.com/contact-us">Contact Us</a>
+              </li>
+              <!-- End Contact Us -->
+
+              <!-- Changelog -->
+              <li class="nav-item hs-has-mega-menu d-none d-lg-inline-block u-header__nav-item position-relative ml-lg-auto"
+                  data-event="hover"
+                  data-animation-in="slideInUp"
+                  data-animation-out="fadeOut"
+                  data-position="left">
+                <a id="changelogMenu" class="nav-link u-header__nav-link text-white-70" href="javascript:;"
+                   aria-haspopup="true"
+                   aria-expanded="false">
+                  v1.6
+                  <span class="fa fa-angle-down u-header__nav-link-icon ml-2"></span>
+                </a>
+
+                <!-- Submenu -->
+                <ul class="hs-mega-menu list-unstyled u-header__sub-menu u-header__sub-menu-menu-gutter--y" style="min-width: 220px;"
+                    aria-labelledby="changelogMenu">
+                  <li class="dropdown-item px-0">
+                    <a class="nav-link text-secondary px-4" href="../getting-started/changelog.html#version1_6_1">v1.6.1</a>
+                    <a class="nav-link text-secondary px-4" href="../getting-started/changelog.html#version1_6">v1.6</a>
+                    <a class="nav-link text-secondary px-4" href="../getting-started/changelog.html#version1_5">v1.5</a>
+                    <a class="nav-link text-secondary px-4" href="../getting-started/changelog.html#version1_4">v1.4</a>
+                    <a class="nav-link text-secondary px-4" href="../getting-started/changelog.html#version1_3_1">v1.3.1</a>
+                    <a class="nav-link text-secondary px-4" href="../getting-started/changelog.html#version1_3">v1.3</a>
+                    <a class="nav-link text-secondary px-4" href="../getting-started/changelog.html#version1_2">v1.2</a>
+                    <a class="nav-link text-secondary px-4" href="../getting-started/changelog.html#version1_1">v1.1</a>
+                    <a class="nav-link text-secondary px-4" href="../getting-started/changelog.html#initial-release">v1.0</a>
+                  </li>
+                </ul>
+                <!-- End Submenu -->
+              </li>
+              <!-- End Changelog -->
+
+              <!-- Social Icons -->
+              <li class="ml-md-auto ml-lg-0">
+                <ul class="list-inline mb-0">
+                  <li class="list-inline-item mx-0">
+                    <a class="u-icon u-icon--sm u-icon--light" href="https://www.facebook.com/htmlstream" target="_blank">
+                      <span class="fab fa-facebook-f u-icon__inner"></span>
+                    </a>
+                  </li>
+                  <li class="list-inline-item mx-0">
+                    <a class="u-icon u-icon--sm u-icon--light" href="https://twitter.com/htmlstream" target="_blank">
+                      <span class="fab fa-twitter u-icon__inner"></span>
+                    </a>
+                  </li>
+                  <li class="list-inline-item mx-0">
+                    <a class="u-icon u-icon--sm u-icon--light" href="https://github.com/htmlstreamofficial" target="_blank">
+                      <span class="fab fa-github u-icon__inner"></span>
+                    </a>
+                  </li>
+                  <li class="list-inline-item mx-0">
+                    <a class="u-icon u-icon--sm u-icon--light" href="https://dribbble.com/htmlstream" target="_blank">
+                      <span class="fab fa-dribbble u-icon__inner"></span>
+                    </a>
+                  </li>
+                  <li class="list-inline-item mx-0">
+                    <a class="u-icon u-icon--sm u-icon--light" href="https://www.instagram.com/htmlstream/" target="_blank">
+                      <span class="fab fa-instagram u-icon__inner"></span>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <!-- End Social Icons -->
+
+              <!-- Button -->
+              <li class="nav-item pl-md-3">
+                <a class="btn btn-sm btn-primary" href="https://themes.getbootstrap.com/product/space-multipurpose-responsive-template/" target="_blank">
+                  Buy Now
+                </a>
+              </li>
+              <!-- End Button -->
+            </ul>
+          </div>
+          <!-- End Navigation -->
+        </nav>
+        <!-- End Nav -->
+      </div>
+    </div>
+  </header>
+  <!-- ========== END HEADER ========== -->
+
+  <div class="container-fluid">
+    <div class="row flex-xl-nowrap">
+      <!-- ========== LEFT ========== -->
+      <div class="col-12 col-md-3 col-xl-2 fd-sidebar">
+        <!-- Sidebar Search -->
+        <form class="fd-search d-flex align-items-center">
+          <input id="fd-sidebar-navigation__search-autocomplete" class="form-control form-control-sm" type="text" placeholder="Search..." data-url="../assets/include/ajax/autocomplete-data-for-documentation-search.json">
+
+          <!-- Responsive Toggle Button -->
+          <button class="btn btn-link fd-search-docs-toggle d-md-none p-0 ml-3" type="button"
+                  data-toggle="collapse"
+                  data-target="#navside-accordion"
+                  aria-controls="navside-accordion"
+                  aria-expanded="false"
+                  aria-label="Toggle docs navigation">
+            <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 30 30" width="30" height="30" focusable="false">
+              <title>Menu</title>
+              <path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M4 7h22M4 15h22M4 23h22"/>
+            </svg>
+          </button>
+          <!-- End Responsive Toggle Button -->
+        </form>
+        <!-- End Sidebar Search -->
+
+        <!-- Sidebar Nav -->
+        <nav id="navside-accordion" class="fd-navside collapse">
+          <div class="fd-navside__block">
+            <a class="fd-navside__title collapsed" data-toggle="collapse" data-target="#getting-started" aria-expanded="true" aria-controls="getting-started" href="javascript:;">Getting started</a>
+
+            <ul id="getting-started" class="fd-navside__links collapse show" data-parent="#navside-accordion">
+              <li><a href="../index.html">Introduction</a></li>
+              <li><a href="../getting-started/file-structures.html">File structures</a></li>
+              <li><a href="../getting-started/gulp.html">Gulp</a></li>
+              <li><a href="../getting-started/credits.html">Credits</a></li>
+              <li><a href="../getting-started/update.html">Update</a></li>
+              <li><a class="active" href="../getting-started/changelog.html">Changelog</a></li>
+            </ul>
+          </div>
+
+          <div class="fd-navside__block">
+            <a class="fd-navside__title" data-toggle="collapse" data-target="#components" aria-expanded="true" aria-controls="components" href="javascript:;">Components</a>
+
+            <ul id="components" class="fd-navside__links collapse" data-parent="#navside-accordion">
+              <li><a href="../components/typography.html">Typography</a></li>
+              <li><a href="../components/alerts.html">Alerts</a></li>
+              <li><a href="../components/animations.html">Animations</a></li>
+              <li><a href="../components/avatars.html">Avatars</a></li>
+              <li><a href="../components/badge.html">Badge</a></li>
+              <li><a href="../components/bg-video.html">Background Video</a></li>
+              <li><a href="../components/buttons.html">Buttons</a></li>
+              <li><a href="../components/cards.html">Cards</a></li>
+              <li><a href="../components/collapse.html">Collapse</a></li>
+              <li><a href="../components/countdown.html">Countdown</a></li>
+              <li><a href="../components/counters.html">Counters</a></li>
+              <li><a href="../components/cubeportfolio.html">Cubeportfolio</a></li>
+              <li><a href="../components/dividers.html">Dividers</a></li>
+              <li><a href="../components/unfold.html">Unfold (Dropdown and others)</a></li>
+              <li><a href="../components/fancybox.html">Fancybox</a></li>
+              <li><a href="../components/flatpickr.html">Flatpickr</a></li>
+              <li><a href="../components/quantity-counter.html">Quantity Counter</a></li>
+              <li><a href="../components/string-unifier.html">String Unifier</a></li>
+              <li><a href="../components/forms.html">Forms</a></li>
+              <li><a href="../components/input-group.html">Input Groups</a></li>
+              <li><a href="../components/google-map.html">Google Map</a></li>
+              <li><a href="../components/go-to.html">Go to</a></li>
+              <li><a href="../components/headers.html">Headers</a></li>
+              <li><a href="../components/header-mega-menu.html">Header Mega Menu</a></li>
+              <li><a href="../components/header-searches.html">Header Searches</a></li>
+              <li><a href="../components/header-shopping-carts.html">Header Shopping Carts</a></li>
+              <li>
+                <h6 class="fd-navside__sub-title">Icons:</h6>
+                <ul class="fd-navside__links ml-3 mb-2">
+                  <li><a href="../components/icons.html">Common</a></li>
+                  <li><a href="../components/business-icons.html">Business Icons</a></li>
+                  <li><a href="../components/font-awesome.html">Font Awesome Icons</a></li>
+                  <li><a href="../components/stockholm-icons.html">Stockholm Icons</a></li>
+                </ul>
+              </li>
+              <li><a href="../components/labels.html">Label</a></li>
+              <li><a href="../components/list-group.html">List group</a></li>
+              <li><a href="../components/malihu-scrollbar.html">Malihu Scrollbar</a></li>
+              <li><a href="../components/modal-window.html">Modal Window</a></li>
+              <li><a href="../components/pagination.html">Pagination</a></li>
+              <li><a href="../components/parallax.html">Parallax</a></li>
+              <li><a href="../components/progress.html">Progress</a></li>
+              <li><a href="../components/scroll-effect.html">Scroll Effect</a></li>
+              <li><a href="../components/scroll-effect.html">Scroll Effect</a></li>
+              <li><a href="../components/scroll-nav.html">Scroll Nav</a></li>
+              <li><a href="../components/show-animation.html">Show Animation</a></li>
+              <li><a href="../components/skippy.html">Skippy</a></li>
+              <li><a href="../components/slick-carousel.html">Slick Carousel</a></li>
+              <li><a href="../components/social-apis.html">Social APIs</a></li>
+              <li><a href="../components/spinners.html">Spinners</a></li>
+              <li><a href="../components/step-form.html">Step Form</a></li>
+              <li><a href="../components/sticky-block.html">Sticky Block</a></li>
+              <li><a href="../components/sticky-footer.html">Sticky Footer</a></li>
+              <li><a href="../components/tables.html">Tables</a></li>
+              <li><a href="../components/tabs.html">Tabs</a></li>
+              <li><a href="../components/toasts.html">Toasts</a></li>
+              <li><a href="../components/typedjs.html">Typedjs</a></li>
+              <li><a href="../components/validation.html">Validation</a></li>
+              <li><a href="../components/video-player.html">Video Player</a></li>
+              <li><a href="../components/wizard.html">Wizard</a></li>
+            </ul>
+          </div>
+
+          <div class="fd-navside__block">
+            <a class="fd-navside__title" data-toggle="collapse" data-target="#utilities" aria-expanded="true" aria-controls="utilities" href="javascript:;">Utilities</a>
+
+            <ul id="utilities" class="fd-navside__links collapse" data-parent="#navside-accordion">
+              <li><a href="../utilities/borders.html">Borders</a></li>
+              <li><a href="../utilities/colors.html">Colors</a></li>
+              <li><a href="../utilities/content-alignments.html">Content Alignments (with Position)</a></li>
+              <li><a href="../utilities/position.html">Position</a></li>
+              <li><a href="../utilities/sizing.html">Sizing</a></li>
+              <li><a href="../utilities/shadows.html">Shadows</a></li>
+              <li><a href="../utilities/lift.html">Lift</a></li>
+              <li><a href="../utilities/spacing.html">Spacing</a></li>
+              <li><a href="../utilities/others.html">Others</a></li>
+            </ul>
+          </div>
+
+          <div class="fd-navside__block">
+            <a class="fd-navside__title" data-toggle="collapse" data-target="#customization" aria-expanded="true" aria-controls="customization" href="javascript:;">Customization</a>
+
+            <ul id="customization" class="fd-navside__links collapse" data-parent="#navside-accordion">
+              <li><a href="../customization/css.html">CSS</a></li>
+              <li><a href="../customization/sass.html">SASS</a></li>
+              <li><a href="../customization/bootstrap-sass.html">Bootstrap SASS</a></li>
+              <li><a href="../customization/js.html">JavaScript</a></li>
+              <li><a href="../customization/typography.html">Typography</a></li>
+              <li><a href="../customization/colors.html">Colors</a></li>
+            </ul>
+          </div>
+        </nav>
+        <!-- End Sidebar Nav -->
+      </div>
+      <!-- ========== END LEFT ========== -->
+
+      <!-- ========== RIGHT ========== -->
+      <div class="d-none d-xl-block col-xl-2 fd-toc">
+        <ul id="scrollNav" class="fd-toc-section-nav">
+          <li class="fd-toc-entry"><a href="#version1_6_1">v1.6.1</a></li>
+          <li class="fd-toc-entry"><a href="#version1_6">v1.6</a></li>
+          <li class="fd-toc-entry"><a href="#version1_5">v1.5</a></li>
+          <li class="fd-toc-entry"><a href="#version1_4">v1.4</a></li>
+          <li class="fd-toc-entry"><a href="#version1_3_1">v1.3.1</a></li>
+          <li class="fd-toc-entry"><a href="#version1_3">v1.3</a></li>
+          <li class="fd-toc-entry"><a href="#version1_2">v1.2</a></li>
+          <li class="fd-toc-entry"><a href="#version1_1">v1.1</a></li>
+          <li class="fd-toc-entry"><a href="#version1_0_1">v1.0.1</a></li>
+          <li class="fd-toc-entry"><a href="#initial-release">Initial release</a></li>
+        </ul>
+      </div>
+      <!-- ========== END RIGHT ========== -->
+
+      <!-- ========== MAIN ========== -->
+      <main class="col-12 col-md-9 col-xl-8 pl-md-5 fd-content space-3">
+        <div class="mb-9">
+          <h1 class="font-weight-medium">Changelog</h1>
+          <p class="lead font-weight-normal">See what's new added, changed, fixed, improved or updated in the latest Space versions.</p>
+        </div>
+
+        <div class="fd-callout fd-callout-danger mb-9">
+          <h3 id="read-this-before-updating" class="h5">Read this before updating.</h3>
+
+          <p>Do <strong class="text-dark">not</strong> forget to <strong class="text-dark">backup</strong> your files and <strong class="text-dark">read the changelog</strong> before updating your Space copy. If you come across with any problems with Space template during the update and development processes, feel free to contact our support at <a target="_blank" href="https://htmlstream.com/contact-us">htmlstream.com/contact-us</a> and our team will assist you within a short time.</p>
+        </div>
+
+        <div id="version1_6_1">
+          <h2 class="h4"><code class="highlighter-rouge">1.6.1</code> - 29 Nov, 2019 <a class="anchorjs-link" href="#version1_6_1" aria-label="Anchor" data-anchorjs-icon="#"></a></h2>
+
+          <p><span class="u-label u-label--sm u-label--info font-weight-bold rounded">Enhanced</span> SASS file structure</p>
+          <p><span class="u-label u-label--sm u-label--info font-weight-bold rounded">Enhanced</span> Documentation &amp; Starter packages</p>
+          <p><span class="u-label u-label--sm u-label--warning font-weight-bold rounded">Updated</span> Bootstrap <code>v4.3.1</code> to <code>v4.4.0</code></p>
+          <p><span class="u-label u-label--sm u-label--warning font-weight-bold rounded">Updated</span> gulpfile.js from <code>v3.9.x</code> to <code>v4.x</code></p>
+          <p><span class="u-label u-label--sm u-label--warning font-weight-bold rounded">Updated</span> <code>package.json</code></p>
+
+          <h3 class="h5">List of important updated files:</h3>
+          <ul>
+            <li><code class="highlighter-rouge">html/home/creative-start-up.html</code></li>
+            <li><code class="highlighter-rouge">html/home/modern-start-up.html</code></li>
+
+          </ul>
+        </div>
+
+        <hr class="my-7">
+
+        <div id="version1_6">
+          <h2 class="h4"><code class="highlighter-rouge">1.6</code> - 12 Nov, 2019 <a class="anchorjs-link" href="#version1_6" aria-label="Anchor" data-anchorjs-icon="#"></a></h2>
+
+          <p><span class="u-label u-label--sm u-label--primary font-weight-bold rounded">New</span> Job demo</p>
+          <p><span class="u-label u-label--sm u-label--primary font-weight-bold rounded">New</span> Feather Icons</p>
+          <p><span class="u-label u-label--sm u-label--info font-weight-bold rounded">Enhanced</span> Starter</p>
+          <p><span class="u-label u-label--sm u-label--info font-weight-bold rounded">Enhanced</span> Real estate demo</p>
+          <p><span class="u-label u-label--sm u-label--info font-weight-bold rounded">Enhanced</span> Starter</p>
+
+          <h3 class="h5">List of important updated files:</h3>
+          <ul>
+            <li><code class="highlighter-rouge">assets/scss/space/_variables.scss</code></li>
+            <li><code class="highlighter-rouge">assets/scss/space/_space.scss</code></li>
+            <li><code class="highlighter-rouge">assets/scss/space/utilities/_bg-colors.scss</code></li>
+            <li><code class="highlighter-rouge">assets/scss/space/utilities/_bg-overlay.scss</code></li>
+            <li><code class="highlighter-rouge">assets/scss/space/utilities/_borders.scss</code></li>
+            <li><code class="highlighter-rouge">assets/scss/space/utilities/_gradients.scss</code></li>
+            <li><code class="highlighter-rouge">assets/scss/space/utilities/_link-colors.scss</code></li>
+            <li><code class="highlighter-rouge">assets/scss/space/utilities/_opacity.scss</code></li>
+            <li><code class="highlighter-rouge">assets/scss/space/utilities/_text-colors.scss</code></li>
+          </ul>
+        </div>
+
+        <hr class="my-7">
+
+        <div id="version1_5">
+          <h2 class="h4"><code class="highlighter-rouge">1.5</code> - 15 Aug, 2019 <a class="anchorjs-link" href="#version1_5" aria-label="Anchor" data-anchorjs-icon="#"></a></h2>
+
+          <p><span class="u-label u-label--sm u-label--primary font-weight-bold rounded">New</span> Real Estate demo</p>
+          <p><span class="u-label u-label--sm u-label--primary font-weight-bold rounded">New</span> Wizard component</p>
+          <p><span class="u-label u-label--sm u-label--warning font-weight-bold rounded">Updated</span> FontAwesome from v5.9.0 to v5.10.1</p>
+          <p><span class="u-label u-label--sm u-label--warning font-weight-bold rounded">Updated</span> jQuery from v3.3.1 to v3.4.1</p>
+          <p><span class="u-label u-label--sm u-label--info font-weight-bold rounded">Enhanced</span> Starter</p>
+          <p><span class="u-label u-label--sm u-label--info font-weight-bold rounded">Enhanced</span> Documentation</p>
+
+          <h3 class="h5">List of important updated files:</h3>
+          <ul>
+            <li><code class="highlighter-rouge">assets/include/scss/space/_variables.scss</code></li>
+            <li><code class="highlighter-rouge">assets/include/scss/space/_space.scss</code></li>
+
+            <li><code class="highlighter-rouge">assets/include/scss/space/icons/_icon-size.scss</code></li>
+
+            <li><code class="highlighter-rouge">assets/include/scss/space/utilities/_borders.scss</code></li>
+            <li><code class="highlighter-rouge">assets/include/scss/space/utilities/_gradients-overlay.scss</code></li>
+            <li><code class="highlighter-rouge">assets/include/scss/space/utilities/_sizing.scss</code></li>
+            <li><code class="highlighter-rouge">assets/include/scss/space/utilities/_text.scss</code></li>
+            <li><code class="highlighter-rouge">assets/include/scss/space/utilities/_text-colors.scss</code></li>
+          </ul>
+        </div>
+
+        <hr class="my-7">
+
+        <div id="version1_4">
+          <h2 class="h4"><code class="highlighter-rouge">1.4</code> - 29 July, 2019 <a class="anchorjs-link" href="#version1_4" aria-label="Anchor" data-anchorjs-icon="#"></a></h2>
+
+          <p><span class="u-label u-label--sm u-label--primary font-weight-bold rounded">New</span> Hotel demo</p>
+          <p><span class="u-label u-label--sm u-label--primary font-weight-bold rounded">New</span> Stockholm Icons</p>
+          <p><span class="u-label u-label--sm u-label--primary font-weight-bold rounded">New</span> Flatpicker</p>
+          <p><span class="u-label u-label--sm u-label--warning font-weight-bold rounded">Updated</span> FontAwesome from v5.8.1 to v5.9.0</p>
+          <p><span class="u-label u-label--sm u-label--danger font-weight-bold rounded">Fixed</span> Some issues with some type of gradients in Safari</p>
+          <p><span class="u-label u-label--sm u-label--info font-weight-bold rounded">Enhanced</span> Starter</p>
+          <p><span class="u-label u-label--sm u-label--info font-weight-bold rounded">Enhanced</span> Documentation</p>
+
+          <h3 class="h5">List of important updated files:</h3>
+          <ul>
+            <li><code class="highlighter-rouge">assets/include/scss/space/_variables.scss</code></li>
+            <li><code class="highlighter-rouge">assets/include/scss/space/_space.scss</code></li>
+
+            <li><code class="highlighter-rouge">assets/include/scss/space/address/_address.scss</code></li>
+            <li><code class="highlighter-rouge">assets/include/scss/space/badges/_badges.scss</code></li>
+            <li><code class="highlighter-rouge">assets/include/scss/space/icons/_svg-icon.scss</code></li>
+            <li><code class="highlighter-rouge">assets/include/scss/space/forms/_input-dropdown.scss</code></li>
+            <li><code class="highlighter-rouge">assets/include/scss/space/slick/_slick.scss</code></li>
+            <li><code class="highlighter-rouge">assets/include/scss/space/slick/arrows/_slick-arrow-classic.scss</code></li>
+
+            <li><code class="highlighter-rouge">assets/include/scss/space/utilities/_bg-colors.scss</code></li>
+            <li><code class="highlighter-rouge">assets/include/scss/space/utilities/_borders.scss</code></li>
+            <li><code class="highlighter-rouge">assets/include/scss/space/utilities/_fill-colors.scss</code></li>
+            <li><code class="highlighter-rouge">assets/include/scss/space/utilities/_gradient-overlay.scss</code></li>
+            <li><code class="highlighter-rouge">assets/include/scss/space/utilities/_letter-spacing.scss</code></li>
+            <li><code class="highlighter-rouge">assets/include/scss/space/utilities/_position-spaces.scss</code></li>
+            <li><code class="highlighter-rouge">assets/include/scss/space/utilities/_shadows.scss</code></li>
+            <li><code class="highlighter-rouge">assets/include/scss/space/utilities/_stroke-colors.scss</code></li>
+            <li><code class="highlighter-rouge">assets/include/scss/space/utilities/_text.scss</code></li>
+
+            <li><code class="highlighter-rouge">assets/include/scss/space/vendor/datepicker/_datepicker.scss</code></li>
+          </ul>
+        </div>
+
+        <hr class="my-7">
+
+        <div id="version1_3_1">
+          <h2 class="h4"><code class="highlighter-rouge">1.3.1</code> - 20 April, 2018 <a class="anchorjs-link" href="#version1_3_1" aria-label="Anchor" data-anchorjs-icon="#"></a></h2>
+
+          <p><span class="u-label u-label--sm u-label--warning font-weight-bold rounded">Updated</span> FontAwesome from v5.7.2 to 5.8.1</p>
+          <p><span class="u-label u-label--sm u-label--danger font-weight-bold rounded">Fixed</span> Some path issues on demo pages</p>
+          <p><span class="u-label u-label--sm u-label--info font-weight-bold rounded">Enhanced</span> Gradient colors rewritten with variables now</p>
+          <p><span class="u-label u-label--sm u-label--info font-weight-bold rounded">Enhanced</span> Documentation</p>
+        </div>
+
+        <hr class="my-7">
+
+        <div id="version1_3">
+          <h2 class="h4"><code class="highlighter-rouge">1.3</code> - 8 March, 2018 <a class="anchorjs-link" href="#version1_3" aria-label="Anchor" data-anchorjs-icon="#"></a></h2>
+
+          <p><span class="u-label u-label--sm u-label--primary font-weight-bold rounded">New</span> Restaurant demo</p>
+          <p><span class="u-label u-label--sm u-label--primary font-weight-bold rounded">New</span> Added a new <a href="../components/spinner.html">spinner loading component</a>.</p>
+          <p><span class="u-label u-label--sm u-label--primary font-weight-bold rounded">New</span> Added new <a href="../components/toasts.html">toast component</a> for displaying notifications.</p>
+          <p><span class="u-label u-label--sm u-label--primary font-weight-bold rounded">New</span> Added a new <a href="../components/forms.html#switches">iOS style switch</a> (a modifier class to our custom checkboxes).</p>
+          <p><span class="u-label u-label--sm u-label--primary font-weight-bold rounded">New</span> Added responsive <code class="highlighter-rouge">.list-group-horizontal</code> modifier classes for displaying list groups as a horizontal row.</p>
+          <p><span class="u-label u-label--sm u-label--primary font-weight-bold rounded">New</span> Utility Classes</p>
+          <p><span class="u-label u-label--sm u-label--warning font-weight-bold rounded">Updated</span> Bootstrap from v4.1.3 to v4.3.1</p>
+          <p><span class="u-label u-label--sm u-label--warning font-weight-bold rounded">Updated</span> FontAwesome from v5.5.0 to v5.7.2</p>
+          <p><span class="u-label u-label--sm u-label--danger font-weight-bold rounded">Fixed</span> Form validation across all HTML-pages (added <code class="highlighter-rouge">id="password"</code> to the <em>password</em> input).</p>
+          <p><span class="u-label u-label--sm u-label--danger font-weight-bold rounded">Fixed</span> Timeline on Safari.</p>
+          <p><span class="u-label u-label--sm u-label--danger font-weight-bold rounded">Fixed</span> <code class="highlighter-rouge">.form-control</code> size style removed for the <code class="highlighter-rouge">.input-group-lg</code> class.</p>
+          <p><span class="u-label u-label--sm u-label--info font-weight-bold rounded">Enhanced</span> Documentation</p>
+
+          <div id="version1_3-breaking-changes" class="my-5">
+            <h4 class="h5 font-weight-medium">Breaking changes <a class="anchorjs-link" href="#version2_0-breaking-changes" aria-label="Anchor" data-anchorjs-icon="#"></a></h4>
+
+            <ul>
+              <li class="py-1">Dropped margin classes in favor of Bootstrap negative classes.</li>
+            </ul>
+          </div>
+
+          <h3 class="h5">Others:</h3>
+          <ul>
+            <li><code class="highlighter-rouge">assets/include/scss/space/_variables.scss</code></li>
+            <li><code class="highlighter-rouge">assets/include/scss/space/utilities/_text.scss</code></li>
+            <li><code class="highlighter-rouge">assets/include/scss/space/utilities/_position-spaces.scss</code></li>
+            <li><code class="highlighter-rouge">assets/include/scss/space/utilities/_borders.scss</code></li>
+            <li><code class="highlighter-rouge">assets/include/scss/space/utilities/_sizing.scss</code></li>
+            <li><code class="highlighter-rouge">assets/include/scss/space/utilities/_margin.scss</code></li>
+            <li><code class="highlighter-rouge">assets/include/scss/space/forms/_form.scss</code></li>
+            <li><code class="highlighter-rouge">assets/include/scss/space/timeline/_timeline.scss</code></li>
+            <li><code class="highlighter-rouge">assets/include/scss/space/card/_card.scss</code></li>
+            <li><code class="highlighter-rouge">html/home/app-business.html</code></li>
+            <li><code class="highlighter-rouge">html/home/shipping.html</code></li>
+          </ul>
+        </div>
+
+        <hr class="my-7">
+
+        <div id="version1_2">
+          <h2 class="h4"><code class="highlighter-rouge">1.2</code> - 4 December, 2018 <a class="anchorjs-link" href="#version1_2" aria-label="Anchor" data-anchorjs-icon="#"></a></h2>
+
+          <p><span class="u-label u-label--sm u-label--primary font-weight-bold rounded">New</span> Event demo</p>
+          <p><span class="u-label u-label--sm u-label--primary font-weight-bold rounded">New</span> Shipping demo</p>
+          <p><span class="u-label u-label--sm u-label--primary font-weight-bold rounded">New</span> Utility Classes</p>
+          <p><span class="u-label u-label--sm u-label--danger font-weight-bold rounded">Fixed</span> Google Map degradation issue.</p>
+          <p><span class="u-label u-label--sm u-label--danger font-weight-bold rounded">Fixed</span> components/hs.video-player.js wrong path.</p>
+          <p><span class="u-label u-label--sm u-label--info font-weight-bold rounded">Enhanced</span> SASS file structure</p>
+          <p><span class="u-label u-label--sm u-label--warning font-weight-bold rounded">Updated</span> Cubeportfolio from v4.1.3 to v4.4.0</p>
+          <p><span class="u-label u-label--sm u-label--warning font-weight-bold rounded">Updated</span> FontAwesome from v5.2 to v5.5</p>
+
+          <h3 class="h5">Others:</h3>
+          <ul>
+            <li><code class="highlighter-rouge">bootstrap.css</code> file merged to the <code class="highlighter-rouge">theme.css</code>.</li>
+            <li><code class="highlighter-rouge">bootstrap.css</code> file removed from all HTML-files.</li>
+            <li><code class="highlighter-rouge">px-to-rem</code> unit mixin dropped.</li>
+            <li><code class="highlighter-rouge">position</code> mixin dropped.</li>
+          </ul>
+        </div>
+
+        <hr class="my-7">
+
+        <div id="version1_1">
+          <h2 class="h4"><code class="highlighter-rouge">1.1</code> - 02 September, 2018 <a class="anchorjs-link" href="#version1_1" aria-label="Anchor" data-anchorjs-icon="#"></a></h2>
+
+          <p>This update is focused on new Home pages, improvements, minor bug-fixes and few global changes. Please check below migration information.</p>
+
+          <p><span class="u-label u-label--sm u-label--primary font-weight-bold rounded">New</span> 10 Home Pages</p>
+          <p><span class="u-label u-label--sm u-label--primary font-weight-bold rounded">New</span> Icon Shadow Style (<code class="highlighter-rouge">.u-icon--shadow</code> class added)</p>
+          <p><span class="u-label u-label--sm u-label--primary font-weight-bold rounded">New</span> Utility Classes</p>
+          <p><span class="u-label u-label--sm u-label--danger font-weight-bold rounded">Fixed</span> Social APIs</p>
+          <p><span class="u-label u-label--sm u-label--danger font-weight-bold rounded">Fixed</span> Validation message alignments on form layouts</p>
+          <p><span class="u-label u-label--sm u-label--danger font-weight-bold rounded">Fixed</span> Header Absolute Second Screen - secondary dropdown position alignment</p>
+          <p><span class="u-label u-label--sm u-label--info font-weight-bold rounded">Enhanced</span> SASS file structure</p>
+          <p><span class="u-label u-label--sm u-label--info font-weight-bold rounded">Enhanced</span> Documentation</p>
+
+          <div id="version1_1-migration" class="mt-5">
+            <h3 class="h5 font-weight-medium">Migration <a class="anchorjs-link" href="#version1_1-migration" aria-label="Anchor" data-anchorjs-icon="#"></a></h3>
+            <ul class="text-secondary">
+              <li><strong>Renamed</strong> <code class="highlighter-rouge">.u-info-v1</code> class to <code class="hover">.card-frame</code>. See <a href="../../documentation/cards.html">Cards</a></li>
+              <li><code class="highlighter-rouge">.u-pricing-v1</code> class dropped, and replaced with Bootstrap <code class="hover">.card</code> classes. See <a href="../../starter/pricing.html">Cards</a></li>
+              <li><code class="highlighter-rouge">.align-items-*-center</code> classes removed from form layouts to fix the forms' error alignment</li>
+              <li><code class="highlighter-rouge">$info</code> variable changed from <code class="highlighter-rouge">$blue</code> to <code class="highlighter-rouge">$cyan</code>, to fix duplication of <code class="highlighter-rouge">$blue</code> variable.</li>
+              <li><code class="highlighter-rouge">scss/vendor/_typo-font-sizes.scss</code> and <code class="highlighter-rouge">scss/vendor/_typo-font-weight.scss</code> merged in to <code class="highlighter-rouge">scss/vendor/_text.scss</code> file.</li>
+              <li><code class="highlighter-rouge">scss/vendor/_rounded.scss</code> file renamed to <code class="highlighter-rouge">_border.scss</code>.</li>
+              <li><code class="highlighter-rouge">scss/vendor/bootstrap.scss</code> file moved to <code class="highlighter-rouge">scss/</code> path.</li>
+              <li><code class="highlighter-rouge">scss/vendor/</code> SCSS folder moved to <code class="highlighter-rouge">scss/base/</code> path.</li>
+            </ul>
+          </div>
+        </div>
+
+        <hr class="my-7">
+
+        <div id="version1_0_1">
+          <h2 class="h4"><code class="highlighter-rouge">1.0.1</code> - 02 August, 2018 <a class="anchorjs-link" href="#version1_0_1" aria-label="Anchor" data-anchorjs-icon="#"></a></h2>
+
+          <p><span class="u-label u-label--sm u-label--danger font-weight-bold rounded">Fixed</span> Improved malihu-scrollbar library to fix iFrame live preview issue.</p>
+        </div>
+
+        <hr class="my-7">
+
+        <div id="initial-release">
+          <h2 class="h4"><code class="highlighter-rouge">1.0</code> - 01 August, 2018 <a class="anchorjs-link" href="#initial-release" aria-label="Anchor" data-anchorjs-icon="#"></a></h2>
+          <p>Initial Release</p>
+        </div>
+      </main>
+      <!-- ========== END MAIN ========== -->
+    </div>
+  </div>
+
+  <!-- Go to Top -->
+  <a class="js-go-to u-go-to" href="javascript:;"
+    data-position='{"bottom": 15, "right": 15 }'
+    data-type="fixed"
+    data-offset-top="400"
+    data-compensation="#header"
+    data-show-effect="slideInUp"
+    data-hide-effect="slideOutDown">
+    <span class="fa fa-arrow-up u-go-to__inner"></span>
+  </a>
+  <!-- End Go to Top -->
+
+  <!-- JS Global Compulsory -->
+  <script src="../../assets/vendor/jquery/dist/jquery.min.js"></script>
+  <script src="../../assets/vendor/jquery-migrate/dist/jquery-migrate.min.js"></script>
+  <script src="../../assets/vendor/popper.js/dist/umd/popper.min.js"></script>
+  <script src="../../assets/vendor/bootstrap/bootstrap.min.js"></script>
+
+  <!-- JS Implementing Plugins -->
+  <script src="../../assets/vendor/hs-megamenu/src/hs.megamenu.js"></script>
+  <script src="../assets/vendor/jquery-ui/jquery-ui.core.min.js"></script>
+  <script src="../assets/vendor/jquery-ui/ui/widgets/menu.js"></script>
+  <script src="../assets/vendor/jquery-ui/ui/widgets/mouse.js"></script>
+  <script src="../assets/vendor/jquery-ui/ui/widgets/autocomplete.js"></script>
+  <script src="../assets/vendor/prism/prism.js"></script>
+
+  <!-- JS Space -->
+  <script src="../../assets/js/hs.core.js"></script>
+  <script src="../../assets/js/components/hs.header.js"></script>
+  <script src="../../assets/js/components/hs.unfold.js"></script>
+  <script src="../../assets/js/components/hs.go-to.js"></script>
+  <script src="../../assets/js/components/hs.scroll-nav.js"></script>
+  <script src="../assets/js/components/hs.autocomplete-local-search.js"></script>
+
+  <!-- JS Plugins Init. -->
+  <script>
+    $(document).on('ready', function () {
+      // initialization of header
+      $.HSCore.components.HSHeader.init($('#header'));
+
+      // initialization of go to
+      $.HSCore.components.HSGoTo.init('.js-go-to');
+    });
+
+    $(window).on('load', function () {
+      // initialization of HSMegaMenu component
+      $('.js-mega-menu').HSMegaMenu({
+        event: 'hover',
+        pageContainer: $('.container'),
+        breakpoint: 768,
+        hideTimeOut: 0
+      });
+
+      // initialization of autocomplete
+      $.HSCore.components.HSLocalSearchAutocomplete.init('#fd-sidebar-navigation__search-autocomplete');
+
+      // initialization of HSScrollNav component
+      $.HSCore.components.HSScrollNav.init($('#scrollNav'), {
+        duration: 700
+      });
+    });
+  </script>
+</body>
+</html>

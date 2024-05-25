@@ -1,0 +1,998 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Title -->
+  <title>Hero Subscribe - Space Starter | Space - Responsive Website Template</title>
+
+  <!-- Required Meta Tags Always Come First -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="../favicon.ico">
+
+  <!-- Google Fonts -->
+  <link href="//fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+
+  <!-- CSS Implementing Plugins -->
+  <link rel="stylesheet" href="../assets/vendor/font-awesome/css/all.min.css">
+  <link rel="stylesheet" href="../assets/vendor/hs-megamenu/src/hs.megamenu.css">
+  <link rel="stylesheet" href="../assets/vendor/animate.css/animate.min.css">
+  <link rel="stylesheet" href="../documentation/assets/vendor/jquery-ui/themes/base/jquery-ui.min.css">
+  <link rel="stylesheet" href="../documentation/assets/vendor/prism/prism.css">
+
+  <!-- CSS Space Template -->
+  <link rel="stylesheet" href="../assets/css/theme.css">
+
+  <!-- CSS Space Doc -->
+  <link rel="stylesheet" href="../documentation/assets/css/starter.css">
+</head>
+
+<body>
+  <!-- Skippy -->
+  <a id="skippy" class="sr-only sr-only-focusable u-skippy" href="#content">
+    <div class="container">
+      <span class="u-skiplink-text">Skip to main content</span>
+    </div>
+  </a>
+  <!-- End Skippy -->
+
+  <!-- ========== HEADER ========== -->
+  <header id="header" class="u-header u-header--sticky-top-lg">
+    <div class="u-header__section">
+      <div id="logoAndNav" class="container-fluid">
+        <!-- Nav -->
+        <nav class="js-mega-menu navbar navbar-expand-lg u-header__navbar">
+          <!-- Logo -->
+          <a class="navbar-brand u-header__navbar-brand py-3" href="index.html" aria-label="Space">
+            <img src="../assets/svg/logos/logo.svg" alt="Logo">
+          </a>
+          <!-- End Logo -->
+
+          <!-- Responsive Toggle Button -->
+          <button type="button" class="navbar-toggler btn fd-header-toggle"
+                  aria-label="Toggle navigation"
+                  aria-expanded="false"
+                  aria-controls="navBar"
+                  data-toggle="collapse"
+                  data-target="#navBar">
+            <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 30 30" width="30" height="30" focusable="false">
+              <title>Menu</title>
+              <path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M4 7h22M4 15h22M4 23h22"/>
+            </svg>
+          </button>
+          <!-- End Responsive Toggle Button -->
+
+          <!-- Navigation -->
+          <div id="navBar" class="collapse navbar-collapse py-0">
+            <ul class="navbar-nav navbar-expand-md w-100 u-header__navbar-nav">
+              <!-- Live Preview -->
+              <li class="nav-item u-header__nav-item">
+                <a class="nav-link u-header__nav-link" href="../html/home/index.html">Live Preview</a>
+              </li>
+              <!-- End Live Preview -->
+
+              <!-- Starter -->
+              <li class="nav-item u-header__nav-item">
+                <a class="nav-link u-header__nav-link" href="../documentation/index.html">Documentation</a>
+              </li>
+              <!-- End Starter -->
+
+              <!-- Contact Us -->
+              <li class="nav-item u-header__nav-item">
+                <a class="nav-link u-header__nav-link" href="https://htmlstream.com/contact-us">Contact Us</a>
+              </li>
+              <!-- End Contact Us -->
+
+              <!-- Changelog -->
+              <li class="nav-item hs-has-mega-menu d-none d-lg-inline-block u-header__nav-item position-relative ml-lg-auto"
+                  data-event="hover"
+                  data-animation-in="slideInUp"
+                  data-animation-out="fadeOut"
+                  data-position="left">
+                <a id="changelogMenu" class="nav-link u-header__nav-link" href="javascript:;"
+                   aria-haspopup="true"
+                   aria-expanded="false">
+                  v1.6
+                  <span class="fa fa-angle-down u-header__nav-link-icon ml-2"></span>
+                </a>
+
+                <!-- Submenu -->
+                <ul class="hs-mega-menu list-unstyled u-header__sub-menu u-header__sub-menu-menu-gutter--y" style="min-width: 220px;"
+                    aria-labelledby="changelogMenu">
+                  <li class="dropdown-item px-0">
+                    <a class="nav-link text-secondary px-4" href="../documentation/getting-started/changelog.html#version1_6_1">v1.6.1</a>
+                    <a class="nav-link text-secondary px-4" href="../documentation/getting-started/changelog.html#version1_6">v1.6</a>
+                    <a class="nav-link text-secondary px-4" href="../documentation/getting-started/changelog.html#version1_5">v1.5</a>
+                    <a class="nav-link text-secondary px-4" href="../documentation/getting-started/changelog.html#version1_4">v1.4</a>
+                    <a class="nav-link text-secondary px-4" href="../documentation/getting-started/changelog.html#version1_3_1">v1.3.1</a>
+                    <a class="nav-link text-secondary px-4" href="../documentation/getting-started/changelog.html#version1_3">v1.3</a>
+                    <a class="nav-link text-secondary px-4" href="../documentation/getting-started/changelog.html#version1_2">v1.2</a>
+                    <a class="nav-link text-secondary px-4" href="../documentation/getting-started/changelog.html#version1_1">v1.1</a>
+                    <a class="nav-link text-secondary px-4" href="../documentation/getting-started/changelog.html#initial-release">v1.0</a>
+                  </li>
+                </ul>
+                <!-- End Submenu -->
+              </li>
+              <!-- End Changelog -->
+
+              <!-- Social Icons -->
+              <li class="ml-md-auto ml-lg-0">
+                <ul class="list-inline mb-0">
+                  <li class="list-inline-item mx-0">
+                    <a class="u-icon u-icon--sm u-icon--secondary" href="https://www.facebook.com/htmlstream" target="_blank">
+                      <span class="fab fa-facebook-f u-icon__inner"></span>
+                    </a>
+                  </li>
+                  <li class="list-inline-item mx-0">
+                    <a class="u-icon u-icon--sm u-icon--secondary" href="https://twitter.com/htmlstream" target="_blank">
+                      <span class="fab fa-twitter u-icon__inner"></span>
+                    </a>
+                  </li>
+                  <li class="list-inline-item mx-0">
+                    <a class="u-icon u-icon--sm u-icon--secondary" href="https://github.com/htmlstreamofficial" target="_blank">
+                      <span class="fab fa-github u-icon__inner"></span>
+                    </a>
+                  </li>
+                  <li class="list-inline-item mx-0">
+                    <a class="u-icon u-icon--sm u-icon--secondary" href="https://dribbble.com/htmlstream" target="_blank">
+                      <span class="fab fa-dribbble u-icon__inner"></span>
+                    </a>
+                  </li>
+                  <li class="list-inline-item mx-0">
+                    <a class="u-icon u-icon--sm u-icon--secondary" href="https://www.instagram.com/htmlstream/" target="_blank">
+                      <span class="fab fa-instagram u-icon__inner"></span>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <!-- End Social Icons -->
+
+              <!-- Button -->
+              <li class="nav-item pl-md-3">
+                <a class="btn btn-sm btn-primary" href="https://themes.getbootstrap.com/product/space-multipurpose-responsive-template/" target="_blank">
+                  Buy Now
+                </a>
+              </li>
+              <!-- End Button -->
+            </ul>
+          </div>
+          <!-- End Navigation -->
+        </nav>
+        <!-- End Nav -->
+      </div>
+    </div>
+  </header>
+  <!-- ========== END HEADER ========== -->
+
+  <div class="container-fluid">
+    <div class="row flex-xl-nowrap">
+      <!-- ========== LEFT ========== -->
+      <div class="col-12 col-md-3 col-xl-2 fd-sidebar">
+        <!-- Sidebar Search -->
+        <form class="fd-search d-flex align-items-center">
+          <input id="fd-sidebar-navigation__search-autocomplete" class="form-control form-control-sm" type="text" placeholder="Search..." data-url="../documentation/assets/include/ajax/autocomplete-data-for-starter-search.json">
+
+          <!-- Responsive Toggle Button -->
+          <button class="btn btn-link fd-search-docs-toggle d-md-none p-0 ml-3" type="button"
+                  data-toggle="collapse"
+                  data-target="#navside-accordion"
+                  aria-controls="navside-accordion"
+                  aria-expanded="false"
+                  aria-label="Toggle docs navigation">
+            <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 30 30" width="30" height="30" focusable="false">
+              <title>Menu</title>
+              <path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M4 7h22M4 15h22M4 23h22"/>
+            </svg>
+          </button>
+          <!-- End Responsive Toggle Button -->
+        </form>
+        <!-- End Sidebar Search -->
+
+        <!-- Sidebar Nav -->
+        <nav id="navside-accordion" class="fd-navside collapse">
+          <ul id="components" class="fd-navside__links collapse show" data-parent="#navside-accordion">
+            <li><a href="index.html">Introduction</a></li>
+            <li><a href="cards.html">Cards</a></li>
+            <li><a href="clients.html">Clients</a></li>
+            <li><a href="cta.html">Call-to-action (CTA)</a></li>
+            <li><a href="features.html">Features</a></li>
+            <li><a href="footers.html">Footers</a></li>
+            <li><a href="form-layouts.html">Form layouts</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="header-layouts.html">Header layouts</a></li>
+            <li><a href="hero.html">Hero</a></li>
+            <li><a class="active" href="hero-subscribe.html">Hero Subscribe</a></li>
+            <li><a href="icon-blocks.html">Icon blocks</a></li>
+            <li><a href="media-objects.html">Media objects</a></li>
+            <li><a href="modal-window.html">Modal Window</a></li>
+            <li><a href="news-blogs.html">News Blogs</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="products-hero.html">Products hero</a></li>
+            <li><a href="stats.html">Stats</a></li>
+            <li><a href="team.html">Team</a></li>
+            <li><a href="testimonials.html">Testimonials</a></li>
+            <li><a href="timeline.html">Timeline</a></li>
+            <li><a href="typedjs.html">TypedJS</a></li>
+            <li><a href="unfold-dropdown.html">Unfold (Dropdown)</a></li>
+            <li><a href="unfold-sidebar.html">Unfold (Sidebar)</a></li>
+            <li><a href="video-player.html">Video Player</a></li>
+            <li><a href="wizard.html">Wizard</a></li>
+          </ul>
+        </nav>
+        <!-- End Sidebar Nav -->
+      </div>
+      <!-- ========== END LEFT ========== -->
+
+      <!-- ========== MAIN ========== -->
+      <main class="col-12 col-md-9 col-xl-10 pl-md-5 fd-content space-3">
+        <div class="mb-9">
+          <h1 class="font-weight-medium">Hero Subscribe</h1>
+          <p class="lead font-weight-normal">Find your audience, engage your customers, and build your brand with Space's subscribe forms.</p>
+        </div>
+
+        <div id="hero-subscribe-1" class="mb-9">
+          <h2 class="h4">Hero subscribe #1 <a class="anchorjs-link" href="#hero-subscribe-1" aria-label="Anchor" data-anchorjs-icon="#"></a></h2>
+
+          <div class="fd-example mb-4">
+            <!-- Contact Us Section -->
+            <div class="container space-2">
+              <div class="row justify-content-lg-between">
+                <div class="col-md-6 mb-9 mb-md-0">
+                  <!-- Title -->
+                  <div class="mb-7">
+                    <span class="u-label u-label--sm u-label--purple mb-3">Contact Us</span>
+                    <h2 class="h3">Should you have questions or concerns, contact us</h2>
+                    <p>We are a creative studio focusing on culture, luxury, editorial & art. Somewhere between sophistication and simplicity.</p>
+                  </div>
+                  <!-- End Title -->
+
+                  <!-- Google Map -->
+                  <div class="bg-white shadow-sm rounded p-2 mb-5">
+                    <div id="GMapCustomized-light" class="js-g-map embed-responsive embed-responsive-21by9 min-height-280 rounded"
+                         data-type="custom"
+                         data-lat="40.674"
+                         data-lng="-73.946"
+                         data-zoom="12"
+                         data-title="Agency"
+                         data-styles='[["", "", [{"saturation":-100},{"lightness":51},{"visibility":"simplified"}]], ["", "labels", [{"visibility":"on"}]], ["water", "", [{"color":"#bac6cb"}]] ]'
+                         data-pin="true"
+                         data-pin-icon="../assets/img/map-markers/map-marker1.png"></div>
+                  </div>
+                  <!-- End Google Map -->
+
+                  <!-- Info -->
+                  <div class="media">
+                    <h5 class="h6 d-flex mr-3">Office hours:</h5>
+                    <div class="media-body">
+                      <small class="d-block text-muted">Monday - Friday: 09:00 AM - 06:00 PM</small>
+                      <small class="d-block text-muted">Closed on Sunday &amp; Holidays</small>
+                    </div>
+                  </div>
+                  <!-- End Info -->
+                </div>
+
+                <div class="col-md-6 col-lg-5 d-flex align-items-end gradient-overlay-half-dark-v2 bg-img-hero height-600 px-0" data-bg-img-src="../assets/img/500x700/img1.jpg">
+                  <div class="w-100 text-center shadow-sm p-5">
+                    <!-- Title -->
+                    <div class="mb-5">
+                      <h3 class="text-white">London, <strong class="text-primary">England</strong></h3>
+                      <p class="text-white">Unit 25 Suite 3, 925 Prospect PI,<br>Beach Resort, 23001</p>
+                    </div>
+                    <!-- End Title -->
+
+                    <!-- Info -->
+                    <div class="mb-5">
+                      <h4 class="h6 text-primary">Phone number</h4>
+                      <span class="d-block text-white">+01 (0) 333 444 55</span>
+                    </div>
+                    <!-- End Info -->
+
+                    <!-- Input -->
+                    <form class="js-validate js-form-message">
+                      <div class="js-focus-state input-group form form--no-brd form--no-addon-brd">
+                        <input type="email" class="form-control form__input" name="email" required
+                               placeholder="Enter your email address"
+                               aria-label="Enter your email address">
+                        <span class="input-group-append form__append">
+                          <button type="submit" class="btn btn-sm btn-primary">Subscribe</button>
+                        </span>
+                      </div>
+                    </form>
+                    <!-- End Input -->
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- End Contact Us Section -->
+          </div>
+
+          <h3 class="h6">HTML:</h3>
+          <div class="mb-4" style="overflow: auto; height: 300px;">
+            <pre>
+              <code class="language-html" data-lang="html">
+                &lt;!-- Contact Us Section --&gt;
+                &lt;div class="container space-2 space-3--lg"&gt;
+                  &lt;div class="row justify-content-lg-between"&gt;
+                    &lt;div class="col-md-6 mb-9 mb-md-0"&gt;
+                      &lt;!-- Title --&gt;
+                      &lt;div class="mb-7"&gt;
+                        &lt;span class="u-label u-label--sm u-label--purple mb-3"&gt;Contact Us&lt;/span&gt;
+                        &lt;h2 class="h3"&gt;Should you have questions or concerns, contact us&lt;/h2&gt;
+                        &lt;p&gt;We are a creative studio focusing on culture, luxury, editorial & art. Somewhere between sophistication and simplicity.&lt;/p&gt;
+                      &lt;/div&gt;
+                      &lt;!-- End Title --&gt;
+
+                      &lt;!-- Google Map --&gt;
+                      &lt;div class="bg-white shadow-sm rounded p-2 mb-5"&gt;
+                        &lt;div id="GMapCustomized-light" class="js-g-map embed-responsive embed-responsive-21by9 min-height-280 rounded"
+                             data-type="custom"
+                             data-lat="40.674"
+                             data-lng="-73.946"
+                             data-zoom="12"
+                             data-title="Agency"
+                             data-styles='[["", "", [{"saturation":-100},{"lightness":51},{"visibility":"simplified"}]], ["", "labels", [{"visibility":"on"}]], ["water", "", [{"color":"#bac6cb"}]] ]'
+                             data-pin="true"
+                             data-pin-icon="../assets/img/map-markers/map-marker1.png"&gt;&lt;/div&gt;
+                      &lt;/div&gt;
+                      &lt;!-- End Google Map --&gt;
+
+                      &lt;!-- Info --&gt;
+                      &lt;div class="media"&gt;
+                        &lt;h5 class="h6 d-flex mr-3"&gt;Office hours:&lt;/h5&gt;
+                        &lt;div class="media-body"&gt;
+                          &lt;small class="d-block text-muted"&gt;Monday - Friday: 09:00 AM - 06:00 PM&lt;/small&gt;
+                          &lt;small class="d-block text-muted"&gt;Closed on Sunday &amp; Holidays&lt;/small&gt;
+                        &lt;/div&gt;
+                      &lt;/div&gt;
+                      &lt;!-- End Info --&gt;
+                    &lt;/div&gt;
+
+                    &lt;div class="col-md-6 col-lg-5 d-flex align-items-end gradient-overlay-half-dark-v2 bg-img-hero height-600 px-0" data-bg-img-src="../assets/img/500x700/img1.jpg"&gt;
+                      &lt;div class="w-100 text-center shadow-sm p-5"&gt;
+                        &lt;!-- Title --&gt;
+                        &lt;div class="mb-5"&gt;
+                          &lt;h3 class="text-white"&gt;London, &lt;strong class="text-primary"&gt;England&lt;/strong&gt;&lt;/h3&gt;
+                          &lt;p class="text-white"&gt;Unit 25 Suite 3, 925 Prospect PI,&lt;br&gt;Beach Resort, 23001&lt;/p&gt;
+                        &lt;/div&gt;
+                        &lt;!-- End Title --&gt;
+
+                        &lt;!-- Info --&gt;
+                        &lt;div class="mb-5"&gt;
+                          &lt;h4 class="h6 text-primary"&gt;Phone number&lt;/h4&gt;
+                          &lt;span class="d-block text-white"&gt;+01 (0) 333 444 55&lt;/span&gt;
+                        &lt;/div&gt;
+                        &lt;!-- End Info --&gt;
+
+                        &lt;!-- Input --&gt;
+                        &lt;form class="js-validate js-form-message"&gt;
+                          &lt;div class="js-focus-state input-group form form--no-brd form--no-addon-brd"&gt;
+                            &lt;input type="email" class="form-control form__input" name="email" required
+                                   placeholder="Enter your email address"
+                                   aria-label="Enter your email address"&gt;
+                            &lt;span class="input-group-append form__append"&gt;
+                              &lt;button type="submit" class="btn btn-sm btn-primary"&gt;Subscribe&lt;/button&gt;
+                            &lt;/span&gt;
+                          &lt;/div&gt;
+                        &lt;/form&gt;
+                        &lt;!-- End Input --&gt;
+                      &lt;/div&gt;
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;!-- End Contact Us Section --&gt;
+              </code>
+            </pre>
+          </div>
+
+          <h3 class="h6">JS library and initialization:</h3>
+          <pre class="mb-4">
+            <code class="language-html" data-lang="html">
+              &lt;!-- JS Implementing Plugins --&gt;
+              &lt;script src="../../assets/vendor/jquery-validation/dist/jquery.validate.min.js"&gt;&lt;/script&gt;
+              &lt;script src="../../assets/vendor/gmaps/gmaps.min.js"&gt;&lt;/script&gt;
+
+              &lt;!-- JS Space --&gt;
+              &lt;script src="../../assets/js/components/hs.validation.js"&gt;&lt;/script&gt;
+              &lt;script src="../../assets/js/helpers/hs.focus-state.js"&gt;&lt;/script&gt;
+              &lt;script src="../../assets/js/helpers/hs.g-map.js"&gt;&lt;/script&gt;
+
+              &lt;!-- JS Plugins Init. --&gt;
+              &lt;script&gt;
+                // initialization of google map
+                function initMap() {
+                  $.HSCore.components.HSGMap.init('.js-g-map');
+                }
+
+                $(document).on('ready', function () {
+                  // initialization of form validation
+                  $.HSCore.components.HSValidation.init('.js-validate');
+
+                  // initialization of forms
+                  $.HSCore.helpers.HSFocusState.init();
+                });
+              &lt;/script&gt;
+
+              &lt;script src="//maps.googleapis.com/maps/api/js?key=AIzaSyAtt1z99GtrHZt_IcnK-wryNsQ30A112J0&callback=initMap" async defer&gt;&lt;/script&gt;
+            </code>
+          </pre>
+        </div>
+
+        <div id="hero-subscribe-2" class="mb-9">
+          <h2 class="h4">Hero subscribe #2 <a class="anchorjs-link" href="#hero-subscribe-2" aria-label="Anchor" data-anchorjs-icon="#"></a></h2>
+
+          <div class="fd-example mb-4">
+            <div class="container space-2">
+              <!-- Form -->
+              <form class="js-validate w-lg-80 mx-lg-auto">
+                <div class="form-row">
+                  <div class="col-sm-4 mb-3 mb-sm-0">
+                    <!-- Input -->
+                    <div class="js-form-message">
+                      <div class="js-focus-state input-group form">
+                        <div class="input-group-prepend form__prepend">
+                          <span class="input-group-text form__text">
+                            <span class="fa fa-user form__text-inner"></span>
+                          </span>
+                        </div>
+                        <input type="text" class="form-control form__input" name="username" required
+                               placeholder="Name"
+                               aria-label="Name"
+                               data-msg="Name must contain only letters.">
+                      </div>
+                    </div>
+                    <!-- End Input -->
+                  </div>
+
+                  <div class="col-sm-4 mb-3 mb-sm-0">
+                    <!-- Input -->
+                    <div class="js-form-message">
+                      <div class="js-focus-state input-group form">
+                        <div class="input-group-prepend form__prepend">
+                          <span class="input-group-text form__text">
+                            <span class="fa fa-envelope form__text-inner"></span>
+                          </span>
+                        </div>
+                        <input type="email" class="form-control form__input" name="email" required
+                               placeholder="Email"
+                               aria-label="Email"
+                               data-msg="Please enter a valid email address.">
+                      </div>
+                    </div>
+                    <!-- End Input -->
+                  </div>
+
+                  <div class="col-sm-4">
+                    <button type="submit" class="btn btn-block btn-primary">Get Started</button>
+                  </div>
+                </div>
+              </form>
+              <!-- End Form -->
+            </div>
+          </div>
+
+          <h3 class="h6">HTML:</h3>
+          <div class="mb-4" style="overflow: auto; height: 300px;">
+            <pre>
+              <code class="language-html" data-lang="html">
+                &lt;div class="container space-2 space-3--lg"&gt;
+                  &lt;!-- Form --&gt;
+                  &lt;form class="js-validate w-lg-80 mx-lg-auto"&gt;
+                    &lt;div class="form-row"&gt;
+                      &lt;div class="col-sm-4 mb-3 mb-sm-0"&gt;
+                        &lt;!-- Input --&gt;
+                        &lt;div class="js-form-message"&gt;
+                          &lt;div class="js-focus-state input-group form"&gt;
+                            &lt;div class="input-group-prepend form__prepend"&gt;
+                              &lt;span class="input-group-text form__text"&gt;
+                                &lt;span class="fa fa-user form__text-inner"&gt;&lt;/span&gt;
+                              &lt;/span&gt;
+                            &lt;/div&gt;
+                            &lt;input type="text" class="form-control form__input" name="username" required
+                                   placeholder="Name"
+                                   aria-label="Name"
+                                   data-msg="Name must contain only letters."&gt;
+                          &lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;!-- End Input --&gt;
+                      &lt;/div&gt;
+
+                      &lt;div class="col-sm-4 mb-3 mb-sm-0"&gt;
+                        &lt;!-- Input --&gt;
+                        &lt;div class="js-form-message"&gt;
+                          &lt;div class="js-focus-state input-group form"&gt;
+                            &lt;div class="input-group-prepend form__prepend"&gt;
+                              &lt;span class="input-group-text form__text"&gt;
+                                &lt;span class="fa fa-envelope form__text-inner"&gt;&lt;/span&gt;
+                              &lt;/span&gt;
+                            &lt;/div&gt;
+                            &lt;input type="email" class="form-control form__input" name="email" required
+                                   placeholder="Email"
+                                   aria-label="Email"
+                                   data-msg="Please enter a valid email address."&gt;
+                          &lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;!-- End Input --&gt;
+                      &lt;/div&gt;
+
+                      &lt;div class="col-sm-4"&gt;
+                        &lt;button type="submit" class="btn btn-block btn-primary"&gt;Get Started&lt;/button&gt;
+                      &lt;/div&gt;
+                    &lt;/div&gt;
+                  &lt;/form&gt;
+                  &lt;!-- End Form --&gt;
+                &lt;/div&gt;
+              </code>
+            </pre>
+          </div>
+
+          <h3 class="h6">JS library and initialization:</h3>
+          <pre class="mb-4">
+            <code class="language-html" data-lang="html">
+              &lt;!-- JS Implementing Plugins --&gt;
+              &lt;script src="../../assets/vendor/jquery-validation/dist/jquery.validate.min.js"&gt;&lt;/script&gt;
+
+              &lt;!-- JS Space --&gt;
+              &lt;script src="../../assets/js/components/hs.validation.js"&gt;&lt;/script&gt;
+              &lt;script src="../../assets/js/helpers/hs.focus-state.js"&gt;&lt;/script&gt;
+
+              &lt;!-- JS Plugins Init. --&gt;
+              &lt;script&gt;
+                $(document).on('ready', function () {
+                  // initialization of form validation
+                  $.HSCore.components.HSValidation.init('.js-validate');
+
+                  // initialization of forms
+                  $.HSCore.helpers.HSFocusState.init();
+                });
+              &lt;/script&gt;
+            </code>
+          </pre>
+        </div>
+
+        <div id="hero-subscribe-3" class="mb-9">
+          <h2 class="h4">Hero subscribe #3 <a class="anchorjs-link" href="#hero-subscribe-3" aria-label="Anchor" data-anchorjs-icon="#"></a></h2>
+
+          <div class="fd-example mb-4">
+            <div class="container text-center space-2">
+              <!-- Form -->
+              <form class="js-validate form-row justify-content-md-center mb-4">
+                <div class="col-7 col-md-6 col-lg-4">
+                  <!-- Input -->
+                  <div class="js-form-message">
+                    <div class="js-focus-state input-group form">
+                      <div class="input-group-prepend form__prepend">
+                        <span class="input-group-text form__text">
+                          <span class="fa fa-user form__text-inner"></span>
+                        </span>
+                      </div>
+                      <input type="text" class="form-control form__input" name="username" required
+                             placeholder="Name"
+                             aria-label="Name"
+                             data-msg="Name must contain only letters.">
+                    </div>
+                  </div>
+                  <!-- End Input -->
+                </div>
+
+                <div class="col-5 col-md-3 col-lg-2">
+                  <button type="submit" class="btn btn-block btn-primary">Get Started</button>
+                </div>
+              </form>
+              <!-- End Form -->
+
+              <p class="small mb-0">* 14 day free trial, no credit card required.</p>
+            </div>
+          </div>
+
+          <h3 class="h6">HTML:</h3>
+          <div class="mb-4" style="overflow: auto; height: 300px;">
+            <pre>
+              <code class="language-html" data-lang="html">
+                &lt;div class="container text-center space-2"&gt;
+                  &lt;!-- Form --&gt;
+                  &lt;form class="js-validate form-row justify-content-md-center mb-4"&gt;
+                    &lt;div class="col-7 col-md-6 col-lg-4"&gt;
+                      &lt;!-- Input --&gt;
+                      &lt;div class="js-form-message"&gt;
+                        &lt;div class="js-focus-state input-group form"&gt;
+                          &lt;div class="input-group-prepend form__prepend"&gt;
+                            &lt;span class="input-group-text form__text"&gt;
+                              &lt;span class="fa fa-user form__text-inner"&gt;&lt;/span&gt;
+                            &lt;/span&gt;
+                          &lt;/div&gt;
+                          &lt;input type="text" class="form-control form__input" name="username" required
+                                 placeholder="Name"
+                                 aria-label="Name"
+                                 data-msg="Name must contain only letters."&gt;
+                        &lt;/div&gt;
+                      &lt;/div&gt;
+                      &lt;!-- End Input --&gt;
+                    &lt;/div&gt;
+
+                    &lt;div class="col-5 col-md-3 col-lg-2"&gt;
+                      &lt;button type="submit" class="btn btn-block btn-primary"&gt;Get Started&lt;/button&gt;
+                    &lt;/div&gt;
+                  &lt;/form&gt;
+                  &lt;!-- End Form --&gt;
+
+                  &lt;p class="small mb-0"&gt;* 14 day free trial, no credit card required.&lt;/p&gt;
+                &lt;/div&gt;
+              </code>
+            </pre>
+          </div>
+
+          <h3 class="h6">JS library and initialization:</h3>
+          <pre class="mb-4">
+            <code class="language-html" data-lang="html">
+              &lt;!-- JS Implementing Plugins --&gt;
+              &lt;script src="../../assets/vendor/jquery-validation/dist/jquery.validate.min.js"&gt;&lt;/script&gt;
+
+              &lt;!-- JS Space --&gt;
+              &lt;script src="../../assets/js/components/hs.validation.js"&gt;&lt;/script&gt;
+              &lt;script src="../../assets/js/helpers/hs.focus-state.js"&gt;&lt;/script&gt;
+
+              &lt;!-- JS Plugins Init. --&gt;
+              &lt;script&gt;
+                $(document).on('ready', function () {
+                  // initialization of form validation
+                  $.HSCore.components.HSValidation.init('.js-validate');
+
+                  // initialization of forms
+                  $.HSCore.helpers.HSFocusState.init();
+                });
+              &lt;/script&gt;
+            </code>
+          </pre>
+        </div>
+
+        <div id="hero-subscribe-4" class="mb-9">
+          <h2 class="h4">Hero subscribe #4 <a class="anchorjs-link" href="#hero-subscribe-4" aria-label="Anchor" data-anchorjs-icon="#"></a></h2>
+
+          <div class="fd-example mb-4">
+            <!-- CTA Section -->
+            <div class="container space-2">
+              <div class="row align-items-md-center">
+                <div class="col-md-6 mb-5 mb-md-0">
+                  <h2 class="h4 mb-1">Sign up for newsletter</h2>
+                  <p class="mb-0">Keep an eye out for our new deals rolling out this year!</p>
+                </div>
+
+                <div class="col-md-6">
+                  <!-- Form -->
+                  <form class="js-validate">
+                    <div class="js-form-message">
+                      <div class="js-focus-state input-group form">
+                        <input type="email" class="form-control form__input" name="email" required
+                               placeholder="Email address"
+                               aria-label="Email address"
+                               data-msg="Please enter a valid email address.">
+                        <div class="input-group-append form__append">
+                          <button type="submit" class="btn btn-block btn-primary btn-wide">Subscribe</button>
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+                  <!-- End Form -->
+                </div>
+              </div>
+            </div>
+            <!-- End CTA Section -->
+          </div>
+
+          <h3 class="h6">HTML:</h3>
+          <div class="mb-4" style="overflow: auto; height: 300px;">
+            <pre>
+              <code class="language-html" data-lang="html">
+                &lt;!-- CTA Section --&gt;
+                &lt;div class="container space-2"&gt;
+                  &lt;div class="row align-items-md-center"&gt;
+                    &lt;div class="col-md-6 mb-5 mb-md-0"&gt;
+                      &lt;h2 class="h4 mb-1"&gt;Sign up for newsletter&lt;/h2&gt;
+                      &lt;p class="mb-0"&gt;Keep an eye out for our new deals rolling out this year!&lt;/p&gt;
+                    &lt;/div&gt;
+
+                    &lt;div class="col-md-6"&gt;
+                      &lt;!-- Form --&gt;
+                      &lt;form class="js-validate"&gt;
+                        &lt;div class="js-form-message"&gt;
+                          &lt;div class="js-focus-state input-group form"&gt;
+                            &lt;input type="email" class="form-control form__input" name="email" required
+                                   placeholder="Email address"
+                                   aria-label="Email address"
+                                   data-msg="Please enter a valid email address."&gt;
+                            &lt;div class="input-group-append form__append"&gt;
+                              &lt;button type="submit" class="btn btn-block btn-primary btn-wide"&gt;Subscribe&lt;/button&gt;
+                            &lt;/div&gt;
+                          &lt;/div&gt;
+                        &lt;/div&gt;
+                      &lt;/form&gt;
+                      &lt;!-- End Form --&gt;
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;!-- End CTA Section --&gt;
+              </code>
+            </pre>
+          </div>
+
+          <h3 class="h6">JS library and initialization:</h3>
+          <pre class="mb-4">
+            <code class="language-html" data-lang="html">
+              &lt;!-- JS Implementing Plugins --&gt;
+              &lt;script src="../../assets/vendor/jquery-validation/dist/jquery.validate.min.js"&gt;&lt;/script&gt;
+
+              &lt;!-- JS Space --&gt;
+              &lt;script src="../../assets/js/components/hs.validation.js"&gt;&lt;/script&gt;
+              &lt;script src="../../assets/js/helpers/hs.focus-state.js"&gt;&lt;/script&gt;
+
+              &lt;!-- JS Plugins Init. --&gt;
+              &lt;script&gt;
+                $(document).on('ready', function () {
+                  // initialization of form validation
+                  $.HSCore.components.HSValidation.init('.js-validate');
+
+                  // initialization of forms
+                  $.HSCore.helpers.HSFocusState.init();
+                });
+              &lt;/script&gt;
+            </code>
+          </pre>
+        </div>
+
+        <div id="hero-subscribe-5" class="mb-9">
+          <h2 class="h4">Hero subscribe #5 <a class="anchorjs-link" href="#hero-subscribe-5" aria-label="Anchor" data-anchorjs-icon="#"></a></h2>
+
+          <div class="fd-example mb-4">
+            <!-- Subscribe Section -->
+            <div class="bg-purple">
+              <div class="container space-2">
+                <div class="row justify-content-md-center align-items-md-center">
+                  <div class="col-md-4 col-lg-3 d-none d-md-inline-block">
+                    <img class="img-fluid" src="../assets/svg/components/news-illustration.svg" alt="Image Description">
+                  </div>
+
+                  <div class="col-md-8 col-lg-6 offset-lg-1">
+                    <!-- Title -->
+                    <div class="mb-5">
+                      <h2 class="text-white mb-1">Start talking to your users today</h2>
+                      <p class="lead text-light">14 day free trial. No credit card required.</p>
+                    </div>
+                    <!-- End Title -->
+
+                    <!-- Input -->
+                    <form class="js-validate js-form-message mb-2">
+                      <div class="js-focus-state input-group form">
+                        <input type="email" class="form-control form__input" name="email" required
+                               placeholder="Enter company email address"
+                               aria-label="Enter company email address">
+                        <span class="input-group-append form__append">
+                          <button type="submit" class="btn btn-sm btn-primary btn-wide">Start Free Trial</button>
+                        </span>
+                      </div>
+                    </form>
+                    <!-- End Input -->
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- End Subscribe Section -->
+          </div>
+
+          <h3 class="h6">HTML:</h3>
+          <div class="mb-4" style="overflow: auto; height: 300px;">
+            <pre>
+              <code class="language-html" data-lang="html">
+                &lt;!-- Subscribe Section --&gt;
+                &lt;div class="bg-purple"&gt;
+                  &lt;div class="container space-2"&gt;
+                    &lt;div class="row justify-content-md-center align-items-md-center"&gt;
+                      &lt;div class="col-md-4 col-lg-3 d-none d-md-inline-block"&gt;
+                        &lt;img class="img-fluid" src="../assets/svg/components/news-illustration.svg" alt="Image Description"&gt;
+                      &lt;/div&gt;
+
+                      &lt;div class="col-md-8 col-lg-6 offset-lg-1"&gt;
+                        &lt;!-- Title --&gt;
+                        &lt;div class="mb-5"&gt;
+                          &lt;h2 class="text-white mb-1"&gt;Start talking to your users today&lt;/h2&gt;
+                          &lt;p class="lead text-light"&gt;14 day free trial. No credit card required.&lt;/p&gt;
+                        &lt;/div&gt;
+                        &lt;!-- End Title --&gt;
+
+                        &lt;!-- Input --&gt;
+                        &lt;form class="js-validate js-form-message mb-2"&gt;
+                          &lt;div class="js-focus-state input-group form"&gt;
+                            &lt;input type="email" class="form-control form__input" name="email" required
+                                   placeholder="Enter company email address"
+                                   aria-label="Enter company email address"&gt;
+                            &lt;span class="input-group-append form__append"&gt;
+                              &lt;button type="submit" class="btn btn-sm btn-primary btn-wide"&gt;Start Free Trial&lt;/button&gt;
+                            &lt;/span&gt;
+                          &lt;/div&gt;
+                        &lt;/form&gt;
+                        &lt;!-- End Input --&gt;
+                      &lt;/div&gt;
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;!-- End Subscribe Section --&gt;
+              </code>
+            </pre>
+          </div>
+
+          <h3 class="h6">JS library and initialization:</h3>
+          <pre class="mb-4">
+            <code class="language-html" data-lang="html">
+              &lt;!-- JS Implementing Plugins --&gt;
+              &lt;script src="../../assets/vendor/jquery-validation/dist/jquery.validate.min.js"&gt;&lt;/script&gt;
+
+              &lt;!-- JS Space --&gt;
+              &lt;script src="../../assets/js/components/hs.validation.js"&gt;&lt;/script&gt;
+              &lt;script src="../../assets/js/helpers/hs.focus-state.js"&gt;&lt;/script&gt;
+
+              &lt;!-- JS Plugins Init. --&gt;
+              &lt;script&gt;
+                $(document).on('ready', function () {
+                  // initialization of form validation
+                  $.HSCore.components.HSValidation.init('.js-validate');
+
+                  // initialization of forms
+                  $.HSCore.helpers.HSFocusState.init();
+                });
+              &lt;/script&gt;
+            </code>
+          </pre>
+        </div>
+
+        <div id="hero-subscribe-6" class="mb-9">
+          <h2 class="h4">Hero subscribe #6 <a class="anchorjs-link" href="#hero-subscribe-6" aria-label="Anchor" data-anchorjs-icon="#"></a></h2>
+
+          <div class="fd-example mb-4">
+            <!-- CTA Section -->
+            <div class="bg-purple text-white">
+              <div class="container space-1">
+                <div class="row justify-content-lg-between align-items-lg-center">
+                  <div class="col-lg-5">
+                    <h3 class="h4 mb-0">Track &amp; trace</h3>
+                    <p class="lead text-white mb-0">Enter your Tracking number to track your delivery.</p>
+                  </div>
+
+                  <div class="col-lg-5">
+                    <!-- Input -->
+                    <div class="input-group form">
+                      <div class="input-group-prepend form__prepend">
+                        <span class="input-group-text form__text">
+                          <span class="fas fa-truck-loading text-purple" id="keywordInputAddon"></span>
+                        </span>
+                      </div>
+                      <input type="text" class="form-control form__input" placeholder="1283791HJK128" aria-label="1283791HJK128" aria-describedby="keywordInputAddon">
+                    </div>
+                    <!-- End Input -->
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- End CTA Section -->
+          </div>
+
+          <h3 class="h6">HTML:</h3>
+          <div class="mb-4" style="overflow: auto; height: 300px;">
+            <pre>
+              <code class="language-html" data-lang="html">
+                &lt;!-- CTA Section --&gt;
+                &lt;div class="bg-purple text-white"&gt;
+                  &lt;div class="container space-1"&gt;
+                    &lt;div class="row justify-content-lg-between align-items-lg-center"&gt;
+                      &lt;div class="col-lg-5"&gt;
+                        &lt;h3 class="h4 mb-0"&gt;Track &amp; trace&lt;/h3&gt;
+                        &lt;p class="lead text-white mb-0"&gt;Enter your Tracking number to track your delivery.&lt;/p&gt;
+                      &lt;/div&gt;
+
+                      &lt;div class="col-lg-5"&gt;
+                        &lt;!-- Input --&gt;
+                        &lt;div class="input-group form"&gt;
+                          &lt;div class="input-group-prepend form__prepend"&gt;
+                            &lt;span class="input-group-text form__text"&gt;
+                              &lt;span class="fas fa-truck-loading text-purple" id="keywordInputAddon"&gt;&lt;/span&gt;
+                            &lt;/span&gt;
+                          &lt;/div&gt;
+                          &lt;input type="text" class="form-control form__input" placeholder="1283791HJK128" aria-label="1283791HJK128" aria-describedby="keywordInputAddon"&gt;
+                        &lt;/div&gt;
+                        &lt;!-- End Input --&gt;
+                      &lt;/div&gt;
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;!-- End CTA Section --&gt;
+              </code>
+            </pre>
+          </div>
+        </div>
+      </main>
+      <!-- ========== END MAIN ========== -->
+    </div>
+  </div>
+
+  <!-- Go to Top -->
+  <a class="js-go-to u-go-to" href="javascript:;"
+    data-position='{"bottom": 15, "right": 15 }'
+    data-type="fixed"
+    data-offset-top="400"
+    data-compensation="#header"
+    data-show-effect="slideInUp"
+    data-hide-effect="slideOutDown">
+    <span class="fa fa-arrow-up u-go-to__inner"></span>
+  </a>
+  <!-- End Go to Top -->
+
+  <!-- JS Global Compulsory -->
+  <script src="../assets/vendor/jquery/dist/jquery.min.js"></script>
+  <script src="../assets/vendor/jquery-migrate/dist/jquery-migrate.min.js"></script>
+  <script src="../assets/vendor/popper.js/dist/umd/popper.min.js"></script>
+  <script src="../assets/vendor/bootstrap/bootstrap.min.js"></script>
+
+  <!-- JS Implementing Plugins -->
+  <script src="../assets/vendor/hs-megamenu/src/hs.megamenu.js"></script>
+  <script src="../assets/vendor/jquery-validation/dist/jquery.validate.min.js"></script>
+  <script src="../assets/vendor/gmaps/gmaps.min.js"></script>
+  <script src="../documentation/assets/vendor/jquery-ui/jquery-ui.core.min.js"></script>
+  <script src="../documentation/assets/vendor/jquery-ui/ui/widgets/menu.js"></script>
+  <script src="../documentation/assets/vendor/jquery-ui/ui/widgets/mouse.js"></script>
+  <script src="../documentation/assets/vendor/jquery-ui/ui/widgets/autocomplete.js"></script>
+  <script src="../documentation/assets/vendor/prism/prism.js"></script>
+
+  <!-- JS Space -->
+  <script src="../assets/js/hs.core.js"></script>
+  <script src="../assets/js/components/hs.header.js"></script>
+  <script src="../assets/js/components/hs.unfold.js"></script>
+  <script src="../assets/js/components/hs.go-to.js"></script>
+  <script src="../assets/js/components/hs.scroll-nav.js"></script>
+  <script src="../assets/js/helpers/hs.focus-state.js"></script>
+  <script src="../assets/js/components/hs.validation.js"></script>
+  <script src="../assets/js/components/hs.g-map.js"></script>
+  <script src="../documentation/assets/js/components/hs.autocomplete-local-search.js"></script>
+
+  <!-- JS Plugins Init. -->
+  <script>
+    // initialization of google map
+    function initMap() {
+      $.HSCore.components.HSGMap.init('.js-g-map');
+    }
+
+    $(document).on('ready', function () {
+      // initialization of header
+      $.HSCore.components.HSHeader.init($('#header'));
+
+      // initialization of forms
+      $.HSCore.helpers.HSFocusState.init();
+
+      // initialization of form validation
+      $.HSCore.components.HSValidation.init('.js-validate');
+
+      // initialization of go to
+      $.HSCore.components.HSGoTo.init('.js-go-to');
+    });
+
+    $(window).on('load', function () {
+      // initialization of HSMegaMenu component
+      $('.js-mega-menu').HSMegaMenu({
+        event: 'hover',
+        pageContainer: $('.container'),
+        breakpoint: 768,
+        hideTimeOut: 0
+      });
+
+      // initialization of autocomplete
+      $.HSCore.components.HSLocalSearchAutocomplete.init('#fd-sidebar-navigation__search-autocomplete');
+
+      // initialization of HSScrollNav component
+      $.HSCore.components.HSScrollNav.init($('#scrollNav'), {
+        duration: 700
+      });
+    });
+  </script>
+
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyABAaQLTeSRRn4egPXc1tRNi40scrXvcQM&callback=initMap" async defer></script>
+</body>
+</html>

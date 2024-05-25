@@ -1,0 +1,910 @@
+{% extends "fin_manager/base1_1.html" %}
+{% load humanize %}
+{% load static %}
+{% block title %}ANALITICA{% endblock %}
+
+{% block scrips_head %}
+<style>
+
+  form {
+    width: 100%;
+}
+
+
+.space-3 {
+    padding-top: 4rem;
+    padding-bottom: 0rem;
+ }
+
+.container.space-2-bottom.space-3-bottom--lg {
+    padding-bottom: 0px;
+}
+
+
+
+.col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12, .col, .col-auto, .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm, .col-sm-auto, .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12, .col-md, .col-md-auto, .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg, .col-lg-auto, .col-xl-1, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl, .col-xl-auto {
+    position: relative;
+    width: 100%;
+    padding-right: 3px;
+    padding-left: 3px;
+    margin-top: 3px;
+}
+
+
+
+@media (min-width: 992px)
+.col-lg-1 {
+    -ms-flex: 0 0 8.33333%;
+    /* flex: 0 0 155.33333%; */
+    max-width: 104px;
+}
+
+form.row.align-items-md-center {
+    width: 100%;
+}
+
+.card-body {
+    height: 300px;
+}
+
+.fd-navside {
+    padding-top: 0rem;
+     padding-bottom: 0rem;
+    margin: 0 0px 0rem;
+}
+
+.p-5 {
+    padding: 0.5rem !important;
+}
+
+.fd-toc {
+    position: sticky;
+    top: 3.5rem;
+    height: calc(100vh - 4.6rem);
+    padding-top: 1.0rem;
+    padding-bottom: 1.0rem;
+    overflow-y: auto;
+    order: 2;
+    font-size: .875rem;
+    height: 100%;
+}
+
+
+.fd-navside {
+    display: block !important;
+    max-height: calc(280vh - 4rem);
+    overflow-y: auto;
+}
+
+h6.h5.mb-3 {
+    margin-left: 35px;
+    padding-top: 10px;
+}
+
+.border.rounded.p-4 {
+    color: #646f79 !important
+}
+
+.border.rounded.p-4 {
+    padding: 0.3rem !important;
+}
+
+.p-4 {
+    padding: 1.5rem !important;
+}
+
+
+.row {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.col-sm-6.mb-4.mb-lg-0.card-frame {
+    max-width: 100%;
+    flex: 0 0 100%;
+}
+
+.mb-4, .my-4 {
+    margin-bottom: 0.5rem !important;
+}
+
+.space-1 {
+    padding-top: 0.2rem;
+    padding-bottom: 2rem;
+}
+
+.container {
+    width: 100%;
+    padding-right: 2px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.card {
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid #e3e6f0;
+    border-radius: 0.25rem;
+    min-width: 200px;
+}
+
+.navbar-expand-lg .u-header__navbar-brand {
+    padding-top: 1rem;
+    padding-bottom: 0rem;
+    padding-right: 0rem;
+}
+</style>
+<style>
+  form {
+    width: 100%;
+}
+
+
+.space-3 {
+    padding-top: 4rem;
+    padding-bottom: 0rem;
+ }
+
+.container.space-2-bottom.space-3-bottom--lg {
+    padding-bottom: 0px;
+}
+
+
+
+
+
+
+
+@media (min-width: 992px)
+
+
+form.row.align-items-md-center {
+    width: 100%;
+}
+
+.card-body {
+    height: 300px;
+}
+
+.fd-navside {
+    padding-top: 0rem;
+     padding-bottom: 0rem;
+    margin: 0 0px 0rem;
+}
+
+.p-5 {
+    padding: 0.5rem !important;
+}
+
+.fd-toc {
+    position: sticky;
+    top: 3.5rem;
+    height: calc(100vh - 4.6rem);
+    padding-top: 1.0rem;
+    padding-bottom: 1.0rem;
+    overflow-y: auto;
+    order: 2;
+    font-size: .875rem;
+    height: 100%;
+}
+
+
+.fd-navside {
+    display: block !important;
+    max-height: calc(280vh - 4rem);
+    overflow-y: auto;
+}
+
+h6.h5.mb-3 {
+    margin-left: 35px;
+    padding-top: 10px;
+}
+
+.border.rounded.p-4 {
+    color: #646f79 !important
+}
+
+.border.rounded.p-4 {
+    padding: 0.3rem !important;
+}
+
+.p-4 {
+    padding: 1.5rem !important;
+}
+
+.navbar-expand-lg .u-header__navbar-brand {
+    padding-top: 1rem;
+    padding-bottom: 0.5rem;
+    padding-right: 0rem;
+}
+
+
+
+div#contenedor1 {
+   *** display: flex;***
+    justify-content: center;
+}
+
+div#h-tabContent {
+    margin: 60px;
+}
+
+.space-2-bottom.space-3-bottom--lg {
+    padding-right: 2rem;
+}
+
+.text-primary {
+    color: #a1a1a1 !important;
+}
+.card-collapse__btn-arrow {
+    color:  #a1a1a1;
+    }
+
+
+
+.custom-select {
+    font-size: 0.8rem;
+}
+.form-control {
+    font-size: 0.8rem;
+    }
+.text-warning {
+    color: #ffbc4269 !important;
+}
+button.btn.btn-secondary {
+    padding: 5px;
+}
+
+
+
+.fd-sidebar {
+
+  /*  top: 3rem; */
+}
+
+.space-2-bottom.space-3-bottom--lg {
+    padding-right: 0rem;
+}
+
+
+
+textarea{
+  overflow:hidden;
+  display:block;
+  height:auto;
+}
+
+canvas.bk-canvas {
+    /* max-width: 700px; */
+    max-height: 600px;
+    padding: 25px;
+
+
+}
+
+div#\32 3E41A33371D49B88C0D4C2083AA525C {
+    margin: auto;
+}
+
+.bk-plot-layout.bk-layout-fixed {
+    margin: auto;
+}
+
+.form-control {
+    color: #a0a6b1;
+    }
+
+
+ .fd-sidebar {
+
+    height: auto;
+    }
+
+
+    div#h-tabContent {
+    margin: 0px;
+}
+
+.space-3-bottom--lg {
+    padding-bottom: 0rem;
+}
+
+.space-2-bottom {
+    padding-bottom: 0rem;
+}
+</style>
+
+
+
+<!--<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/plotly.js/2.24.2/plotly.min.js"></script>
+{% load static %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'ezEditTable/ezEditTable.css' %}" />
+<script src="{% static 'ezEditTable/ezEditTable.js' %}"></script>
+<link rel="stylesheet" type="text/css" href="{% static 'node_modules/tablefilter/dist/tablefilter/style/tablefilter.css' %}" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+{% endblock %}
+
+{% block content_links_logo %}
+<h4 class="text-white" style="font-weight: 900; font-size:1.8rem; ">VAJO</h4>
+{% endblock %}
+
+
+
+
+{% block content_main %}
+
+<br>
+<br>
+<br>
+<div class="container space-2-bottom space-3-bottom--lg" style="font-size: small;">
+        <div class="container space-1 " style="padding-bottom: 0rem;">
+          <!-- Job Positions - Filter -->
+          <form method="POST" enctype="multipart/form-data"   class="row align-items-md-center row" novalidate="novalidate">
+          {% csrf_token %}
+
+            <!-- years -->
+
+            <div class="col-sm-6 col-lg-2 mb-4 card-frame card-purple-frame " >
+            <p>Cliente</p>
+
+              <select name="Colum10" id="Colum10" class="custom-select valid" aria-invalid="false">
+
+                <option  value="Todos" >Todos</option>
+
+                {% for Colum1_List0 in Colum1_List_views0 %}
+                {% if Colum1_List0 %}
+                <option value="{{Colum1_List0}}">{{Colum1_List0}}</option>
+                {% endif %}
+                {% endfor %}
+
+                {% if Colum1_Select0 %}
+                <option value="{{ Colum1_Select0 }}" selected>{{ Colum1_Select0 }}</option>
+                {% endif %}
+
+
+              </select>
+
+            </div>
+
+
+            <!-- End years -->
+            <!-- Locations -->
+
+            <div  class="col-sm-6 col-lg-2 mb-4 card-frame card-purple-frame " >
+            <p>Tipo Cliente</p>
+
+              <select name="Colum20"  id="Colum20" class="custom-select valid" aria-invalid="false" required  >
+                 <option  value="Todos" >Todos</option>
+
+                {% for Colum2_List0 in Colum2_List_views0 %}
+                <option value="{{Colum2_List0}}">{{Colum2_List0}}</option>
+                {% endfor %}
+
+                {% if Colum2_Select0 %}
+                <option value="{{ Colum2_Select0 }}" selected>{{ Colum2_Select0 }}</option>
+                {% endif %}
+
+
+              </select>
+
+            </div>
+
+             <!-- End Locations -->
+
+            <!-- Locations -->
+
+            <div class="col-sm-6 col-lg-2 mb-4 card-frame card-purple-frame ">
+            <p>Sector Económico</p>
+              <select name="Colum30" id="Colum30" class="custom-select valid" aria-invalid="false" >
+
+                <option  value="Todos" >Todos</option>
+
+                {% for Colum3_List0 in Colum3_List_views0 %}
+                <option value="{{Colum3_List0}}">{{Colum3_List0}}</option>
+                {% endfor %}
+
+                {% if Colum3_Select0 %}
+                <option value="{{ Colum3_Select0 }}" selected>{{ Colum3_Select0 }}</option>
+                {% endif %}
+
+              </select>
+
+            </div>
+
+            <!-- End Locations -->
+
+            <!-- Locations -->
+
+            <div class="col-sm-6 col-lg-2 mb-4 card-frame card-purple-frame">
+            <p>Año</p>
+              <select name="Colum40" id="Colum40"  class="custom-select valid" aria-invalid="false" required>
+
+
+                <option  value="Todos" >Todos</option>
+
+                  {% for Colum4_List0 in Colum4_List_views0 %}
+                  <option value="{{ Colum4_List0 }}" >{{ Colum4_List0 }}</option>
+                  {% endfor %}
+                 {% if Colum4_Select0 %}
+                 <option value="{{ Colum4_Select0 }}" selected>{{ Colum4_Select0 }}</option>
+                 {% endif %}
+
+              </select>
+
+            </div>
+
+            <!-- End Locations -->
+
+
+            <!-- Locations -->
+
+            <div class="col-sm-6 col-lg-2 mb-4 card-frame card-purple-frame">
+            <p>Fecha Inicio</p>
+
+                <input type="date" id="Colum50" name="Colum50"  class="custom-select valid" value="{{ Colum5_Select0 }}" aria-invalid="false" required>
+
+            </div>
+
+            <!-- End Locations -->
+
+            <!-- Column60 -->
+
+            <div class="col-sm-6 col-lg-2 mb-4 card-frame card-purple-frame">
+            <p>Fecha Fin</p>
+
+                <input type="date" name="Colum60" id="Colum60"  min="2021-01-01" max="{{Colum6_max}}" value="{{ Colum6_Select0 }}" class="custom-select valid" aria-invalid="false" required>
+
+            </div>
+
+            <!-- End Locations -->
+
+
+
+
+
+
+
+            <div class="col-lg-2 text-lg-right">
+            <a> <button type="submit" class="btn btn-block btn-outline-primary" style="font-size: small;" >Filtrar</button></a>
+            </div>
+
+
+            <div class="field" style="">
+
+            <a href="/"><input  value="Borrar" class="btn btn-block btn-outline-primary" style="width:100px; font-size: small;" ></a>
+
+            </div>
+
+          </form>
+          <!-- End Job Positions - Filter -->
+        </div>
+</div>
+
+
+
+<!--------------------------------------------------------------------------------------------------------------------->
+<!--------------------------------inicio----Contenido herramientas----------------------------------------------------->
+<!--------------------------------------------------------------------------------------------------------------------->
+
+  <div class="row">
+
+        <div class=" col-sm-12 col-lg-12 mb-12 card-frame card-purple-frame  " style="max-width: 50%;" >
+
+            <ul class="list-unstyled font-size-14 mb-5">
+                <li>
+                  <a class="media align-items-center u-sidebar--panel__link py-2 px-5" href="javascript:window.open('/grafica1','',' width=750,height=400,left=100,top=100,toolbar=no, directories=no');void 0">
+                    <img class="max-width-4 mr-3" src="/static/space/assets/svg/components/finance-dark-icon.svg" alt="Image Description">
+                    <div class="media-body">
+                      <span></span>
+                    </div>
+                  </a>
+                </li>
+            </ul>
+
+          <div class="graph">
+            <div class="bar-chart">
+              <div class="plotly0-chart" id="plotly0-chart"></div>
+           </div>
+          </div>
+        </div>
+
+       <div class="col-sm-12 col-lg-12 mb-12 card-frame card-purple-frame  " style="max-width: 50%;">
+
+
+            <ul class="list-unstyled font-size-14 mb-5">
+                <li>
+                  <a class="media align-items-center u-sidebar--panel__link py-2 px-5" href="javascript:window.open('/grafica2','',' width=750,height=400,left=100,top=100,toolbar=no, directories=no');void 0">
+                    <img class="max-width-4 mr-3" src="/static/space/assets/svg/components/finance-dark-icon.svg" alt="Image Description">
+                    <div class="media-body">
+                      <span></span>
+                    </div>
+                  </a>
+                </li>
+            </ul>
+
+
+        <div class="graph">
+        <div class="bar-chart">
+          <div class="plotly3-chart" id="plotly3-chart"></div>
+        </div>
+         </div>
+        </div>
+
+        <div class="col-sm-12 col-lg-12 mb-12 card-frame card-purple-frame  " style="max-width: 50%;">
+
+           <ul class="list-unstyled font-size-14 mb-5">
+                <li>
+                  <a class="media align-items-center u-sidebar--panel__link py-2 px-5" href="javascript:window.open('/grafica3','',' width=750,height=400,left=100,top=100,toolbar=no, directories=no');void 0">
+                    <img class="max-width-4 mr-3" src="/static/space/assets/svg/components/finance-dark-icon.svg" alt="Image Description">
+                    <div class="media-body">
+                      <span></span>
+                    </div>
+                  </a>
+                </li>
+            </ul>
+
+        <div class="graph">
+        <div class="bar-chart">
+          <div class="plotly4-chart" id="plotly4-chart"></div>
+        </div>
+         </div>
+        </div>
+
+
+        <div class=" col-sm-12 col-lg-12 mb-12 card-frame card-purple-frame  " style="max-width: 50%;" >
+
+           <ul class="list-unstyled font-size-14 mb-5">
+                <li>
+                  <a class="media align-items-center u-sidebar--panel__link py-2 px-5" href="javascript:window.open('/grafica4','',' width=750,height=400,left=100,top=100,toolbar=no, directories=no');void 0">
+                    <img class="max-width-4 mr-3" src="/static/space/assets/svg/components/finance-dark-icon.svg" alt="Image Description">
+                    <div class="media-body">
+                      <span></span>
+                    </div>
+                  </a>
+                </li>
+            </ul>
+
+
+           <div class="graph">
+            <div class="bar-chart">
+              <div class="plotly-chart" id="plotly-chart"></div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="col-sm-12 col-lg-12 mb-12 card-frame card-purple-frame  " style="max-width: 50%;">
+
+          <ul class="list-unstyled font-size-14 mb-5">
+                <li>
+                  <a class="media align-items-center u-sidebar--panel__link py-2 px-5" href="javascript:window.open('/grafica5','',' width=750,height=400,left=100,top=100,toolbar=no, directories=no');void 0">
+                    <img class="max-width-4 mr-3" src="/static/space/assets/svg/components/finance-dark-icon.svg" alt="Image Description">
+                    <div class="media-body">
+                      <span></span>
+                    </div>
+                  </a>
+                </li>
+            </ul>
+
+
+        <div class="graph">
+        <div class="bar-chart">
+          <div class="plotly5-chart" id="plotly5-chart"></div>
+        </div>
+         </div>
+        </div>
+
+        <div id="plot1" class="col-sm-12 col-lg-12 mb-12 card-frame card-purple-frame " style="max-width: 50%;">
+          <ul class="list-unstyled font-size-14 mb-5">
+                <li>
+                  <a class="media align-items-center u-sidebar--panel__link py-2 px-5" href="javascript:window.open('/grafica6','',' width=750,height=400,left=100,top=100,toolbar=no, directories=no');void 0">
+                    <img class="max-width-4 mr-3" src="/static/space/assets/svg/components/finance-dark-icon.svg" alt="Image Description">
+                    <div class="media-body">
+                      <span></span>
+                    </div>
+                  </a>
+                </li>
+            </ul>
+
+
+        <div class="graph">
+        <div class="bar-chart">
+          <div class="plotly2-chart" id="plotly2-chart"></div>
+        </div>
+         </div>
+        </div>
+
+
+
+
+
+
+
+<!--</div>-->
+</div>
+
+
+
+
+{% endblock %}
+
+{% block content_right %}{% endblock %}
+
+{% block scripts_body %}
+
+{% load static %}
+
+  <script>
+    // Initialize the Plotly chart
+    var graph0Data = {{ fig_consumo_energia| safe }};
+    Plotly.newPlot('plotly0-chart', graph0Data.data, graph0Data.layout);
+  </script>
+  <script>
+    // Initialize the Plotly chart
+    var graphData = {{ fig_energia_activa| safe }};
+    Plotly.newPlot('plotly-chart', graphData.data, graphData.layout);
+  </script>
+  <script>
+    // Initialize the Plotly chart
+    var graph2Data = {{ fig_energia_reactiva| safe }};
+    Plotly.newPlot('plotly2-chart', graph2Data.data, graph2Data.layout);
+  </script>
+  <script>
+    // Initialize the Plotly chart
+    var graph3Data = {{ fig_anomalias_01| safe }};
+    Plotly.newPlot('plotly3-chart', graph3Data.data, graph3Data.layout);
+  </script>
+  <script>
+    // Initialize the Plotly chart
+    var graph4Data = {{ fig_clientes_anomalias_01| safe }};
+    Plotly.newPlot('plotly4-chart', graph4Data.data, graph4Data.layout);
+  </script>
+  <script>
+    // Initialize the Plotly chart
+    var graph5Data = {{ fig_radar_01| safe }};
+    Plotly.newPlot('plotly5-chart', graph5Data.data, graph5Data.layout);
+  </script>
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script>
+    $("#Colum1011").change(function () {
+        const url = ""  // get the url of the `load_cities` view
+        const Colum10 = $("#Colum10").val();
+
+       req= $.ajax({
+            url: url,
+            data: { 'Colum10': Colum10 },
+            datatype:"json",
+
+        });
+
+       req.done(function(data) {
+                var graphs = JSON.parse(data.graph1);
+                Plotly.react('plotly-chart', graphs, {});
+
+                var graphs2 = JSON.parse(data.graph2);
+                Plotly.react('plotly2-chart', graphs2, {});
+
+                var graphs3 = JSON.parse(data.graph3);
+                Plotly.react('plotly3-chart', graphs3, {});
+
+                var list_colum1 = JSON.parse(data.list_colum1);
+
+
+               var $nom_fac_dril = $("#Colum20");
+               $nom_fac_dril.empty();
+               $nom_fac_dril.append($("<option></option>").attr("value", '').text(''));
+               $.each(list_colum1, function(i, value ) {
+               i= value
+               $nom_fac_dril.append($("<option></option>").attr("value", i).text(value));
+               });
+
+
+       });
+
+    });
+</script>
+<script>
+    $("#Colum101").change(function () {
+        const url = ""  // get the url of the `load_cities` view
+        const Colum10 = $("#Colum10").val();
+
+       req= $.ajax({
+            url: url,
+            data: { 'Colum10': Colum10 },
+            datatype:"json",
+
+        });
+
+       req.done(function(data) {
+                //$("#plot1").fadeOut(100).fadeIn(100);
+                //var graphs = JSON.parse(data);
+                var graphs = JSON.parse(data.graph1);
+                //console.log(graphs)
+                Plotly.react('plotly-chart', graphs, {});
+       });
+
+    });
+</script>
+ <script>
+      //var $ =jQuery.noConflict();
+    $("#Colum501, #Colum401, #Colum301, #Colum201, #Colum101").change(function () {
+        const url = ""  // get the url of the `load_cities` view
+        const Colum50 = $("#Colum50").val();
+        const Colum40 = $("#Colum40").val();
+        const Colum30 = $("#Colum30").val(); // get the selected country ID from the HTML input
+        const Colum20 = $("#Colum20").val();
+        const Colum10 = $("#Colum10").val();
+
+        $.ajax({                       // initialize an AJAX request
+            url: url,                    // set the url of the request (= /persons/ajax/load-cities/ )
+            data: {
+                'Colum50': Colum50,
+                'Colum40': Colum40,
+                'Colum30': Colum30,       // add the country id to the GET parameters
+                'Colum20': Colum20,
+                'Colum10': Colum10,
+            },
+            datatype:"json",
+            success: function (data) {   // `data` is the return of the `load_cities` view function
+               //$("#Colum5").html(data);   replace the contents of the city input with the data that came from the server
+               var $Nzon = $("#Colum60");
+               $Nzon.empty(); // remove old options
+               $Nzon.append($("<option></option>").attr("value", '').text(''));
+               $.each(data, function(i, value ) {
+               i= value
+               $Nzon.append($("<option></option>").attr("value", i).text(value));
+               });
+                    console.log(data); // imprimir datos en consola
+            }
+        });
+
+    });
+
+</script>
+ <script>
+      //var $ =jQuery.noConflict();
+    $("#Colum401, #Colum301, #Colum201, #Colum101").change(function () {
+        const url = ""  // get the url of the `load_cities` view
+        const Colum40 = $("#Colum40").val();
+        const Colum30 = $("#Colum30").val(); // get the selected country ID from the HTML input
+        const Colum20 = $("#Colum20").val();
+        const Colum10 = $("#Colum10").val();
+
+        $.ajax({                       // initialize an AJAX request
+            url: url,                    // set the url of the request (= /persons/ajax/load-cities/ )
+            data: {
+                'Colum40': Colum40,
+                'Colum30': Colum30,       // add the country id to the GET parameters
+                'Colum20': Colum20,
+                'Colum10': Colum10,
+            },
+            datatype:"json",
+            success: function (data) {   // `data` is the return of the `load_cities` view function
+               //$("#Colum5").html(data);   replace the contents of the city input with the data that came from the server
+               var $Nzon = $("#Colum50");
+               $Nzon.empty(); // remove old options
+               $Nzon.append($("<option></option>").attr("value", '').text(''));
+               $.each(data, function(i, value ) {
+               i= value
+               $Nzon.append($("<option></option>").attr("value", i).text(value));
+               });
+                    console.log(data); // imprimir datos en consola
+            }
+        });
+
+    });
+
+</script>
+ <script>
+      //var $ =jQuery.noConflict();
+    $("#Colum301, #Colum201, #Colum101").change(function () {
+        const url = ""  // get the url of the `load_cities` view
+        const Colum30 = $("#Colum30").val(); // get the selected country ID from the HTML input
+        const Colum20 = $("#Colum20").val();
+        const Colum10 = $("#Colum10").val();
+
+        $.ajax({                       // initialize an AJAX request
+            url: url,                    // set the url of the request (= /persons/ajax/load-cities/ )
+            data: {
+                'Colum30': Colum30,       // add the country id to the GET parameters
+                'Colum20': Colum20,
+                'Colum10': Colum10,
+            },
+            datatype:"json",
+            success: function (data) {   // `data` is the return of the `load_cities` view function
+               //$("#Colum4").html(data);   replace the contents of the city input with the data that came from the server
+               var $Nvar = $("#Colum40");
+               $Nvar.empty(); // remove old options
+               $Nvar.append($("<option></option>").attr("value", '').text(''));
+               $.each(data, function(i, value ) {
+               i= value
+               $Nvar.append($("<option></option>").attr("value", i).text(value));
+               });
+                    console.log(data); // imprimir datos en consola
+            }
+        });
+
+    });
+
+</script>
+ <script>
+      //var $ =jQuery.noConflict();
+    $("#Colum201, #Colum101").change(function () {
+        const url = ""  // get the url of the `load_cities` view
+        const Colum20 = $("#Colum20").val();
+        const Colum10 = $("#Colum10").val();
+
+        $.ajax({                       // initialize an AJAX request
+            url: url,                    // set the url of the request (= /persons/ajax/load-cities/ )
+            data: {
+                'Colum20': Colum20,      // add the country id to the GET parameters
+                'Colum10': Colum10,
+            },
+            datatype:"json",
+            success: function (data) {   // `data` is the return of the `load_cities` view function
+               //$("#Colum3").html(data);   replace the contents of the city input with the data that came from the server
+               // variables a remover
+               var $nfac = $("#Colum30");
+               $nfac.empty(); // remove old options
+               $nfac.append($("<option></option>").attr("value", '').text(''));
+               $.each(data, function(i, value ) {
+               i= value
+               $nfac.append($("<option></option>").attr("value", i).text(value));
+               });
+                    console.log(data); // imprimir datos en consola
+            }
+        });
+
+    });
+
+</script>
+<script>
+      //var $ =jQuery.noConflict();
+ //   $("#Colum101").change(function () {
+        const url = ""  // get the url of the `load_cities` view
+        const Colum10 = $("#Colum10").val();
+
+        $.ajax({                       // initialize an AJAX request
+            url: url,                    // set the url of the request (= /persons/ajax/load-cities/ )
+            data: {
+                'Colum10': Colum10,      // add the country id to the GET parameters
+            },
+            datatype:"json",
+            success: function (data) {   // `data` is the return of the `load_cities` view function
+               //$("#Colum2-").html(data);   replace the contents of the city input with the data that came from the server
+               // variables a remover
+               var $nom_fac_dril = $("#Colum20");
+               $nom_fac_dril.empty(); // remove old options
+               $nom_fac_dril.append($("<option></option>").attr("value", '').text(''));
+               $.each(data, function(i, value ) {
+               i= value
+               $nom_fac_dril.append($("<option></option>").attr("value", i).text(value));
+               });
+               //     console.log(data); // imprimir datos en consola
+            }
+        });
+
+    });
+</script>
+
+
+
+
+{% endblock %}

@@ -1,0 +1,216 @@
+{% extends "fin_manager/base1_1.html" %}
+{% load humanize %}
+{% load static %}
+{% block title %}CARGAR DATOS{% endblock %}
+
+{% block scrips_head %}
+<style>
+
+  form {
+    width: 100%;
+}
+
+.row {
+/*flex-wrap:  wrap-reverse*/
+}
+
+.space-3 {
+    padding-top: 4rem;
+    padding-bottom: 0rem;
+}
+
+
+#demo {
+
+  height: 1200px;
+
+  overflow: visible;
+  margin-left: 0%;
+}
+
+
+label {
+    display: block;
+    font: 1rem 'Fira Sans', sans-serif;
+}
+
+input,
+label {
+    margin: .4rem 0;
+}
+
+    form {
+       width: 100%;
+       }
+
+.u-icon {
+    background-color: rgb(24 215 185);
+}
+
+.u-icon--primary {
+    color: #f9f9f9;
+}
+
+.u-timeline__info::before, .u-timeline__content::before {
+    border-left: 3px dashed #e3e6f000;
+}
+</style>
+
+{% load static %}
+{% endblock %}
+
+{% block content_links_logo %}
+<h2 class="text-white" style="font-weight: 900; font-size:1.8rem; ">VAJO</h2>
+{% endblock %}
+
+{% block content_main %}
+<br>
+<br>
+<br>
+<br>
+<div id="basicsAccordion">
+
+
+ <div class="card mb-3 card-frame card-purple-frame">
+    <div class="card-header card-collapse__header " id="basicsHeadingOne">
+      <h5 class="mb-0">
+        <button class="btn btn-link btn-block d-flex justify-content-between card-collapse__btn p-3"
+                data-toggle="collapse"
+                data-target="#basicsCollapseOne"
+                aria-expanded="true"
+                aria-controls="basicsCollapseOne">
+
+              <h6 class="h6">
+                <a class="h6 text-primary mb-3" style="padding: 0rem 0rem; font-size: small;" >Ingreso de datos al modelo</a>
+              </h6>
+
+          <span class="card-collapse__btn-arrow">
+            <span class="fa fa-arrow-down small"></span>
+          </span>
+        </button>
+      </h5>
+    </div>
+    <div id="basicsCollapseOne" class="collapse show"
+         aria-labelledby="basicsHeadingOne"
+         data-parent="#basicsAccordion">
+      <div class="card-body card-collapse__body"
+         style="float: left; margin: 10 auto;    height: auto; margin-right: 0px;">
+
+
+
+    <form method="POST" enctype="multipart/form-data" action="">
+    {% csrf_token %}
+    <label class="h6 text-primary mb-3" style="padding: 0rem 0rem; font-size: small;"  for="exampleFormControlFile1">Dar Click en el botón "Choose File", seleccionar el archivo y luego dar click en el botón "Cargar Datos"</label>
+    <ul class="u-timeline">
+    <li class="u-timeline__item">
+      <div class="u-timeline__content">
+        <div class="media">
+          <span class="u-icon u-icon--primary u-icon--sm u-timeline__icon rounded-circle mr-3">
+            <span class="u-icon__inner">1</span>
+          </span>
+          <div class="media-body">
+
+                  <div class="form-group">
+                  <input name="path" type="file" style=" height:30px; padding: 0rem 0rem; font-size: small;" class="form-control-file" id="exampleFormControlFile1" />
+                  </div>
+          </div>
+        </div>
+      </div>
+    </li>
+
+    <li class="u-timeline__item">
+      <div class="u-timeline__content">
+        <div class="media">
+          <span class="u-icon u-icon--primary u-icon--sm u-timeline__icon rounded-circle mr-3">
+            <span class="u-icon__inner">2</span>
+          </span>
+          <div class="media-body">
+
+              <div class="form-group"  >
+              <button type="submit" class="btn btn-block btn-outline-primary" style="width:100px; height:30px; padding: 0rem 0rem; font-size: small;" >Cargar Datos</button>
+              </div>
+          </div>
+        </div>
+      </div>
+    </li>
+
+    </ul>
+    </form>
+
+
+    </div>
+    </div>
+  </div>
+
+
+ <div class="card mb-3 card-frame card-purple-frame">
+    <div class="card-header card-collapse__header" id="basicsHeadingTwo">
+      <h5 class="mb-0">
+        <button class="btn btn-link btn-block d-flex justify-content-between card-collapse__btn collapsed p-3"
+                data-toggle="collapse"
+                data-target="#basicsCollapseTwo"
+                aria-expanded="false"
+                aria-controls="basicsCollapseTwo">
+
+              <h6 class="h6">
+                <a class="h6 text-primary mb-3" style="font-size: small;" >Información Modelo </a>
+              </h6>
+
+          <span class="card-collapse__btn-arrow">
+            <span class="fa fa-arrow-down small"></span>
+          </span>
+
+        </button>
+      </h5>
+    </div>
+
+     <!-- -->
+
+  </div>
+
+
+</div>
+
+
+
+{% endblock %}
+
+{% block content_right %} {% endblock %}
+
+
+{% block scripts_body %}
+{% load static %}
+
+
+<script>
+      //var $ =jQuery.noConflict();
+    $("#Nombre_segmento").change(function () {
+        const url = ""  // get the url of the `load_cities` view
+        const Nombre_segmento = $("#Nombre_segmento").val();
+        $.ajax({                       // initialize an AJAX request
+            url: url,                    // set the url of the request (= /persons/ajax/load-cities/ )
+            data: {
+
+                'Nombre_segmento': Nombre_segmento,      // add the country id to the GET parameters
+
+            },
+            datatype:"json",
+            success: function (data) {   // `data` is the return of the `load_cities` view function
+               //$("#Nombre_tipo").html(data);   replace the contents of the city input with the data that came from the server
+               // variables a remover
+               var $ntipo = $("#Nombre_tipo");
+               $ntipo.empty(); // remove old options
+               $ntipo.append($("<option></option>").attr("value", '').text(''));
+               $.each(data, function(i, value ) {
+               i= value
+               $ntipo.append($("<option></option>").attr("value", i).text(value));
+               });
+                    console.log(data); // imprimir datos en consola
+            }
+        });
+
+    });
+
+</script>
+{% endblock %}
+
