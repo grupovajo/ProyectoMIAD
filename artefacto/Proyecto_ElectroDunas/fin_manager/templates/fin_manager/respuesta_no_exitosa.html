@@ -1,0 +1,128 @@
+{% extends "fin_manager/base1_1.html" %}
+{% load humanize %}
+{% load static %}
+{% block title %}CARGAR DATOS{% endblock %}
+
+{% block scrips_head %}
+<style>
+
+  form {
+    width: 100%;
+}
+
+.row {
+/*flex-wrap:  wrap-reverse*/
+}
+
+.space-3 {
+    padding-top: 4rem;
+    padding-bottom: 0rem;
+}
+
+
+#demo {
+
+  height: 1200px;
+
+  overflow: visible;
+  margin-left: 0%;
+}
+
+
+label {
+    display: block;
+    font: 1rem 'Fira Sans', sans-serif;
+}
+
+input,
+label {
+    margin: .4rem 0;
+}
+
+    form {
+       width: 100%;
+       }
+
+.u-icon {
+    background-color: rgb(24 215 185);
+}
+
+.u-icon--primary {
+    color: #f9f9f9;
+}
+
+.u-timeline__info::before, .u-timeline__content::before {
+    border-left: 3px dashed #e3e6f000;
+}
+</style>
+
+{% load static %}
+{% endblock %}
+
+{% block content_links_logo %}
+<h2 class="text-white" style="font-weight: 500; ">VAJO</h2>
+{% endblock %}
+
+{% block content_main %}
+</br>
+</br>
+</br>
+</br>
+      <!-- Icon Blocks -->
+      <div class="text-center px-lg-3">
+        <img class="max-width-14 mb-2" src="static/space/assets/svg/components/idea-red-icon.svg" alt="Image Description">
+        <h3 class="h4">Revisa e Intente Nuevamente</h3>
+        <p class="mb-0">
+            <a class="d-block text-dark  rounded p-4" href="/cargue_modelos">
+
+                  Continuar
+
+
+            </a>
+        </p>
+      </div>
+      <!-- End Icon Blocks -->
+
+
+
+
+{% endblock %}
+
+{% block content_right %} {% endblock %}
+
+
+{% block scripts_body %}
+{% load static %}
+
+
+<script>
+      //var $ =jQuery.noConflict();
+    $("#Nombre_segmento").change(function () {
+        const url = ""  // get the url of the `load_cities` view
+        const Nombre_segmento = $("#Nombre_segmento").val();
+        $.ajax({                       // initialize an AJAX request
+            url: url,                    // set the url of the request (= /persons/ajax/load-cities/ )
+            data: {
+
+                'Nombre_segmento': Nombre_segmento,      // add the country id to the GET parameters
+
+            },
+            datatype:"json",
+            success: function (data) {   // `data` is the return of the `load_cities` view function
+               //$("#Nombre_tipo").html(data);   replace the contents of the city input with the data that came from the server
+               // variables a remover
+               var $ntipo = $("#Nombre_tipo");
+               $ntipo.empty(); // remove old options
+               $ntipo.append($("<option></option>").attr("value", '').text(''));
+               $.each(data, function(i, value ) {
+               i= value
+               $ntipo.append($("<option></option>").attr("value", i).text(value));
+               });
+                    console.log(data); // imprimir datos en consola
+            }
+        });
+
+    });
+
+</script>
+{% endblock %}

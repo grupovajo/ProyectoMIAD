@@ -27,15 +27,237 @@ import itertools
 from itertools import product
 import plotly.graph_objects as go
 
+
 import json
 from django.utils import timezone
 from datetime import date
 from datetime import datetime
+from django.core.files.storage import FileSystemStorage
+from django.conf import settings
+import os
+
+
+#----------------------------------------------------------------------------------
+#---------------------------Actualizar DATOS en una tabla--------------------------
+#----------------------------------------------------------------------------------
+
+
+@login_required(redirect_field_name='login')
+def tabla_registros_consumo(request):
+    # Consulta la tabla
+    object = Infoclientes.objects.all().order_by('-id')[:10000]
+    context = {'object': object}
+    return render(request, 'fin_manager/tabla_registros_consumo.html', context)
+
 
 
 @login_required(redirect_field_name='login')
 def cargue_modelos(request):
+
+    if request.method == 'POST':
+
+        #  Ingreso modelo de clasificación formato json - modelo_clasificacion.json
+        try:
+            if request.FILES['exampleFormControlFile1']:
+                uploaded_file = request.FILES['exampleFormControlFile1']
+                # Get the project's static directory path
+                static_dir = settings.STATICFILES_DIRS[0]
+                # Create a FileSystemStorage instance for the static directory
+                fs = FileSystemStorage(location=os.path.join(static_dir, 'modelos'))
+                # Especificar la ubicación base
+                new_filename = os.path.join(static_dir, 'modelos\modelo_clasificacion---.json')
+                # Verificar si el archivo existe, si exite
+                if os.path.exists(new_filename):
+                    # Eliminar el archivo
+                    os.remove(new_filename)
+                    message= f"Archivo '{new_filename}' eliminado con éxito."
+                    print(message)
+                filename = fs.save(new_filename, uploaded_file)
+                file_path = fs.path(filename)
+                print(f"Archivo guardado en: {file_path}")  # Añadido para imprimir la ruta del archivo guardado
+                return redirect('/respuesta_exitosa')
+        except:
+            return redirect('/respuesta_no_exitosa')
+
+
+        # Ingreso modelo clasificación pesos weights formato h5 - modeloClf_pesos.weights.h5
+        try:
+            if request.FILES['exampleFormControlFile2']:
+                uploaded_file = request.FILES['exampleFormControlFile2']
+                # Get the project's static directory path
+                static_dir = settings.STATICFILES_DIRS[0]
+                # Create a FileSystemStorage instance for the static directory
+                fs = FileSystemStorage(location=os.path.join(static_dir, 'modelos'))
+                # Especificar la ubicación base
+                new_filename = os.path.join(static_dir, 'modelos\modeloClf_pesos.weights---.h5')
+                # Verificar si el archivo existe, si exite
+                if os.path.exists(new_filename):
+                    # Eliminar el archivo
+                    os.remove(new_filename)
+                    message= f"Archivo '{new_filename}' eliminado con éxito."
+                    print(message)
+                filename = fs.save(new_filename, uploaded_file)
+                file_path = fs.path(filename)
+                print(f"Archivo guardado en: {file_path}")  # Añadido para imprimir la ruta del archivo guardado
+                return redirect('/respuesta_exitosa')
+        except:
+            return redirect('/respuesta_no_exitosa')
+
+
+        # Ingreso objeto de escalación para clasificación en el formato joblib - scalerClf.joblib
+        try:
+            if request.FILES['exampleFormControlFile3']:
+                uploaded_file = request.FILES['exampleFormControlFile3']
+                # Get the project's static directory path
+                static_dir = settings.STATICFILES_DIRS[0]
+                # Create a FileSystemStorage instance for the static directory
+                fs = FileSystemStorage(location=os.path.join(static_dir, 'modelos'))
+                # Especificar la ubicación base
+                new_filename = os.path.join(static_dir, 'modelos\scalerClf---.joblib')
+                # Verificar si el archivo existe, si exite
+                if os.path.exists(new_filename):
+                    # Eliminar el archivo
+                    os.remove(new_filename)
+                    message= f"Archivo '{new_filename}' eliminado con éxito."
+                    print(message)
+                filename = fs.save(new_filename, uploaded_file)
+                file_path = fs.path(filename)
+                print(f"Archivo guardado en: {file_path}")  # Añadido para imprimir la ruta del archivo guardado
+                return redirect('/respuesta_exitosa')
+        except:
+            return redirect('/respuesta_no_exitosa')
+
+
+        # Ingreso  modelo de regresión de energia activa en formato json - modelo_energiaActiva.json
+        try:
+            if request.FILES['exampleFormControlFile4']:
+                uploaded_file = request.FILES['exampleFormControlFile4']
+                # Get the project's static directory path
+                static_dir = settings.STATICFILES_DIRS[0]
+                # Create a FileSystemStorage instance for the static directory
+                fs = FileSystemStorage(location=os.path.join(static_dir, 'modelos'))
+                # Especificar la ubicación base
+                new_filename = os.path.join(static_dir, 'modelos\modelo_energiaActiva---.json')
+                # Verificar si el archivo existe, si exite
+                if os.path.exists(new_filename):
+                    # Eliminar el archivo
+                    os.remove(new_filename)
+                    message= f"Archivo '{new_filename}' eliminado con éxito."
+                    print(message)
+                filename = fs.save(new_filename, uploaded_file)
+                file_path = fs.path(filename)
+                print(f"Archivo guardado en: {file_path}")  # Añadido para imprimir la ruta del archivo guardado
+                return redirect('/respuesta_exitosa')
+        except:
+            return redirect('/respuesta_no_exitosa')
+
+
+        # Ingreso modelo de regresión energía activa pesos en formato h5 - modeloEA_pesos.weights.h5
+        try:
+            if request.FILES['exampleFormControlFile5']:
+                uploaded_file = request.FILES['exampleFormControlFile5']
+                # Get the project's static directory path
+                static_dir = settings.STATICFILES_DIRS[0]
+                # Create a FileSystemStorage instance for the static directory
+                fs = FileSystemStorage(location=os.path.join(static_dir, 'modelos'))
+                # Especificar la ubicación base
+                new_filename = os.path.join(static_dir, 'modelos\modeloEA_pesos---.weights.h5')
+                # Verificar si el archivo existe, si exite
+                if os.path.exists(new_filename):
+                    # Eliminar el archivo
+                    os.remove(new_filename)
+                    message= f"Archivo '{new_filename}' eliminado con éxito."
+                    print(message)
+                filename = fs.save(new_filename, uploaded_file)
+                file_path = fs.path(filename)
+                print(f"Archivo guardado en: {file_path}")  # Añadido para imprimir la ruta del archivo guardado
+                return redirect('/respuesta_exitosa')
+        except:
+            return redirect('/respuesta_no_exitosa')
+
+
+        # Ingreso modelo de regresión energia reactiva en formato json -  mmodelo_energiaReactiva.json
+        try:
+            if request.FILES['exampleFormControlFile6']:
+                uploaded_file = request.FILES['exampleFormControlFile6']
+                # Get the project's static directory path
+                static_dir = settings.STATICFILES_DIRS[0]
+                # Create a FileSystemStorage instance for the static directory
+                fs = FileSystemStorage(location=os.path.join(static_dir, 'modelos'))
+                # Especificar la ubicación base
+                new_filename = os.path.join(static_dir, 'modelos\mmodelo_energiaReactiva---.json')
+                # Verificar si el archivo existe, si exite
+                if os.path.exists(new_filename):
+                    # Eliminar el archivo
+                    os.remove(new_filename)
+                    message= f"Archivo '{new_filename}' eliminado con éxito."
+                    print(message)
+                filename = fs.save(new_filename, uploaded_file)
+                file_path = fs.path(filename)
+                print(f"Archivo guardado en: {file_path}")  # Añadido para imprimir la ruta del archivo guardado
+                return redirect('/respuesta_exitosa')
+        except:
+            return redirect('/respuesta_no_exitosa')
+
+
+        # Ingreso  del modelo de regresión  energía reactiva pesos en formato h5 - modeloER_pesos.weights.h5
+
+        try:
+            if request.FILES['exampleFormControlFile7']:
+                uploaded_file = request.FILES['exampleFormControlFile7']
+                # Get the project's static directory path
+                static_dir = settings.STATICFILES_DIRS[0]
+                # Create a FileSystemStorage instance for the static directory
+                fs = FileSystemStorage(location=os.path.join(static_dir, 'modelos'))
+                # Especificar la ubicación base
+                new_filename = os.path.join(static_dir, 'modelos\modeloER_pesos---.weights.h5')
+                # Verificar si el archivo existe, si exite
+                if os.path.exists(new_filename):
+                    # Eliminar el archivo
+                    os.remove(new_filename)
+                    message= f"Archivo '{new_filename}' eliminado con éxito."
+                    print(message)
+                filename = fs.save(new_filename, uploaded_file)
+                file_path = fs.path(filename)
+                print(f"Archivo guardado en: {file_path}")  # Añadido para imprimir la ruta del archivo guardado
+                return redirect('/respuesta_exitosa')
+        except:
+            return redirect('/respuesta_no_exitosa')
+
+
+        #Ingreso objeto de escalación de regresion en formato joblib -scalerReg.joblib
+
+        try:
+            if request.FILES['exampleFormControlFile8']:
+                uploaded_file = request.FILES['exampleFormControlFile8']
+                # Get the project's static directory path
+                static_dir = settings.STATICFILES_DIRS[0]
+                # Create a FileSystemStorage instance for the static directory
+                fs = FileSystemStorage(location=os.path.join(static_dir, 'modelos'))
+                # Especificar la ubicación base
+                new_filename = os.path.join(static_dir, 'modelos\scalerReg---.joblib')
+                # Verificar si el archivo existe, si exite
+                if os.path.exists(new_filename):
+                    # Eliminar el archivo
+                    os.remove(new_filename)
+                    message= f"Archivo '{new_filename}' eliminado con éxito."
+                    print(message)
+                filename = fs.save(new_filename, uploaded_file)
+                file_path = fs.path(filename)
+                print(f"Archivo guardado en: {file_path}")  # Añadido para imprimir la ruta del archivo guardado
+                return redirect('/respuesta_exitosa')
+        except:
+            return redirect('/respuesta_no_exitosa')
+
+
     return render(request, 'fin_manager/cargue_modelos.html')
+
+
+
+
+
+
+
 
 
 def cargar_tabla_en_memoria(fecha_inicio, fecha_fin ):
@@ -70,9 +292,12 @@ def obtener_datos_de_la_tabla_desde_memoria(fecha_inicio,fecha_fin):
         bdinfoclientes = cache.get('bdinfoclientes')
     return bdinfoclientes
 
-
-
-
+@login_required(redirect_field_name='login')
+def respuesta_no_exitosa(request):
+    return render(request, 'fin_manager/respuesta_no_exitosa.html')
+@login_required(redirect_field_name='login')
+def respuesta_exitosa(request):
+    return render(request, 'fin_manager/respuesta_exitosa.html')
 @login_required(redirect_field_name='login')
 def grafica1(request):
     return render(request, 'fin_manager/grafica_01.html')
@@ -92,7 +317,9 @@ def grafica5(request):
 def grafica6(request):
     return render(request, 'fin_manager/grafica_06.html')
 
-
+@login_required(redirect_field_name='login')
+def ventanagenerarprediccion(request):
+    return render(request, 'fin_manager/generar_tabla_prediccion.html')
 
 @login_required(redirect_field_name='login')
 def home(request):
@@ -101,7 +328,7 @@ def home(request):
     fecha_inicio = date(2022, 11, 1)
     fecha_fin = date(2023, 8, 10)
     #Definición parámetros fijos (Fecha)
-    fecha_maxima='2023-06-01'
+    fecha_maxima='2200-06-01'
 
 
 
@@ -249,25 +476,6 @@ def home(request):
     return render(request, 'fin_manager/home.html', context)
 
 
-def valores_filtros():
-    Colum1_List_views0 =[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26,
-                         27, 28, 29, 30]
-    Colum2_List_views0 =[0.0, 1.0]
-    Colum3_List_views0 = ['Elaboración de cacao y chocolate y de productos de confitería',
-                          'Cultivo de Árboles Frutales y Nueces',
-                          'Cultivo de otros frutos y nueces de árboles y arbustos',
-                          'Cultivo de hortalizas y melones, raíces y tubérculos',
-                          'Captación, tratamiento y distribución de agua',
-                          'Cultivo de Hortalizas',
-                          'Venta al por mayor de metales y minerales metalíferos']
-    Colum4_List_views0 = [2021, 2022, 2023, 2024]
-
-    Colum5_List_views0 = []
-    Colum6_List_views0 = []
-
-    return Colum1_List_views0, Colum2_List_views0, Colum3_List_views0, Colum4_List_views0, Colum5_List_views0, Colum6_List_views0
-
-
 @login_required(redirect_field_name='login')
 def carguedatos(request):
     if request.method == 'POST':
@@ -277,7 +485,7 @@ def carguedatos(request):
                 # Leo la información del Excel
                 df1 = pd.read_excel(archivo, sheet_name="Hoja1", skiprows=0, na_values="-")
                 # Determino las tablas de información que se van a leer
-                df2 = df1.iloc[1:500000, 0:7]  # Selecciono  el rango de los datos de mi df
+                df2 = df1.iloc[1:500001, 0:7]  # Selecciono  el rango de los datos de mi df
                 df2 = df2.fillna(0)  # reemplazo los valores "nan" por cero "0"
 
                 #fechahora = datetime.now()  # fecha y hora actual
@@ -285,15 +493,18 @@ def carguedatos(request):
                 #Obtengo el nombre del usuario
                 usuario = str(User.objects.get(username=request.user.username))
 
+                try:
+                    # Obtener indice
+                    id_max = (Infoclientes.objects.values('id').order_by(
+                        '-id').first())  # obtendo de la base de datos el último indice en un diccionario
+                    id_max_1 = int(id_max.get('id'))  # obtengo el indice del diccionario y lo convierto en número
+                    id_max_3 = int(id_max_1) + 1
+                except:
+                    id_max_3 = 1
+                    print("id_max_3_except:", id_max_3)
+
                 for fila in range(df2.shape[0]):
-                    try:
-                        #Obtener indice
-                        id_max = (Infoclientes.objects.values('id').order_by('-id').first())  # obtendo de la base de datos el último indice en un diccionario
-                        id_max_1 = int(id_max.get('id'))  # obtengo el indice del diccionario y lo convierto en número
-                        id_max_3 = int(id_max_1) + 1
-                    except:
-                        id_max_3 = 1
-                        print("id_max_3_except:", id_max_3)
+
 
                     GuardarModelo = Infoclientes(
                         id= id_max_3,
@@ -309,9 +520,11 @@ def carguedatos(request):
                         fechahora=fechahoraregistro,
                         )
                     GuardarModelo.save()
-                return redirect('/')
+                    id_max_3 += 1
+
+                return redirect('/respuesta_exitosa')
         except:
-            return redirect('/')
+            return redirect('/respuesta_no_exitosa')
 
     return render(request, 'fin_manager/carguedatos.html')
 
@@ -319,201 +532,200 @@ def carguedatos(request):
 
 @login_required(redirect_field_name='login')
 def generartablaprediccion(request):
+    try:
+        # Importamos base de datos de información histórica
 
-    # Importamos base de datos de información histórica
+        df = pd.DataFrame(list(Infoclientes.objects.values()))
 
-    df = pd.DataFrame(list(Infoclientes.objects.values()))
-
-    #-------------------------------------Cargue de modelos Regresión-------------------------------------------------------------
-
-
-    link_arquitectura_json_regresion_ER='static/modelos/modelo_energiaReactiva.json'
-    # Cargar la arquitectura del modelo desde el archivo JSON
-    with open(link_arquitectura_json_regresion_ER, "r") as archivo:
-        modelo_cargado_ER = archivo.read()
-
-    # Reconstruir el modelo desde la arquitectura cargada
-    modeloER = model_from_json(modelo_cargado_ER)
-
-    link_pesos_del_modelo_regresion_ER='static/modelos/modeloER_pesos.weights.h5'
-    # Cargar los pesos del modelo desde el archivo HDF5
-    modeloER.load_weights(link_pesos_del_modelo_regresion_ER)
-
-    link_arquitectura_del_modelo_regresion_json_EA="static/modelos/modelo_energiaActiva.json"
-    # Cargar la arquitectura del modelo desde el archivo JSON
-    with open(link_arquitectura_del_modelo_regresion_json_EA, "r") as archivo:
-        modelo_cargado_EA = archivo.read()
-
-    # Reconstruir el modelo desde la arquitectura cargada
-    modeloEA = model_from_json(modelo_cargado_EA)
-
-    link_pesos_del_modelo_regresion_EA= "static/modelos/modeloEA_pesos.weights.h5"
-    # Cargar los pesos del modelo desde el archivo HDF5
-    modeloEA.load_weights(link_pesos_del_modelo_regresion_EA)
-
-    # Cargar scaler utilizado en los datos para la predicción
-    link_scaler_reg='static/modelos/scalerReg.joblib'
-    from joblib import load
-    scaler = load(link_scaler_reg)
-
-    #----------Ajuste DataFrame base Histórica para unirlo al dataframe de predicción de consumo energía activa y reactiva------------
-
-    # definimos los nombres de las Columnas
-    df.rename(columns={'idcliente': 'idCliente', 'active_energy': 'Active_energy', 'reactive_energy': 'Reactive_energy'},
-        inplace=True)
-
-    df['fecha'] = pd.to_datetime(df['fecha'])
-    df['Dia'] = df['fecha'].dt.day
-    df['Mes'] = df['fecha'].dt.month
-    df['Año'] = df['fecha'].dt.year
-    df['Hora'] = df['fecha'].dt.hour
-    df['Minuto'] = df['fecha'].dt.minute
-
-    # Selecciono columnas de interés
-    df00 = df.loc[:,['fecha', 'Active_energy', 'Reactive_energy', 'idCliente', 'sectoreconomico', 'Dia', 'Mes', 'Año', 'Hora','Minuto']]
-
-    # Adiciono columna para facilidad de filtro
-    df00['prediccion_consumo_energia'] = 0
-
-    #------------------------------Generar Dataframe para aplicar predicción----------------------------------------------------------
-
-    lista_Clientes = df['idCliente'].unique()
-    Fecha_inicio = df['fecha'].max() + pd.Timedelta(hours=1)
-    Fecha_fin = pd.Timestamp('2024-12-31 23:00:00', tz='UTC')
+        #-------------------------------------Cargue de modelos Regresión-------------------------------------------------------------
 
 
-    # Obtener todas las combinaciones de las listas
-    combinaciones = list(product(lista_Clientes, pd.date_range(Fecha_inicio, Fecha_fin, freq='H')))
+        link_arquitectura_json_regresion_ER='static/modelos/modelo_energiaReactiva---.json'
+        # Cargar la arquitectura del modelo desde el archivo JSON
+        with open(link_arquitectura_json_regresion_ER, "r") as archivo:
+            modelo_cargado_ER = archivo.read()
 
-    # Genero Un dataframe
-    df1 = pd.DataFrame(combinaciones, columns=['idCliente', 'fecha'])
+        # Reconstruir el modelo desde la arquitectura cargada
+        modeloER = model_from_json(modelo_cargado_ER)
 
-    # Creación de un DataFrame con todas las combinaciones posibles de las categorías de las variables predictoras
-    df1['Dia'] = df1['fecha'].dt.day
-    df1['Mes'] = df1['fecha'].dt.month
-    df1['Año'] = df1['fecha'].dt.year
-    df1['Hora'] = df1['fecha'].dt.hour
-    df1['Minuto'] = df1['fecha'].dt.minute
+        link_pesos_del_modelo_regresion_ER='static/modelos/modeloER_pesos---.weights.h5'
+        # Cargar los pesos del modelo desde el archivo HDF5
+        modeloER.load_weights(link_pesos_del_modelo_regresion_ER)
 
-    # Normalización de las variables predictoras
-    df_scaled = scaler.transform(df1.loc[:, ['idCliente', 'Dia', 'Mes', 'Año', 'Hora', 'Minuto']])
+        link_arquitectura_del_modelo_regresion_json_EA="static/modelos/modelo_energiaActiva---.json"
+        # Cargar la arquitectura del modelo desde el archivo JSON
+        with open(link_arquitectura_del_modelo_regresion_json_EA, "r") as archivo:
+            modelo_cargado_EA = archivo.read()
 
-    #----------------------------------Realizar Predicción Aplicando la Regresión-----------------------------------------------------
+        # Reconstruir el modelo desde la arquitectura cargada
+        modeloEA = model_from_json(modelo_cargado_EA)
 
-    y_pred_EA = modeloEA.predict(df_scaled)
-    y_pred_ER = modeloER.predict(df_scaled)
+        link_pesos_del_modelo_regresion_EA= "static/modelos/modeloEA_pesos---.weights.h5"
+        # Cargar los pesos del modelo desde el archivo HDF5
+        modeloEA.load_weights(link_pesos_del_modelo_regresion_EA)
 
-    #-------------------------------------------Unir predicción al dataframe de predicción--------------------------------------------
+        # Cargar scaler utilizado en los datos para la predicción
+        link_scaler_reg='static/modelos/scalerReg---.joblib'
+        from joblib import load
+        scaler = load(link_scaler_reg)
 
-    # Convertir el array de NumPy en un DataFrame de pandas
-    df_predEA = pd.DataFrame(y_pred_EA, columns=['Active_energy'])
-    df_predER = pd.DataFrame(y_pred_ER, columns=['Reactive_energy'])
+        #----------Ajuste DataFrame base Histórica para unirlo al dataframe de predicción de consumo energía activa y reactiva------------
 
-    # Unir el DataFrame para predicción con el DataFrame del array
-    df01 = pd.concat([df1, df_predEA, df_predER], axis=1)
+        # definimos los nombres de las Columnas
+        df.rename(columns={'idcliente': 'idCliente', 'active_energy': 'Active_energy', 'reactive_energy': 'Reactive_energy'},
+            inplace=True)
 
-    # Genero una nueva Columna 'prediccion_consumo_energia'
-    df01['prediccion_consumo_energia'] = 1
+        df['fecha'] = pd.to_datetime(df['fecha'])
+        df['Dia'] = df['fecha'].dt.day
+        df['Mes'] = df['fecha'].dt.month
+        df['Año'] = df['fecha'].dt.year
+        df['Hora'] = df['fecha'].dt.hour
+        df['Minuto'] = df['fecha'].dt.minute
 
-    # Genero una tabla con la base de históricos para relacionar el idCliente y Sector económico
-    idCliente_sectoreconomico = df.groupby('idCliente').agg({'sectoreconomico': ['min']})
+        # Selecciono columnas de interés
+        df00 = df.loc[:,['fecha', 'Active_energy', 'Reactive_energy', 'idCliente', 'sectoreconomico', 'Dia', 'Mes', 'Año', 'Hora','Minuto']]
 
-    # Reseteo el index
-    idCliente_sectoreconomico = idCliente_sectoreconomico.reset_index()
+        # Adiciono columna para facilidad de filtro
+        df00['prediccion_consumo_energia'] = 0
 
-    # Elimino Nivel nombre columnas dataframe
-    idCliente_sectoreconomico.columns = idCliente_sectoreconomico.columns.droplevel(1)
+        #------------------------------Generar Dataframe para aplicar predicción----------------------------------------------------------
 
-    # Adiciono campo sector económico en la tabla predicción
-    df001 = pd.merge(df01, idCliente_sectoreconomico, how='left', left_on=['idCliente'], right_on=['idCliente'])
+        lista_Clientes = df['idCliente'].unique()
+        Fecha_inicio = df['fecha'].max() + pd.Timedelta(hours=1)
 
-    #----------------------------------------------Cargar Modelo Prediccion anomalias------------------------------------------------
-
-    # Cargar la arquitectura del modelo desde el archivo JSON
-    arquitectura_del_modelo_clasificacion_archivo_json = "static/modelos/modelo_clasificacion.json"
-    with open(arquitectura_del_modelo_clasificacion_archivo_json, "r") as archivo:
-        modelo_cargado_Clf = archivo.read()
-
-    # Reconstruir el modelo desde la arquitectura cargada
-    modeloClf = model_from_json(modelo_cargado_Clf)
-
-    pesos_del_modelo_clasificacion= "static/modelos/modeloClf_pesos.weights.h5"
-    # Cargar los pesos del modelo desde el archivo HDF5
-    modeloClf.load_weights(pesos_del_modelo_clasificacion)
-
-    # Scaler_modelo_clasificacion
-    scaler_modelo_clasificacion='static/modelos/scalerClf.joblib'
-    scalerClf = load(scaler_modelo_clasificacion)
-
-    #---------------------------------------------Predicción anomalias datos históricos---------------------------------------------
-
-    columnasClf = ['Active_energy', 'Reactive_energy', 'idCliente', 'Dia', 'Mes', 'Año', 'Hora', 'Minuto']
-
-    dfClf01 = scalerClf.transform(df00[columnasClf])
-
-    anomalias = modeloClf.predict(dfClf01)
-    df00_anomalias = df00.copy()
-    df00_anomalias['Anomalia'] = [round(x[0]) for x in anomalias]
-
-    #----------------------------------------------Predicción anomalias datos predichos---------------------------------------------
-
-    dfClf001 = scalerClf.transform(df001[columnasClf])
-
-    anomaliaspre = modeloClf.predict(dfClf001)
-    df001_anomalias = df001.copy()
-    df001_anomalias['Anomalia'] = [round(x[0]) for x in anomaliaspre]
+        Fecha_fin = df['fecha'].max() + pd.DateOffset(months=6) + pd.Timedelta(hours=1) # pd.Timestamp('2024-12-31 23:00:00', tz='UTC')
 
 
-    #--------------------------------------------------------Unir Tabla Históricos y predicción consumo-----------------------------
+        # Obtener todas las combinaciones de las listas
+        combinaciones = list(product(lista_Clientes, pd.date_range(Fecha_inicio, Fecha_fin, freq='H')))
 
-    df003_anomalias = pd.concat([df001_anomalias, df00_anomalias])
+        # Genero Un dataframe
+        df1 = pd.DataFrame(combinaciones, columns=['idCliente', 'fecha'])
 
-    df003_anomalias.prediccion_consumo_energia.unique()
+        # Creación de un DataFrame con todas las combinaciones posibles de las categorías de las variables predictoras
+        df1['Dia'] = df1['fecha'].dt.day
+        df1['Mes'] = df1['fecha'].dt.month
+        df1['Año'] = df1['fecha'].dt.year
+        df1['Hora'] = df1['fecha'].dt.hour
+        df1['Minuto'] = df1['fecha'].dt.minute
+
+        # Normalización de las variables predictoras
+        df_scaled = scaler.transform(df1.loc[:, ['idCliente', 'Dia', 'Mes', 'Año', 'Hora', 'Minuto']])
+
+        #----------------------------------Realizar Predicción Aplicando la Regresión-----------------------------------------------------
+
+        y_pred_EA = modeloEA.predict(df_scaled)
+        y_pred_ER = modeloER.predict(df_scaled)
+
+        #-------------------------------------------Unir predicción al dataframe de predicción--------------------------------------------
+
+        # Convertir el array de NumPy en un DataFrame de pandas
+        df_predEA = pd.DataFrame(y_pred_EA, columns=['Active_energy'])
+        df_predER = pd.DataFrame(y_pred_ER, columns=['Reactive_energy'])
+
+        # Unir el DataFrame para predicción con el DataFrame del array
+        df01 = pd.concat([df1, df_predEA, df_predER], axis=1)
+
+        # Genero una nueva Columna 'prediccion_consumo_energia'
+        df01['prediccion_consumo_energia'] = 1
+
+        # Genero una tabla con la base de históricos para relacionar el idCliente y Sector económico
+        idCliente_sectoreconomico = df.groupby('idCliente').agg({'sectoreconomico': ['min']})
+
+        # Reseteo el index
+        idCliente_sectoreconomico = idCliente_sectoreconomico.reset_index()
+
+        # Elimino Nivel nombre columnas dataframe
+        idCliente_sectoreconomico.columns = idCliente_sectoreconomico.columns.droplevel(1)
+
+        # Adiciono campo sector económico en la tabla predicción
+        df001 = pd.merge(df01, idCliente_sectoreconomico, how='left', left_on=['idCliente'], right_on=['idCliente'])
+
+        #----------------------------------------------Cargar Modelo Prediccion anomalias------------------------------------------------
+
+        # Cargar la arquitectura del modelo desde el archivo JSON
+        arquitectura_del_modelo_clasificacion_archivo_json = "static/modelos/modelo_clasificacion---.json"
+        with open(arquitectura_del_modelo_clasificacion_archivo_json, "r") as archivo:
+            modelo_cargado_Clf = archivo.read()
+
+        # Reconstruir el modelo desde la arquitectura cargada
+        modeloClf = model_from_json(modelo_cargado_Clf)
+
+        pesos_del_modelo_clasificacion= "static/modelos/modeloClf_pesos---.weights.h5"
+        # Cargar los pesos del modelo desde el archivo HDF5
+        modeloClf.load_weights(pesos_del_modelo_clasificacion)
+
+        # Scaler_modelo_clasificacion
+        scaler_modelo_clasificacion='static/modelos/scalerClf---.joblib'
+        scalerClf = load(scaler_modelo_clasificacion)
+
+        #---------------------------------------------Predicción anomalias datos históricos---------------------------------------------
+
+        columnasClf = ['Active_energy', 'Reactive_energy', 'idCliente', 'Dia', 'Mes', 'Año', 'Hora', 'Minuto']
+
+        dfClf01 = scalerClf.transform(df00[columnasClf])
+
+        anomalias = modeloClf.predict(dfClf01)
+        df00_anomalias = df00.copy()
+        df00_anomalias['Anomalia'] = [round(x[0]) for x in anomalias]
+
+        #----------------------------------------------Predicción anomalias datos predichos---------------------------------------------
+
+        dfClf001 = scalerClf.transform(df001[columnasClf])
+
+        anomaliaspre = modeloClf.predict(dfClf001)
+        df001_anomalias = df001.copy()
+        df001_anomalias['Anomalia'] = [round(x[0]) for x in anomaliaspre]
 
 
-    print('-----------------df003_anomalias.head(6)-----------------')
-    print('-----------------df003_anomalias.head(6)-----------------')
-    print('-----------------df003_anomalias.head(6)-----------------')
-    print(df003_anomalias.shape)
-    print(df003_anomalias.head(6))
+        #--------------------------------------------------------Unir Tabla Históricos y predicción consumo-----------------------------
 
-    df003_anomalias = df003_anomalias.reset_index(drop=True)
-    df004_anomalias= df003_anomalias.reset_index()
-    #--------------------------------------------------Guardar en base de datos -----------------------------------------------------
+        df003_anomalias = pd.concat([df001_anomalias, df00_anomalias])
 
-    #Eliminar datos de la tabla
-    if Datostablaregresion.objects.exists():
-        Datostablaregresion.objects.all().delete()
+        df003_anomalias.prediccion_consumo_energia.unique()
 
 
-    #Cargar nuevos datos pd.Timestamp('2024-12-31 23:00:00', tz='UTC')
 
-    instances = [
-        Datostablaregresion(
+        df003_anomalias = df003_anomalias.reset_index(drop=True)
+        df004_anomalias= df003_anomalias.reset_index()
+        #--------------------------------------------------Guardar en base de datos -----------------------------------------------------
 
-            id = int(row['index'])+1,
-            idcliente= int(row['idCliente']),
-            fecha= row['fecha'],
-            dia=int(row['Dia']),
-            mes= int(row['Mes']),
-            anio=int(row['Año']),
-            hora=int(row['Hora']),
-            minuto=int(row['Minuto']),
-            energia_activa=float(row['Active_energy']),
-            energia_reactiva=float(row['Reactive_energy']),
-            prediccion_consumo_energia=int(row['prediccion_consumo_energia']),
-            sectoreconomico=str(row['sectoreconomico']),
-            anomalia = float(row['Anomalia']),
-        )
-        for index, row in df004_anomalias.iterrows()
-    ]
+        #Eliminar datos de la tabla
+        if Datostablaregresion.objects.exists():
+            Datostablaregresion.objects.all().delete()
 
-    Datostablaregresion.objects.bulk_create(instances)
-    print('*****************************************')
-    print("DataFrame guardado en la base de datos.")
-    print('*****************************************')
 
-    return render(request, 'fin_manager/carguedatos.html')
+        #Cargar nuevos datos pd.Timestamp('2024-12-31 23:00:00', tz='UTC')
+
+        instances = [
+            Datostablaregresion(
+
+                id = int(row['index'])+1,
+                idcliente= int(row['idCliente']),
+                fecha= row['fecha'],
+                dia=int(row['Dia']),
+                mes= int(row['Mes']),
+                anio=int(row['Año']),
+                hora=int(row['Hora']),
+                minuto=int(row['Minuto']),
+                energia_activa=float(row['Active_energy']),
+                energia_reactiva=float(row['Reactive_energy']),
+                prediccion_consumo_energia=int(row['prediccion_consumo_energia']),
+                sectoreconomico=str(row['sectoreconomico']),
+                anomalia = float(row['Anomalia']),
+            )
+            for index, row in df004_anomalias.iterrows()
+        ]
+
+        Datostablaregresion.objects.bulk_create(instances)
+        print('*****************************************')
+        print("DataFrame guardado en la base de datos.")
+        print('*****************************************')
+        return redirect('/respuesta_exitosa')
+    except:
+        return redirect('/respuesta_no_exitosa')
+
+    #return render(request, 'fin_manager/carguedatos.html')
 
 
 
@@ -534,12 +746,7 @@ def regresion_energia_activa(df003_anomalias_re1):
     # Gráfica 1 de Regresión Energía activa (EA)
 
 
-    #fig = px.line(df003_anomalias_re3, x='fecha', y='Active_energy', color='prediccion_consumo_energia',
-    #              # size='Active_energy',  # Tamaño de los puntos según la variable Y
-    #              color_discrete_sequence=px.colors.qualitative.Pastel,  # Cambiar la paleta de colores
-    #              title="Predicción Energía activa",
-    #              labels={'fecha': 'fecha', 'Active_energy': 'Energía Activa',
-    #                      'prediccion_consumo_energia': 'Prediccion Energía Activa'})
+
 
     df003_anomalias_re3['prediccion_consumo_energia'] = df003_anomalias_re3['prediccion_consumo_energia'].replace(
         {0: 'Demanda Energía', 1: 'Pronóstico'})

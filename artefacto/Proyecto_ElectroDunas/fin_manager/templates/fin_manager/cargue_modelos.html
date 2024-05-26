@@ -72,7 +72,7 @@ label {
 
 
  <div class="card mb-3 card-frame card-purple-frame">
-    <div class="card-header card-collapse__header " id="basicsHeadingOne">
+     <div class="card-header card-collapse__header " id="basicsHeadingOne">
       <h5 class="mb-0">
         <button class="btn btn-link btn-block d-flex justify-content-between card-collapse__btn p-3"
                 data-toggle="collapse"
@@ -81,7 +81,7 @@ label {
                 aria-controls="basicsCollapseOne">
 
               <h6 class="h6">
-                <a class="h6 text-primary mb-3" style="padding: 0rem 0rem; font-size: small;" >Ingreso de datos al modelo</a>
+                <a class="h6 text-primary mb-3" style="padding: 0rem 0rem; font-size: small;" >Ingreso modelo de clasificación formato json</a>
               </h6>
 
           <span class="card-collapse__btn-arrow">
@@ -90,18 +90,15 @@ label {
         </button>
       </h5>
     </div>
-    <div id="basicsCollapseOne" class="collapse show"
-         aria-labelledby="basicsHeadingOne"
-         data-parent="#basicsAccordion">
-      <div class="card-body card-collapse__body"
-         style="float: left; margin: 10 auto;    height: auto; margin-right: 0px;">
-
-
+     <div id="basicsCollapseOne" class="collapse show" aria-labelledby="basicsHeadingOne" data-parent="#basicsAccordion">
+      <div class="card-body card-collapse__body" style="float: left; margin: 10 auto;    height: auto; margin-right: 0px;">
+      <!-- -->
 
     <form method="POST" enctype="multipart/form-data" action="">
     {% csrf_token %}
     <label class="h6 text-primary mb-3" style="padding: 0rem 0rem; font-size: small;"  for="exampleFormControlFile1">Dar Click en el botón "Choose File", seleccionar el archivo y luego dar click en el botón "Cargar Datos"</label>
     <ul class="u-timeline">
+
     <li class="u-timeline__item">
       <div class="u-timeline__content">
         <div class="media">
@@ -111,7 +108,7 @@ label {
           <div class="media-body">
 
                   <div class="form-group">
-                  <input name="path" type="file" style=" height:30px; padding: 0rem 0rem; font-size: small;" class="form-control-file" id="exampleFormControlFile1" />
+                  <input name="exampleFormControlFile1" type="file" style=" height:30px; padding: 0rem 0rem; font-size: small;" class="form-control-file"  id="exampleFormControlFile1" />
                   </div>
           </div>
         </div>
@@ -137,7 +134,7 @@ label {
     </ul>
     </form>
 
-
+    <!-- -->
     </div>
     </div>
   </div>
@@ -153,7 +150,7 @@ label {
                 aria-controls="basicsCollapseTwo">
 
               <h6 class="h6">
-                <a class="h6 text-primary mb-3" style="font-size: small;" >Información Modelo </a>
+                <a class="h6 text-primary mb-3" style="font-size: small;" >Ingreso modelo clasificación pesos weights formato h5 </a>
               </h6>
 
           <span class="card-collapse__btn-arrow">
@@ -164,9 +161,491 @@ label {
       </h5>
     </div>
 
-     <!-- -->
+    <div id="basicsCollapseTwo" class="collapse show" aria-labelledby="basicsHeadingOne" data-parent="#basicsAccordion">
+      <div class="card-body card-collapse__body" style="float: left; margin: 10 auto;    height: auto; margin-right: 0px;">
 
-  </div>
+  <!--  -->
+    <form method="POST" enctype="multipart/form-data" action="">
+    {% csrf_token %}
+    <label class="h6 text-primary mb-3" style="padding: 0rem 0rem; font-size: small;"  for="exampleFormControlFile2">Dar Click en el botón "Choose File", seleccionar el archivo y luego dar click en el botón "Cargar Datos"</label>
+    <ul class="u-timeline">
+
+    <li class="u-timeline__item">
+      <div class="u-timeline__content">
+        <div class="media">
+          <span class="u-icon u-icon--primary u-icon--sm u-timeline__icon rounded-circle mr-3">
+            <span class="u-icon__inner">1</span>
+          </span>
+          <div class="media-body">
+
+                  <div class="form-group">
+                  <input name="exampleFormControlFile2" type="file" style=" height:30px; padding: 0rem 0rem; font-size: small;" class="form-control-file" id="exampleFormControlFile2" />
+                  </div>
+          </div>
+        </div>
+      </div>
+    </li>
+
+    <li class="u-timeline__item">
+      <div class="u-timeline__content">
+        <div class="media">
+          <span class="u-icon u-icon--primary u-icon--sm u-timeline__icon rounded-circle mr-3">
+            <span class="u-icon__inner">2</span>
+          </span>
+          <div class="media-body">
+
+              <div class="form-group"  >
+              <button type="submit" class="btn btn-block btn-outline-primary" style="width:100px; height:30px; padding: 0rem 0rem; font-size: small;" >Cargar Datos</button>
+              </div>
+          </div>
+        </div>
+      </div>
+    </li>
+
+    </ul>
+    </form>
+
+      </div>
+    </div>
+
+ </div>
+
+
+ <div class="card mb-3 card-frame card-purple-frame">
+    <div class="card-header card-collapse__header" id="basicsHeadingTree">
+      <h5 class="mb-0">
+        <button class="btn btn-link btn-block d-flex justify-content-between card-collapse__btn collapsed p-3"
+                data-toggle="collapse"
+                data-target="#basicsCollapseTree"
+                aria-expanded="false"
+                aria-controls="basicsCollapseTree">
+
+              <h6 class="h6">
+                <a class="h6 text-primary mb-3" style="font-size: small;" >Ingreso objeto de escalación para clasificación en el formato joblib</a>
+              </h6>
+
+          <span class="card-collapse__btn-arrow">
+            <span class="fa fa-arrow-down small"></span>
+          </span>
+
+        </button>
+      </h5>
+    </div>
+
+    <div id="basicsCollapseTree" class="collapse show" aria-labelledby="basicsHeadingOne" data-parent="#basicsAccordion">
+      <div class="card-body card-collapse__body" style="float: left; margin: 10 auto;    height: auto; margin-right: 0px;">
+
+<!--  -->
+    <form method="POST" enctype="multipart/form-data" action="">
+    {% csrf_token %}
+    <label class="h6 text-primary mb-3" style="padding: 0rem 0rem; font-size: small;"  for="exampleFormControlFile3">Dar Click en el botón "Choose File", seleccionar el archivo y luego dar click en el botón "Cargar Datos"</label>
+    <ul class="u-timeline">
+
+    <li class="u-timeline__item">
+      <div class="u-timeline__content">
+        <div class="media">
+          <span class="u-icon u-icon--primary u-icon--sm u-timeline__icon rounded-circle mr-3">
+            <span class="u-icon__inner">1</span>
+          </span>
+          <div class="media-body">
+
+                  <div class="form-group">
+                  <input name="path" type="file" style=" height:30px; padding: 0rem 0rem; font-size: small;" class="form-control-file" id="exampleFormControlFile3" />
+                  </div>
+          </div>
+        </div>
+      </div>
+    </li>
+
+    <li class="u-timeline__item">
+      <div class="u-timeline__content">
+        <div class="media">
+          <span class="u-icon u-icon--primary u-icon--sm u-timeline__icon rounded-circle mr-3">
+            <span class="u-icon__inner">2</span>
+          </span>
+          <div class="media-body">
+
+              <div class="form-group"  >
+              <button type="submit" class="btn btn-block btn-outline-primary" style="width:100px; height:30px; padding: 0rem 0rem; font-size: small;" >Cargar Datos</button>
+              </div>
+          </div>
+        </div>
+      </div>
+    </li>
+
+    </ul>
+    </form>
+
+      </div>
+    </div>
+
+ </div>
+
+
+
+
+ <div class="card mb-3 card-frame card-purple-frame">
+    <div class="card-header card-collapse__header" id="basicsHeadingFour">
+      <h5 class="mb-0">
+        <button class="btn btn-link btn-block d-flex justify-content-between card-collapse__btn collapsed p-3"
+                data-toggle="collapse"
+                data-target="#basicsCollapseFour"
+                aria-expanded="false"
+                aria-controls="basicsCollapseFour">
+
+              <h6 class="h6">
+                <a class="h6 text-primary mb-3" style="font-size: small;" >Ingreso  modelo de regresión de energia activa en formato json</a>
+              </h6>
+
+          <span class="card-collapse__btn-arrow">
+            <span class="fa fa-arrow-down small"></span>
+          </span>
+
+        </button>
+      </h5>
+    </div>
+
+
+    <div id="basicsCollapseFour" class="collapse show" aria-labelledby="basicsHeadingOne" data-parent="#basicsAccordion">
+      <div class="card-body card-collapse__body" style="float: left; margin: 10 auto;    height: auto; margin-right: 0px;">
+
+<!--  -->
+    <form method="POST" enctype="multipart/form-data" action="">
+    {% csrf_token %}
+    <label class="h6 text-primary mb-3" style="padding: 0rem 0rem; font-size: small;"  for="exampleFormControlFile4">Dar Click en el botón "Choose File", seleccionar el archivo y luego dar click en el botón "Cargar Datos"</label>
+    <ul class="u-timeline">
+
+    <li class="u-timeline__item">
+      <div class="u-timeline__content">
+        <div class="media">
+          <span class="u-icon u-icon--primary u-icon--sm u-timeline__icon rounded-circle mr-3">
+            <span class="u-icon__inner">1</span>
+          </span>
+          <div class="media-body">
+
+                  <div class="form-group">
+                  <input name="path" type="file" style=" height:30px; padding: 0rem 0rem; font-size: small;" class="form-control-file" id="exampleFormControlFile4" />
+                  </div>
+          </div>
+        </div>
+      </div>
+    </li>
+
+    <li class="u-timeline__item">
+      <div class="u-timeline__content">
+        <div class="media">
+          <span class="u-icon u-icon--primary u-icon--sm u-timeline__icon rounded-circle mr-3">
+            <span class="u-icon__inner">2</span>
+          </span>
+          <div class="media-body">
+
+              <div class="form-group"  >
+              <button type="submit" class="btn btn-block btn-outline-primary" style="width:100px; height:30px; padding: 0rem 0rem; font-size: small;" >Cargar Datos</button>
+              </div>
+          </div>
+        </div>
+      </div>
+    </li>
+
+    </ul>
+    </form>
+
+      </div>
+    </div>
+
+ </div>
+
+
+
+
+
+ <div class="card mb-3 card-frame card-purple-frame">
+    <div class="card-header card-collapse__header" id="basicsHeadingFive">
+      <h5 class="mb-0">
+        <button class="btn btn-link btn-block d-flex justify-content-between card-collapse__btn collapsed p-3"
+                data-toggle="collapse"
+                data-target="#basicsCollapseFive"
+                aria-expanded="false"
+                aria-controls="basicsCollapseFive">
+
+              <h6 class="h6">
+                <a class="h6 text-primary mb-3" style="font-size: small;" >Ingreso modelo de regresión energía activa pesos en formato h5</a>
+              </h6>
+
+          <span class="card-collapse__btn-arrow">
+            <span class="fa fa-arrow-down small"></span>
+          </span>
+
+        </button>
+      </h5>
+    </div>
+
+    <div id="basicsCollapseFive" class="collapse show" aria-labelledby="basicsHeadingOne" data-parent="#basicsAccordion">
+      <div class="card-body card-collapse__body" style="float: left; margin: 10 auto;    height: auto; margin-right: 0px;">
+
+<!--  -->
+    <form method="POST" enctype="multipart/form-data" action="">
+    {% csrf_token %}
+    <label class="h6 text-primary mb-3" style="padding: 0rem 0rem; font-size: small;"  for="exampleFormControlFile5">Dar Click en el botón "Choose File", seleccionar el archivo y luego dar click en el botón "Cargar Datos"</label>
+    <ul class="u-timeline">
+
+    <li class="u-timeline__item">
+      <div class="u-timeline__content">
+        <div class="media">
+          <span class="u-icon u-icon--primary u-icon--sm u-timeline__icon rounded-circle mr-3">
+            <span class="u-icon__inner">1</span>
+          </span>
+          <div class="media-body">
+
+                  <div class="form-group">
+                  <input name="path" type="file" style=" height:30px; padding: 0rem 0rem; font-size: small;" class="form-control-file" id="exampleFormControlFile5" />
+                  </div>
+          </div>
+        </div>
+      </div>
+    </li>
+
+    <li class="u-timeline__item">
+      <div class="u-timeline__content">
+        <div class="media">
+          <span class="u-icon u-icon--primary u-icon--sm u-timeline__icon rounded-circle mr-3">
+            <span class="u-icon__inner">2</span>
+          </span>
+          <div class="media-body">
+
+              <div class="form-group"  >
+              <button type="submit" class="btn btn-block btn-outline-primary" style="width:100px; height:30px; padding: 0rem 0rem; font-size: small;" >Cargar Datos</button>
+              </div>
+          </div>
+        </div>
+      </div>
+    </li>
+
+    </ul>
+    </form>
+
+      </div>
+    </div>
+
+ </div>
+
+
+
+
+ <div class="card mb-3 card-frame card-purple-frame">
+    <div class="card-header card-collapse__header" id="basicsHeadingSix">
+      <h5 class="mb-0">
+        <button class="btn btn-link btn-block d-flex justify-content-between card-collapse__btn collapsed p-3"
+                data-toggle="collapse"
+                data-target="#basicsCollapseSix"
+                aria-expanded="false"
+                aria-controls="basicsCollapseSix">
+
+              <h6 class="h6">
+                <a class="h6 text-primary mb-3" style="font-size: small;" >Ingreso modelo de regresión energia reactiva en formato json </a>
+              </h6>
+
+          <span class="card-collapse__btn-arrow">
+            <span class="fa fa-arrow-down small"></span>
+          </span>
+
+        </button>
+      </h5>
+    </div>
+
+    <div id="basicsCollapseSix" class="collapse show" aria-labelledby="basicsHeadingOne" data-parent="#basicsAccordion">
+      <div class="card-body card-collapse__body" style="float: left; margin: 10 auto;    height: auto; margin-right: 0px;">
+
+<!--  -->
+    <form method="POST" enctype="multipart/form-data" action="">
+    {% csrf_token %}
+    <label class="h6 text-primary mb-3" style="padding: 0rem 0rem; font-size: small;"  for="exampleFormControlFile6">Dar Click en el botón "Choose File", seleccionar el archivo y luego dar click en el botón "Cargar Datos"</label>
+    <ul class="u-timeline">
+
+    <li class="u-timeline__item">
+      <div class="u-timeline__content">
+        <div class="media">
+          <span class="u-icon u-icon--primary u-icon--sm u-timeline__icon rounded-circle mr-3">
+            <span class="u-icon__inner">1</span>
+          </span>
+          <div class="media-body">
+
+                  <div class="form-group">
+                  <input name="path" type="file" style=" height:30px; padding: 0rem 0rem; font-size: small;" class="form-control-file" id="exampleFormControlFile6" />
+                  </div>
+          </div>
+        </div>
+      </div>
+    </li>
+
+    <li class="u-timeline__item">
+      <div class="u-timeline__content">
+        <div class="media">
+          <span class="u-icon u-icon--primary u-icon--sm u-timeline__icon rounded-circle mr-3">
+            <span class="u-icon__inner">2</span>
+          </span>
+          <div class="media-body">
+
+              <div class="form-group"  >
+              <button type="submit" class="btn btn-block btn-outline-primary" style="width:100px; height:30px; padding: 0rem 0rem; font-size: small;" >Cargar Datos</button>
+              </div>
+          </div>
+        </div>
+      </div>
+    </li>
+
+    </ul>
+    </form>
+
+      </div>
+    </div>
+
+ </div>
+
+
+
+ <div class="card mb-3 card-frame card-purple-frame">
+    <div class="card-header card-collapse__header" id="basicsHeadingSeven">
+      <h5 class="mb-0">
+        <button class="btn btn-link btn-block d-flex justify-content-between card-collapse__btn collapsed p-3"
+                data-toggle="collapse"
+                data-target="#basicsCollapseSeven"
+                aria-expanded="false"
+                aria-controls="basicsCollapseSeven">
+
+              <h6 class="h6">
+                <a class="h6 text-primary mb-3" style="font-size: small;" >Ingreso  del modelo de regresión  energía reactiva pesos en formato h5</a>
+              </h6>
+
+          <span class="card-collapse__btn-arrow">
+            <span class="fa fa-arrow-down small"></span>
+          </span>
+
+        </button>
+      </h5>
+    </div>
+
+    <div id="basicsCollapseSeven" class="collapse show" aria-labelledby="basicsHeadingOne" data-parent="#basicsAccordion">
+      <div class="card-body card-collapse__body" style="float: left; margin: 10 auto;    height: auto; margin-right: 0px;">
+
+<!--  -->
+    <form method="POST" enctype="multipart/form-data" action="">
+    {% csrf_token %}
+    <label class="h6 text-primary mb-3" style="padding: 0rem 0rem; font-size: small;"  for="exampleFormControlFile7">Dar Click en el botón "Choose File", seleccionar el archivo y luego dar click en el botón "Cargar Datos"</label>
+    <ul class="u-timeline">
+
+    <li class="u-timeline__item">
+      <div class="u-timeline__content">
+        <div class="media">
+          <span class="u-icon u-icon--primary u-icon--sm u-timeline__icon rounded-circle mr-3">
+            <span class="u-icon__inner">1</span>
+          </span>
+          <div class="media-body">
+
+                  <div class="form-group">
+                  <input name="path" type="file" style=" height:30px; padding: 0rem 0rem; font-size: small;" class="form-control-file" id="exampleFormControlFile7" />
+                  </div>
+          </div>
+        </div>
+      </div>
+    </li>
+
+    <li class="u-timeline__item">
+      <div class="u-timeline__content">
+        <div class="media">
+          <span class="u-icon u-icon--primary u-icon--sm u-timeline__icon rounded-circle mr-3">
+            <span class="u-icon__inner">2</span>
+          </span>
+          <div class="media-body">
+
+              <div class="form-group"  >
+              <button type="submit" class="btn btn-block btn-outline-primary" style="width:100px; height:30px; padding: 0rem 0rem; font-size: small;" >Cargar Datos</button>
+              </div>
+          </div>
+        </div>
+      </div>
+    </li>
+
+    </ul>
+    </form>
+
+      </div>
+    </div>
+
+ </div>
+
+
+
+ <div class="card mb-3 card-frame card-purple-frame">
+    <div class="card-header card-collapse__header" id="basicsHeadingEight">
+      <h5 class="mb-0">
+        <button class="btn btn-link btn-block d-flex justify-content-between card-collapse__btn collapsed p-3"
+                data-toggle="collapse"
+                data-target="#basicsCollapseEight"
+                aria-expanded="false"
+                aria-controls="basicsCollapseEight">
+
+              <h6 class="h6">
+                <a class="h6 text-primary mb-3" style="font-size: small;" >Ingreso objeto de escalación de regresion en formato joblib </a>
+              </h6>
+
+          <span class="card-collapse__btn-arrow">
+            <span class="fa fa-arrow-down small"></span>
+          </span>
+
+        </button>
+      </h5>
+    </div>
+
+    <div id="basicsCollapseEight" class="collapse show" aria-labelledby="basicsHeadingOne" data-parent="#basicsAccordion">
+      <div class="card-body card-collapse__body" style="float: left; margin: 10 auto;    height: auto; margin-right: 0px;">
+
+<!--  -->
+    <form method="POST" enctype="multipart/form-data" action="">
+    {% csrf_token %}
+    <label class="h6 text-primary mb-3" style="padding: 0rem 0rem; font-size: small;"  for="exampleFormControlFile8">Dar Click en el botón "Choose File", seleccionar el archivo y luego dar click en el botón "Cargar Datos"</label>
+    <ul class="u-timeline">
+
+    <li class="u-timeline__item">
+      <div class="u-timeline__content">
+        <div class="media">
+          <span class="u-icon u-icon--primary u-icon--sm u-timeline__icon rounded-circle mr-3">
+            <span class="u-icon__inner">1</span>
+          </span>
+          <div class="media-body">
+
+                  <div class="form-group">
+                  <input name="path" type="file" style=" height:30px; padding: 0rem 0rem; font-size: small;" class="form-control-file" id="exampleFormControlFile8" />
+                  </div>
+          </div>
+        </div>
+      </div>
+    </li>
+
+    <li class="u-timeline__item">
+      <div class="u-timeline__content">
+        <div class="media">
+          <span class="u-icon u-icon--primary u-icon--sm u-timeline__icon rounded-circle mr-3">
+            <span class="u-icon__inner">2</span>
+          </span>
+          <div class="media-body">
+
+              <div class="form-group"  >
+              <button type="submit" class="btn btn-block btn-outline-primary" style="width:100px; height:30px; padding: 0rem 0rem; font-size: small;" >Cargar Datos</button>
+              </div>
+          </div>
+        </div>
+      </div>
+    </li>
+
+    </ul>
+    </form>
+
+      </div>
+    </div>
+
+ </div>
+
 
 
 </div>

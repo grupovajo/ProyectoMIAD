@@ -4,3 +4,6 @@ from .models import *
 
 #admin.site.register(Peajes)
 
+
+admin.site.register(Datostablaregresion)
+admin.site.register(Infoclientes)

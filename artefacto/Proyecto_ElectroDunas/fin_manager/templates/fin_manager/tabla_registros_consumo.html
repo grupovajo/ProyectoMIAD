@@ -1,0 +1,209 @@
+{% extends "fin_manager/base1_1.html" %}
+{% load humanize %}
+{% load static %}
+{% block title %}TABLA CONSUMO ENERGÍA{% endblock %}
+
+{% block scrips_head %}
+
+<style>
+
+
+.row {
+/*flex-wrap:  wrap-reverse*/
+}
+
+.space-3 {
+    padding-top: 0rem;
+    padding-bottom: 0rem;
+}
+
+
+thead {
+    height: 70px;
+    vertical-align: top;
+}
+
+    .myLoader{
+        position:absolute; padding: 5px;
+        margin:100px 0 0 5%; width:auto;
+        z-index:1000; font-size:12px; font-weight:bold;
+        border:1px solid #666; background:#ffffcc;
+        vertical-align:middle;
+    }
+    .myStatus{
+        width:auto; display:block;
+    }
+</style>
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'ezEditTable/ezEditTable.css' %}" />
+<script src="{% static 'ezEditTable/ezEditTable.js' %}"></script>
+<link rel="stylesheet" type="text/css" href="{% static 'node_modules/tablefilter/dist/tablefilter/style/tablefilter.css' %}" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+{% endblock %}
+
+{% block content_links_logo %}
+<h2 class="text-white" style="font-weight: 500; ">VAJO</h2>
+{% endblock %}
+
+
+
+{% block content_main %}
+  </br>
+  </br>
+  </br>
+  </br>
+
+<div style="text-align: center">
+  <h2 style="font-weight: 200; ">Visualización últimos 10.000 registros históricos </h2>
+</div>
+
+
+<div class="card card-frame card-purple-frame mb-2">
+  <div class="card-body" style="float: left;     height: auto; ">
+
+
+
+
+<div >
+  <div >
+<!-------------------Inicio Tabla Estimado ------------------------->
+<div  style="border-radius: 0px; margin-left: 0px" >
+  <br>
+
+  <table id="demo" >
+    <thead style="height:80px">
+      <tr>
+
+        <th>Fecha de Lectura </th>
+        <th>Enregía Activa</th>
+        <th>Energía Reactiva</th>
+        <th>Voltaje Corriente Alterna</th>
+        <th>Voltaje Corriente Continua</th>
+        <th>Identificador del Cliente</th>
+        <th>Sector Económico</th>
+        <th>Fecha de Registro</th>
+
+      </tr>
+    </thead>
+    <tbody>
+    <!-- jinja2 Technique -->
+
+    {% for i in object %}
+      <tr>
+        {% csrf_token %}
+
+
+        <td class="editable" data-id="{{ i.id }}" data-type="fecha">{{i.fecha}}</td>
+        <td class="editable" data-id="{{ i.id }}" data-type="active_energy">{{i.active_energy|floatformat:2 |intcomma}}</td>
+        <td class="editable" data-id="{{ i.id }}" data-type="reactive_energy">{{i.reactive_energy|floatformat:2 |intcomma}}</td>
+        <td class="editable" data-id="{{ i.id }}" data-type="voltaje_fa">{{i.voltaje_fa|floatformat:2 |intcomma}}</td>
+        <td class="editable" data-id="{{ i.id }}" data-type="voltaje_fc">{{i.voltaje_fc|floatformat:2 |intcomma}}</td>
+        <td class="editable" data-id="{{ i.id }}" data-type="idcliente">{{i.idcliente}}</td>
+        <td class="editable" data-id="{{ i.id }}" data-type="sectoreconomico">{{i.sectoreconomico}}</td>
+        <td class="editable" data-id="{{ i.id }}" data-type="fechahora">{{i.fechahora}}</td>
+
+      </tr>
+    {% endfor %}
+
+
+    </tbody>
+  </table>
+
+
+</div>
+</div>
+</div>
+
+
+
+</div>
+</div>
+{% endblock %}
+
+
+
+
+{% block scripts_body %}
+
+
+
+{% load static %}
+<script  type="application/javascript" src="{% static 'node_modules/tablefilter/dist/tablefilter/tablefilter.js' %}"></script>
+
+
+<script>
+      var  tfConfig= {
+        base_path: 'static/node_modules/tablefilter/dist/tablefilter/',
+        paging: true,
+        state: { types: ['cookie'] },
+        alternate_rows: true,
+        rows_counter: true,
+        btn_reset: {
+            text: 'Clear'
+        },
+        status_bar: true,
+
+
+        responsive: true,
+        alternate_rows: true,
+        rows_counter: true,
+        btn_reset: true,
+        status_bar: true,
+        msg_filter: 'Filtering...',
+
+
+        grid_layout: true, grid_layout: { width: '100%', height: 'max-content'},
+        //loader: true,
+
+                paging: {
+          results_per_page: ['Records: ', [3, 10, 25, 50, 100]]
+        },
+        state: {
+          types: ['local_storage'],
+          filters: true,
+          page_number: true,
+          page_length: true,
+          sort: true
+        },
+        alternate_rows: true,
+        btn_reset: true,
+        rows_counter: true,
+        loader: {
+          html: '<div id="lblMsg"></div>',
+          css_class: 'myLoader'
+        },
+
+        col_0: 'select',col_1: 'select', col_2: 'select', col_3: 'select', col_4: 'select', col_5: 'select', col_6: 'select',
+        col_7: 'select',
+
+        col_types: [
+             'date', 'number', 'number', 'number', 'number', 'number','string', 'date'
+        ],
+
+      col_widths: [
+             '200px', '200px', '200px', '200px', '250px', '300px', '200px', '200px'
+        ],
+
+
+        /* columns visibility and sort extension */
+        extensions: [{
+            //  name: 'colsVisibility',
+             // at_start: [],
+             // text: 'Columns: ',
+            //  enable_tick_all: true
+          }, {
+             // name: 'sort'
+        }]
+    };
+    var tf = new TableFilter('demo', tfConfig);
+    tf.init();
+
+</script>
+
+
+
+{% load static %}
+{% endblock %}
+
