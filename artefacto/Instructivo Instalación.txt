@@ -1,0 +1,144 @@
+Instalación de Tablero Proyecto Aplicado 
+
+
+
+Pasos para el despliegue en un ambiente Local - Windows: 
+
+ 
+
+-Verifique que tiene Python 3 instalado y asegúrese que la versión es por lo menos 3.9 o superior. 
+
+python3 --version 
+
+-Verifique su instalación 
+
+pip --version 
+
+-Clone el repositorio en la ruta de su elección con el siguiente comando: 
+
+git clone https://github.com/grupovajo/ProyectoMIAD.git 
+
+-Instale virtualenv para crear ambientes virtuales 
+
+pip install virtualenv 
+
+-Ingrese a la siguiente ruta: 
+
+cd ProyectoMIAD/artefacto/Proyecto_ElectroDunas 
+
+-Cree un ambiente virtual con nombre env  
+
+virtualenv env 
+
+-Active el ambiente virtual con 
+
+cd env\Scripts 
+
+.\activate 
+
+-En caso de presentar problemas de permisos de acceso, ejecuta el siguiente comando para permitir la ejecución de scripts: Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser  
+
+-Luego se debe volver a la carpeta raíz “Proyecto_ElectroDunas” con el siguiente comando (se debe realizar dos veces):  
+
+cd..  
+
+cd.. 
+
+-Instale los requerimientos  
+
+pip install -r requirements.txt 
+
+ 
+
+-Inicie el tablero con el comando  
+
+python manage.py runserver 
+
+
+-El link final del dashboard es el siguiente: 
+
+http://127.0.0.1:8000/ 
+
+
+
+
+
+
+
+Pasos para el despliegue de una instancia EC2 en AWS: 
+
+
+
+Pasos Instalación en EC2 
+
+En un espacio de AWS lance una instancia t2.medium con sistema operativo Ubuntu Server 
+
+22.04 y 20GB de disco. 
+
+ 
+
+-Diríjase ahora a la consola de EC2, seleccione su máquina virtual y modifique el grupo de seguridad para permitir tráfico por el puerto 8000. Es decir, en el grupo de seguridad de la máquina edite las reglas de entrada y agregue una que permita tráfico por el puerto TCP 8000 desde cualquier IP (anywhere IPv4). 
+
+ 
+
+Conéctese a la máquina: 
+
+-Abra una terminal: En windows, escriba cmd y oprima Enter. En macOS, abra la aplicación llamada Terminal. 
+
+-En la terminal emita el comando ssh -i /path/to/llave.pem ubuntu@IP en el que /path/to/ se refiere a la ubicación del archivo llave.pem que descargó, e IP es la dirección IP de la instancia EC2 que lanzó. Si prefiere, en la terminal puede navegar a la ubicación del archivo llave.pem y emitir el comando ssh -i llave.pem ubuntu@IP 
+
+-Verifique que se cuenta con el programa Python 3 instalado y asegúrese que la versión es la 3.9 o superior. 
+
+python3 --version 
+
+-Actualice la lista de paquetes del sistema ejecutando el siguiente comando: 
+
+sudo apt update 
+
+-Instale pip. 
+
+sudo apt install python3-pip 
+
+-Verifique la instalación 
+
+pip3 --version 
+
+-Clone el repositorio con el siguiente comando: 
+
+git clone https://github.com/grupovajo/ProyectoMIAD.git 
+
+-Instale virtualenv para crear ambientes virtuales: 
+
+                sudo apt install python3-virtualenv 
+
+-Ingrese a la siguiente ruta: 
+
+                cd ProyectoMIAD/artefacto/Proyecto_ElectroDunas 
+
+-Cree un ambiente virtual con nombre env  
+
+                virtualenv env 
+
+-Realice la activación el ambiente virtual con 
+
+             source env/bin/activate 
+
+-Instale los requerimientos  
+
+pip install -r requirements.txt 
+
+ 
+
+-Inicie el tablero con el comando  
+
+python manage.py runserver 0.0.0.0:8000 
+
+ 
+
+-Ahora se debe acceder al link que se arroja en la terminal y cambiar 0.0.0.0 por la IP de la instancia creada. 
+
+
+
+
+
+
