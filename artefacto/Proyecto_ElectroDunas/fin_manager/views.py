@@ -623,6 +623,11 @@ def generartablaprediccion(request):
         df_predEA = pd.DataFrame(y_pred_EA, columns=['Active_energy'])
         df_predER = pd.DataFrame(y_pred_ER, columns=['Reactive_energy'])
 
+
+        # --------------------------------------------Reemplazo valores negativos de energía reactiva por la mediana-----------------------
+        mediana= df00['Reactive_energy'].median()
+        df_predER['Reactive_energy'] = df_predER['Reactive_energy'].apply(lambda x: mediana if x < 3 else x)
+
         # Unir el DataFrame para predicción con el DataFrame del array
         df01 = pd.concat([df1, df_predEA, df_predER], axis=1)
 
@@ -750,6 +755,8 @@ def regresion_energia_activa(df003_anomalias_re1):
 
     df003_anomalias_re3['prediccion_consumo_energia'] = df003_anomalias_re3['prediccion_consumo_energia'].replace(
         {0: 'Demanda Energía', 1: 'Pronóstico'})
+
+
     fig = px.line(
         df003_anomalias_re3,
         x='fecha',
@@ -780,8 +787,15 @@ def comportamiento_consumo_energia(df003_anomalias_re1):
                                                                      'prediccion_consumo_energia': 'min'
                                                                      }).reset_index()
     # Crear el gráfico
-    fig = px.bar(df003_anomalias_re02, x='fecha', y=['Active_energy', 'Reactive_energy'],
-                 title='Consumo Energía Activa y Reactiva')
+    fig = px.bar(df003_anomalias_re02,
+                 x='fecha',
+                 y=['Active_energy', 'Reactive_energy'],
+                 title='Consumo Energía Activa y Reactiva',
+                 labels = {'fecha': 'Fecha',
+                           'Active_energy': 'Energía Activa',
+                          'Reactive_energy': 'Energía Reactiva',
+                           'value': 'Consumo Energía'}
+                 )
 
     graph_json = fig.to_json()
     graph_data['chart'] = graph_json
@@ -825,11 +839,19 @@ def regresion_energia_reactiva(df003_anomalias_re1):
 def fig_anomalias(df003_anomalias_re1):
     graph_data = {}
     #Grafica de prediccion anomalia
+
     df003_anomalias_cl01 = df003_anomalias_re1[df003_anomalias_re1.prediccion_consumo_energia == 0]
     df003_anomalias_cl02 = df003_anomalias_cl01.loc[:, ['Active_energy', 'Reactive_energy', 'Anomalia']]
+    df003_anomalias_cl02['Anomalia'] = df003_anomalias_cl02['Anomalia'].replace(
+        {0: 'Comportamiento Normal', 1: 'Comportamiento Anómalo'})
+
     fig_Anomalias = px.scatter(df003_anomalias_cl02.replace(0, ''), x='Active_energy', y='Reactive_energy',
                      title='Predicción de anomalias',
-                     color="Anomalia")
+                     color="Anomalia",
+    labels = {'Active_energy': 'Energía Activa',
+              'Reactive_energy': 'Energía Reactiva'}
+
+                               )
 
     graph_json = fig_Anomalias.to_json()
     graph_data['chart'] = graph_json
