@@ -292,6 +292,12 @@ def obtener_datos_de_la_tabla_desde_memoria(fecha_inicio,fecha_fin):
         bdinfoclientes = cache.get('bdinfoclientes')
     return bdinfoclientes
 
+
+@login_required(redirect_field_name='login')
+def ver_pdf(request):
+    return render(request, 'fin_manager/ver_pdf.html')
+
+
 @login_required(redirect_field_name='login')
 def respuesta_no_exitosa(request):
     return render(request, 'fin_manager/respuesta_no_exitosa.html')

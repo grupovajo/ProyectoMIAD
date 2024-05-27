@@ -17,5 +17,7 @@ urlpatterns = [
     path('respuesta_no_exitosa', views.respuesta_no_exitosa, name='respuesta_no_exitosa'),
     path('tabla_registros_consumo', views.tabla_registros_consumo, name='tabla_registros_consumo'),
     path('ventanagenerarprediccion', views.ventanagenerarprediccion, name='ventanagenerarprediccion'),
+    path('ver_pdf', views.ver_pdf, name='ver_pdf'),
+
 
 ]
